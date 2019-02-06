@@ -1,0 +1,22 @@
+minix.lib
+y
++abort.obj+abs.obj+access.obj+alarm.obj+atoi.obj+atol.obj+bcopy.obj &
++brk.obj+brk2.obj+call.obj+catchsig.obj+chdir.obj+chmod.obj &
++chown.obj+chroot.obj+cleanup.obj+close.obj+creat.obj &
++ctype.obj+doprintf.obj+dup.obj+dup2.obj+exec.obj &
++exit.obj+fclose.obj+fflush.obj+fgets.obj+fopen.obj+fork.obj+fprintf.obj &
++fputs.obj+fread.obj+freopen.obj+fseek.obj+fstat.obj+ftell.obj+fwrite.obj &
++getc.obj+getegid.obj+getenv.obj+geteuid.obj+getgid.obj+getgrent.obj &
++getpass.obj+getpid.obj+gets.obj+getuid.obj+getutil.obj &
++index.obj+ioctl.obj+isatty.obj+itoa.obj+kill.obj &
++link.obj+lseek.obj+malloc.obj+mknod.obj &
++mktemp.obj+mount.obj+open.obj+pause.obj+perror.obj+pipe.obj+printdat.obj &
++printk.obj+prints.obj+putc.obj+rand.obj+read.obj &
++regexp.obj+regsub.obj+rindex.obj+scanf.obj+sendrec.obj+setbuf.obj &
++setgid.obj+setuid.obj+signal.obj+sleep.obj+sprintf.obj &
++stat.obj+stb.obj+stderr.obj+stime.obj+strcat.obj+strcmp.obj &
++strcpy.obj+strlen.obj+strncat.obj+strncmp.obj+strncpy.obj+sync.obj &
++syslib.obj+time.obj+times.obj+umask.obj+umount.obj+ungetc.obj &
++unlink.obj+utime.obj+wait.obj+write.obj+message.obj+getpwent.obj+crypt.obj &
++anldiv+anlmul+anlrem+anlshl+anlshr+annalshl+aNNalrem+aNNalmul
+minix.lst

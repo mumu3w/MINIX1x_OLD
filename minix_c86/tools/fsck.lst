@@ -1,0 +1,32 @@
+cc1 preprocessor 2.30A 23-MAY-1985
+Copyright (c)1981,82,83,84,85 Computer Innovations Inc, ALL RIGHTS RESERVED
+cc2 parser 2.30A 23-MAY-1985
+Copyright (c)1981,82,83,84,85 Computer Innovations Inc, ALL RIGHTS RESERVED
+cc3 code generator 2.30A 23-MAY-1985
+Copyright (c)1981,82,83,84,85 Computer Innovations Inc, ALL RIGHTS RESERVED
+cc4 optimizer 2.30A 23-MAY-1985
+Copyright (c)1983,84,85 Computer Innovations Inc, ALL RIGHTS RESERVED
+
+Microsoft (R) 8086 Object Linker  Version 3.05
+Copyright (C) Microsoft Corp 1983, 1984, 1985.  All rights reserved.
+
+
+
+DOS-header:
+          nr of pages:    24h    (  36 dec)
+   bytes in last page:    68h    ( 104 dec)
+    min. free mem *16:   2c7h    ( 711 dec)
+           stack-size:   70dh    (1805 dec)
+    stack-pointer val:     0h    (   0 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   36f0h   ( 14064 dec)
+            data-size:    d78h   (  3448 dec)
+             bss-size:   2c70h   ( 11376 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   70d8h   ( 28888 dec)
+
+            text+data =   4468h

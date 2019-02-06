@@ -1,0 +1,219 @@
+Warning: _putc defined in module putc.c is duplicated in library file ..\mlib\minix.lib in module putc
+
+ Start  Stop   Length Name               Class
+
+ 00000H 02335H 02336H _TEXT              CODE
+ 02340H 02340H 00000H _DATABEG           DATA
+ 02340H 0255FH 00220H _DATA              DATA
+ 02560H 02560H 00000H _DATAEND           DATA
+ 02560H 0356DH 0100EH _BSS               BSS
+ 0356EH 0356EH 00000H _BSSEND            BSS
+ 03570H 03570H 00000H _STACK             STACK
+ 03570H 03570H 00000H @STACK             STACK
+
+  Address         Publics by Name
+
+ 0000:0000       $main
+ 0234:0010       brksize
+ 0000:224A       F_LDIV@
+ 0000:2259       F_LMOD@
+ 0000:2251       F_LUDIV@
+ 0000:2261       F_LUMOD@
+ 0000:22F8       F_LXLSH@
+ 0000:2319       F_LXRSH@
+ 0000:224A       LDIV@
+ 0000:2259       LMOD@
+ 0000:2251       LUDIV@
+ 0000:2261       LUMOD@
+ 0000:22F8       LXLSH@
+ 0000:2319       LXRSH@
+ 0000:2247       N_LDIV@
+ 0000:2256       N_LMOD@
+ 0000:224E       N_LUDIV@
+ 0000:225E       N_LUMOD@
+ 0000:22F5       N_LXLSH@
+ 0000:2316       N_LXRSH@
+ 0234:0012       sp_limit
+ 0000:0703       _adjust
+ 0000:173A       _alloc_mem
+ 0000:18E9       _allowed
+ 0000:1D72       _callm1
+ 0000:1DA7       _callm3
+ 0000:1DF3       _callx
+ 0234:0175       _call_vec
+ 0000:1B27       _close
+ 0234:0171       _core_bits
+ 0234:016C       _core_name
+ 0000:1ADE       _creat
+ 0234:0000       _data_org
+ 0234:1192       _dont_reply
+ 0000:12D6       _do_alarm
+ 0000:06AA       _do_brk
+ 0000:0159       _do_brk2
+ 0000:0952       _do_exec
+ 0000:02E6       _do_fork
+ 0000:1654       _do_getset
+ 0000:103C       _do_kill
+ 0000:1056       _do_ksig
+ 0000:04BF       _do_mm_exit
+ 0000:1372       _do_pause
+ 0000:0FB2       _do_signal
+ 0000:0556       _do_wait
+ 0234:1214       _errno
+ 0234:115A       _err_code
+ 0000:1789       _free_mem
+ 0000:1AF7       _fstat
+ 0000:221A       _get_base
+ 0000:221D       _get_size
+ 0000:2221       _get_tot_mem
+ 0000:1E2E       _len
+ 0234:1216       _M
+ 0000:001C       _main
+ 0000:1886       _max_hole
+ 0000:19CC       _mem_copy
+ 0000:18A8       _mem_init
+ 0234:115C       _mm_call
+ 0000:04DA       _mm_exit
+ 0234:1178       _mm_in
+ 0234:1160       _mm_out
+ 0234:07D6       _mm_stack
+ 0234:1194       _mp
+ 0234:0556       _mproc
+ 0000:1A29       _no_sys
+ 0000:1B4C       _open
+ 0000:1A31       _panic
+ 0000:1E69       _printk
+ 0234:1190       _procs_in_use
+ 0000:1A79       _putc
+ 0000:1B65       _read
+ 0000:1E50       _receive
+ 0000:00DA       _reply
+ 0234:1158       _result2
+ 0234:1156       _res_ptr
+ 0000:1E4A       _send
+ 0000:1E56       _sendrec
+ 0000:1E56       _send_rec
+ 0000:12F9       _set_alarm
+ 0000:122C       _sig_proc
+ 0000:0882       _size_ok
+ 0234:0173       _stackpt
+ 0000:08FD       _stack_fault
+ 0000:1D29       _sys_abort
+ 0000:1CA2       _sys_copy
+ 0000:1C58       _sys_exec
+ 0000:1C33       _sys_fork
+ 0000:1BDF       _sys_getsp
+ 0000:1C7D       _sys_newmap
+ 0000:1C0E       _sys_sig
+ 0000:1CCE       _sys_times
+ 0000:1BBA       _sys_xit
+ 0000:1D4E       _tell_fs
+ 0000:1387       _unpause
+ 0234:115E       _who
+ 0000:1B95       _write
+ 0234:122E       __end
+
+  Address         Publics by Value
+
+ 0000:0000       $main
+ 0000:001C       _main
+ 0000:00DA       _reply
+ 0000:0159       _do_brk2
+ 0000:02E6       _do_fork
+ 0000:04BF       _do_mm_exit
+ 0000:04DA       _mm_exit
+ 0000:0556       _do_wait
+ 0000:06AA       _do_brk
+ 0000:0703       _adjust
+ 0000:0882       _size_ok
+ 0000:08FD       _stack_fault
+ 0000:0952       _do_exec
+ 0000:0FB2       _do_signal
+ 0000:103C       _do_kill
+ 0000:1056       _do_ksig
+ 0000:122C       _sig_proc
+ 0000:12D6       _do_alarm
+ 0000:12F9       _set_alarm
+ 0000:1372       _do_pause
+ 0000:1387       _unpause
+ 0000:1654       _do_getset
+ 0000:173A       _alloc_mem
+ 0000:1789       _free_mem
+ 0000:1886       _max_hole
+ 0000:18A8       _mem_init
+ 0000:18E9       _allowed
+ 0000:19CC       _mem_copy
+ 0000:1A29       _no_sys
+ 0000:1A31       _panic
+ 0000:1A79       _putc
+ 0000:1ADE       _creat
+ 0000:1AF7       _fstat
+ 0000:1B27       _close
+ 0000:1B4C       _open
+ 0000:1B65       _read
+ 0000:1B95       _write
+ 0000:1BBA       _sys_xit
+ 0000:1BDF       _sys_getsp
+ 0000:1C0E       _sys_sig
+ 0000:1C33       _sys_fork
+ 0000:1C58       _sys_exec
+ 0000:1C7D       _sys_newmap
+ 0000:1CA2       _sys_copy
+ 0000:1CCE       _sys_times
+ 0000:1D29       _sys_abort
+ 0000:1D4E       _tell_fs
+ 0000:1D72       _callm1
+ 0000:1DA7       _callm3
+ 0000:1DF3       _callx
+ 0000:1E2E       _len
+ 0000:1E4A       _send
+ 0000:1E50       _receive
+ 0000:1E56       _sendrec
+ 0000:1E56       _send_rec
+ 0000:1E69       _printk
+ 0000:221A       _get_base
+ 0000:221D       _get_size
+ 0000:2221       _get_tot_mem
+ 0000:2247       N_LDIV@
+ 0000:224A       LDIV@
+ 0000:224A       F_LDIV@
+ 0000:224E       N_LUDIV@
+ 0000:2251       F_LUDIV@
+ 0000:2251       LUDIV@
+ 0000:2256       N_LMOD@
+ 0000:2259       F_LMOD@
+ 0000:2259       LMOD@
+ 0000:225E       N_LUMOD@
+ 0000:2261       LUMOD@
+ 0000:2261       F_LUMOD@
+ 0000:22F5       N_LXLSH@
+ 0000:22F8       LXLSH@
+ 0000:22F8       F_LXLSH@
+ 0000:2316       N_LXRSH@
+ 0000:2319       LXRSH@
+ 0000:2319       F_LXRSH@
+ 0234:0000       _data_org
+ 0234:0010       brksize
+ 0234:0012       sp_limit
+ 0234:016C       _core_name
+ 0234:0171       _core_bits
+ 0234:0173       _stackpt
+ 0234:0175       _call_vec
+ 0234:0556       _mproc
+ 0234:07D6       _mm_stack
+ 0234:1156       _res_ptr
+ 0234:1158       _result2
+ 0234:115A       _err_code
+ 0234:115C       _mm_call
+ 0234:115E       _who
+ 0234:1160       _mm_out
+ 0234:1178       _mm_in
+ 0234:1190       _procs_in_use
+ 0234:1192       _dont_reply
+ 0234:1194       _mp
+ 0234:1214       _errno
+ 0234:1216       _M
+ 0234:122E       __end
+
+Program entry point at 0000:0000
+

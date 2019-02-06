@@ -1,0 +1,20 @@
+
+
+DOS-header:
+          nr of pages:    19h    (  25 dec)
+   bytes in last page:    69h    ( 105 dec)
+    min. free mem *16:   102h    ( 258 dec)
+           stack-size:   3e8h    (1000 dec)
+    stack-pointer val:     0h    (   0 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   2c50h   ( 11344 dec)
+            data-size:    219h   (   537 dec)
+             bss-size:   1020h   (  4128 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   3e89h   ( 16009 dec)
+
+            text+data =   2e69h

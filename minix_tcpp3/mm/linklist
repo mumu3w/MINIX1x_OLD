@@ -1,0 +1,6 @@
+..\mlib\head+
+main+forkexit+break+exec+signal+
+getset+alloc+utility+table+putc
+mm
+mm
+..\mlib\minix

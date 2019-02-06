@@ -1,0 +1,105 @@
+
+ Start  Stop   Length Name                   Class
+ 00000H 00855H 00856H _TEXT                  CODE
+ 00860H 0087FH 00020H _DATAB                 DATA
+ 00880H 00927H 000A8H _DATA                  DATA
+ 00928H 00928H 00000H CONST                  CONST
+ 00928H 00928H 00000H _DATAT                 CONST
+ 00928H 00928H 00000H _BSS                   BSS
+ 00928H 00A61H 0013AH C_COMMON               BSS
+ 00A62H 00A62H 00000H _DATAU                 BSS
+ 00A62H 00A62H 00000H _DATAV                 BSS
+ 00A70H 00A70H 00000H @STACK                 STACK
+
+ Origin   Group
+ 0086:0   DGROUP
+
+  Address         Publics by Name
+
+ 0000:0000       $MAIN
+ 0000:080B       _begsig
+ 0086:0010       _BRKSIZE
+ 0000:06EE       _callm1
+ 0000:072D       _callm3
+ 0000:0791       _callx
+ 0000:0282       _close
+ 0086:0000       _DATA_ORG
+ 0086:0202       _END
+ 0086:00FE       _errno
+ 0000:02AE       _execl
+ 0000:02CE       _execle
+ 0000:050C       _execn
+ 0000:0304       _execv
+ 0000:0323       _execve
+ 0000:0552       _exit
+ 0000:057A       _fork
+ 0000:022F       _getline
+ 0000:07DF       _len
+ 0086:00B0       _M
+ 0000:001C       _MAIN
+ 0086:0020       _name
+ 0086:00FC       _nullptr
+ 0000:05A0       _open
+ 0086:00E8       _pid
+ 0086:0200       _pidct
+ 0000:05C4       _read
+ 0000:083F       _RECEIVE
+ 0000:083A       _SEND
+ 0000:0844       _sendrec
+ 0000:0844       _SEND_REC
+ 0000:05F4       _signal
+ 0086:0012       _SP_LIMIT
+ 0086:0100       _stack
+ 0086:002A       _STACKPT
+ 0000:0177       _startup
+ 0000:0660       _sync
+ 0086:00C8       _vectab
+ 0000:068A       _wait
+ 0000:06BE       _write
+ 0000:9876  Abs  __ACRTUSED
+
+  Address         Publics by Value
+
+ 0000:0000       $MAIN
+ 0000:001C       _MAIN
+ 0000:0177       _startup
+ 0000:022F       _getline
+ 0000:0282       _close
+ 0000:02AE       _execl
+ 0000:02CE       _execle
+ 0000:0304       _execv
+ 0000:0323       _execve
+ 0000:050C       _execn
+ 0000:0552       _exit
+ 0000:057A       _fork
+ 0000:05A0       _open
+ 0000:05C4       _read
+ 0000:05F4       _signal
+ 0000:0660       _sync
+ 0000:068A       _wait
+ 0000:06BE       _write
+ 0000:06EE       _callm1
+ 0000:072D       _callm3
+ 0000:0791       _callx
+ 0000:07DF       _len
+ 0000:080B       _begsig
+ 0000:083A       _SEND
+ 0000:083F       _RECEIVE
+ 0000:0844       _sendrec
+ 0000:0844       _SEND_REC
+ 0086:0000       _DATA_ORG
+ 0086:0010       _BRKSIZE
+ 0086:0012       _SP_LIMIT
+ 0086:0020       _name
+ 0086:002A       _STACKPT
+ 0086:00B0       _M
+ 0086:00C8       _vectab
+ 0086:00E8       _pid
+ 0086:00FC       _nullptr
+ 0086:00FE       _errno
+ 0086:0100       _stack
+ 0086:0200       _pidct
+ 0086:0202       _END
+ 0000:9876  Abs  __ACRTUSED
+
+Program entry point at 0000:0000

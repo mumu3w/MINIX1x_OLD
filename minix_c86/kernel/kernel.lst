@@ -1,0 +1,24 @@
+
+Microsoft (R) 8086 Object Linker  Version 3.05
+Copyright (C) Microsoft Corp 1983, 1984, 1985.  All rights reserved.
+
+
+
+DOS-header:
+          nr of pages:    37h    (  55 dec)
+   bytes in last page:    65h    ( 101 dec)
+    min. free mem *16:   1c1h    ( 449 dec)
+           stack-size:   867h    (2151 dec)
+    stack-pointer val:     0h    (   0 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   6240h   ( 25152 dec)
+            data-size:    825h   (  2085 dec)
+             bss-size:   1c10h   (  7184 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   8675h   ( 34421 dec)
+
+            text+data =   6a65h

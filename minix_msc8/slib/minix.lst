@@ -1,0 +1,423 @@
+_abort............abort             _abs..............abs
+_access...........access            _alarm............alarm
+_atoi.............atoi              _atol.............atol
+_bcopy............bcopy             _BEGSIG...........catchsig
+_brk..............brk               _brk2.............brk2
+_callm1...........call              _callm3...........call
+_callx............call              _chdir............chdir
+_chmod............chmod             _chown............chown
+_chroot...........chroot            _close............close
+_creat............creat             _crypt............crypt
+_dup..............dup               _dup2.............dup2
+_endgrent.........getgrent          _endpwent.........getpwent
+_error_message....perror            _execl............exec
+_execle...........exec              _execn............exec
+_execv............exec              _execve...........exec
+_exit.............exit              _fclose...........fclose
+_fflush...........fflush            _fgets............fgets
+_fopen............fopen             _fork.............fork
+_fprintf..........fprintf           _fputs............fputs
+_fread............fread             _free.............malloc
+_freopen..........freopen           _fscanf...........scanf
+_fseek............fseek             _fstat............fstat
+_ftell............ftell             _fwrite...........fwrite
+_getc.............getc              _getegid..........getegid
+_getenv...........getenv            _geteuid..........geteuid
+_getgid...........getgid            _getgrent.........getgrent
+_getgrgid.........getgrent          _getgrnam.........getgrent
+_getpass..........getpass           _getpid...........getpid
+_getpwent.........getpwent          _getpwnam.........getpwent
+_getpwuid.........getpwent          _gets.............gets
+_getuid...........getuid            _GET_BASE.........getutil
+_GET_SIZE.........getutil           _GET_TOT_MEM......getutil
+_index............index             _ioctl............ioctl
+_isatty...........isatty            _itoa.............itoa
+_kill.............kill              _len..............call
+_link.............link              _lseek............lseek
+_M................message           _malloc...........malloc
+_mknod............mknod             _mktemp...........mktemp
+_mount............mount             _open.............open
+_pause............pause             _perror...........perror
+_pipe.............pipe              _printf...........fprintf
+_printk...........printk            _prints...........prints
+_putc.............putc              _rand.............rand
+_read.............read              _realloc..........malloc
+_RECEIVE..........sendrec           _regcomp..........regexp
+_regexec..........regexp            _regsub...........regsub
+_rindex...........rindex            _sbrk.............brk
+_scanf............scanf             _SEND.............sendrec
+_SENDREC..........sendrec           _SEND_REC.........sendrec
+_setbuf...........setbuf            _setgid...........setgid
+_setgrent.........getgrent          _setpwent.........getpwent
+_setuid...........setuid            _signal...........signal
+_sleep............sleep             _sprintf..........sprintf
+_sscanf...........scanf             _stat.............stat
+_std_err..........stderr            _stime............stime
+_strcat...........strcat            _strcmp...........strcmp
+_strcpy...........strcpy            _strlen...........strlen
+_strncat..........strncat           _strncmp..........strncmp
+_strncpy..........strncpy           _sync.............sync
+_sys_abort........syslib            _sys_copy.........syslib
+_sys_exec.........syslib            _sys_fork.........syslib
+_sys_getsp........syslib            _sys_newmap.......syslib
+_sys_sig..........syslib            _sys_times........syslib
+_sys_xit..........syslib            _tell_fs..........syslib
+_time.............time              _times............times
+_umask............umask             _umount...........umount
+_ungetc...........ungetc            _unlink...........unlink
+_utime............utime             _wait.............wait
+_write............write             __aNldiv..........anldiv
+__aNlmul..........anlmul            __aNlrem..........anlrem
+__aNlshl..........anlshl            __aNlshr..........anlshr
+__aNNalmul........aNNalmul          __aNNalrem........aNNalrem
+__aNNalshl........annalshl          __aNNaulmul.......aNNalmul
+__aNulmul.........anlmul            __cleanup.........cleanup
+__ctype_..........ctype             __doprintf........doprintf
+__doscanf.........scanf             __io_table........printdat
+__stderr..........printdat          __stdin...........printdat
+__stdout..........printdat          ___stb............stb
+
+
+abort             Offset: 00000010H  Code and data size: 17H
+  _abort          
+
+abs               Offset: 00000130H  Code and data size: 17H
+  _abs            
+
+access            Offset: 00000240H  Code and data size: 23H
+  _access         
+
+alarm             Offset: 00000370H  Code and data size: 28H
+  _alarm          
+
+atoi              Offset: 000004a0H  Code and data size: a9H
+  _atoi           
+
+atol              Offset: 00000650H  Code and data size: a9H
+  _atol           
+
+bcopy             Offset: 00000810H  Code and data size: 30H
+  _bcopy          
+
+brk               Offset: 00000930H  Code and data size: 6dH
+  _brk              _sbrk           
+
+brk2              Offset: 00000ad0H  Code and data size: 2bH
+  _brk2           
+
+call              Offset: 00000c10H  Code and data size: 11dH
+  _callm1           _callm3           _callx            _len
+
+catchsig          Offset: 00000ec0H  Code and data size: 31H
+  _BEGSIG         
+
+chdir             Offset: 00001040H  Code and data size: 24H
+  _chdir          
+
+chmod             Offset: 00001170H  Code and data size: 23H
+  _chmod          
+
+chown             Offset: 000012a0H  Code and data size: 33H
+  _chown          
+
+chroot            Offset: 000013f0H  Code and data size: 24H
+  _chroot         
+
+cleanup           Offset: 00001520H  Code and data size: 36H
+  __cleanup       
+
+close             Offset: 00001680H  Code and data size: 2bH
+  _close          
+
+creat             Offset: 000017b0H  Code and data size: 23H
+  _creat          
+
+ctype             Offset: 000018e0H  Code and data size: 81H
+  __ctype_        
+
+doprintf          Offset: 00001a60H  Code and data size: 567H
+  __doprintf      
+
+dup               Offset: 00002190H  Code and data size: 2bH
+  _dup            
+
+dup2              Offset: 000022c0H  Code and data size: 31H
+  _dup2           
+
+exec              Offset: 00002400H  Code and data size: 2a4H
+  _execl            _execle           _execn            _execv
+  _execve         
+
+exit              Offset: 00002820H  Code and data size: 28H
+  _exit           
+
+fclose            Offset: 00002950H  Code and data size: 90H
+  _fclose         
+
+fflush            Offset: 00002b20H  Code and data size: 7fH
+  _fflush         
+
+fgets             Offset: 00002cb0H  Code and data size: 68H
+  _fgets          
+
+fopen             Offset: 00002e20H  Code and data size: 15aH
+  _fopen          
+
+fork              Offset: 000030d0H  Code and data size: 26H
+  _fork           
+
+fprintf           Offset: 00003200H  Code and data size: 67H
+  _fprintf          _printf         
+
+fputs             Offset: 000033b0H  Code and data size: 38H
+  _fputs          
+
+fread             Offset: 000034f0H  Code and data size: 6dH
+  _fread          
+
+freopen           Offset: 00003660H  Code and data size: 30H
+  _freopen        
+
+fseek             Offset: 000037b0H  Code and data size: 157H
+  _fseek          
+
+fstat             Offset: 00003a20H  Code and data size: 2dH
+  _fstat          
+
+ftell             Offset: 00003b60H  Code and data size: 9bH
+  _ftell          
+
+fwrite            Offset: 00003d00H  Code and data size: 71H
+  _fwrite         
+
+getc              Offset: 00003e80H  Code and data size: dbH
+  _getc           
+
+getegid           Offset: 00004060H  Code and data size: 49H
+  _getegid        
+
+getenv            Offset: 000041c0H  Code and data size: 68H
+  _getenv         
+
+geteuid           Offset: 00004340H  Code and data size: 49H
+  _geteuid        
+
+getgid            Offset: 000044a0H  Code and data size: 26H
+  _getgid         
+
+getgrent          Offset: 000045d0H  Code and data size: 73aH
+  _endgrent         _getgrent         _getgrgid         _getgrnam
+  _setgrent       
+
+getpass           Offset: 00004ac0H  Code and data size: b4H
+  _getpass        
+
+getpid            Offset: 00004cc0H  Code and data size: 26H
+  _getpid         
+
+gets              Offset: 00004df0H  Code and data size: 60H
+  _gets           
+
+getuid            Offset: 00004f60H  Code and data size: 26H
+  _getuid         
+
+getutil           Offset: 00005090H  Code and data size: 2dH
+  _GET_BASE         _GET_SIZE         _GET_TOT_MEM    
+
+index             Offset: 00005210H  Code and data size: 36H
+  _index          
+
+ioctl             Offset: 00005340H  Code and data size: 1a5H
+  _ioctl          
+
+isatty            Offset: 000056a0H  Code and data size: 33H
+  _isatty         
+
+itoa              Offset: 000057e0H  Code and data size: b2H
+  _itoa           
+
+kill              Offset: 000059b0H  Code and data size: 2aH
+  _kill           
+
+link              Offset: 00005ae0H  Code and data size: 3bH
+  _link           
+
+lseek             Offset: 00005c30H  Code and data size: 4fH
+  _lseek          
+
+malloc            Offset: 00005da0H  Code and data size: 242H
+  _free             _malloc           _realloc        
+
+mknod             Offset: 00006160H  Code and data size: 33H
+  _mknod          
+
+mktemp            Offset: 000062b0H  Code and data size: 5aH
+  _mktemp         
+
+mount             Offset: 00006420H  Code and data size: 3aH
+  _mount          
+
+open              Offset: 00006570H  Code and data size: 23H
+  _open           
+
+pause             Offset: 000066a0H  Code and data size: 26H
+  _pause          
+
+perror            Offset: 000067d0H  Code and data size: 35cH
+  _error_message    _perror         
+
+pipe              Offset: 00006d70H  Code and data size: 4bH
+  _pipe           
+
+printdat          Offset: 00006ed0H  Code and data size: 46H
+  __io_table        __stderr          __stdin           __stdout
+
+printk            Offset: 00007070H  Code and data size: 3f6H
+  _printk         
+
+prints            Offset: 000075f0H  Code and data size: 163H
+  _prints         
+
+putc              Offset: 000078d0H  Code and data size: 100H
+  _putc           
+
+rand              Offset: 00007ae0H  Code and data size: 3dH
+  _rand           
+
+read              Offset: 00007c40H  Code and data size: 2fH
+  _read           
+
+regexp            Offset: 00007d80H  Code and data size: 130bH
+  _regcomp          _regexec        
+
+regsub            Offset: 000097b0H  Code and data size: 1a0H
+  _regsub         
+
+rindex            Offset: 00009a90H  Code and data size: 38H
+  _rindex         
+
+scanf             Offset: 00009bc0H  Code and data size: 6f5H
+  _fscanf           _scanf            _sscanf           __doscanf
+
+sendrec           Offset: 0000a540H  Code and data size: 1cH
+  _RECEIVE          _SEND             _SENDREC          _SEND_REC
+
+setbuf            Offset: 0000a6a0H  Code and data size: 5bH
+  _setbuf         
+
+setgid            Offset: 0000a810H  Code and data size: 28H
+  _setgid         
+
+setuid            Offset: 0000a940H  Code and data size: 28H
+  _setuid         
+
+signal            Offset: 0000aa70H  Code and data size: 6bH
+  _signal         
+
+sleep             Offset: 0000ac20H  Code and data size: 36H
+  _sleep          
+
+sprintf           Offset: 0000ada0H  Code and data size: 44H
+  _sprintf        
+
+stat              Offset: 0000af00H  Code and data size: 34H
+  _stat           
+
+stb               Offset: 0000b040H  Code and data size: 3cH
+  ___stb          
+
+stderr            Offset: 0000b170H  Code and data size: 3fH
+  _std_err        
+
+stime             Offset: 0000b2c0H  Code and data size: 2cH
+  _stime          
+
+strcat            Offset: 0000b400H  Code and data size: 5aH
+  _strcat         
+
+strcmp            Offset: 0000b550H  Code and data size: 48H
+  _strcmp         
+
+strcpy            Offset: 0000b690H  Code and data size: 44H
+  _strcpy         
+
+strlen            Offset: 0000b7d0H  Code and data size: 31H
+  _strlen         
+
+strncat           Offset: 0000b900H  Code and data size: 6dH
+  _strncat        
+
+strncmp           Offset: 0000ba70H  Code and data size: 54H
+  _strncmp        
+
+strncpy           Offset: 0000bbc0H  Code and data size: 45H
+  _strncpy        
+
+sync              Offset: 0000bd00H  Code and data size: 29H
+  _sync           
+
+syslib            Offset: 0000be30H  Code and data size: 218H
+  _sys_abort        _sys_copy         _sys_exec         _sys_fork
+  _sys_getsp        _sys_newmap       _sys_sig          _sys_times
+  _sys_xit          _tell_fs        
+
+time              Offset: 0000c250H  Code and data size: 7aH
+  _time           
+
+times             Offset: 0000c3f0H  Code and data size: 65H
+  _times          
+
+umask             Offset: 0000c580H  Code and data size: 2bH
+  _umask          
+
+umount            Offset: 0000c6b0H  Code and data size: 24H
+  _umount         
+
+ungetc            Offset: 0000c7e0H  Code and data size: 71H
+  _ungetc         
+
+unlink            Offset: 0000c950H  Code and data size: 24H
+  _unlink         
+
+utime             Offset: 0000ca80H  Code and data size: 49H
+  _utime          
+
+wait              Offset: 0000cc00H  Code and data size: 34H
+  _wait           
+
+write             Offset: 0000cd40H  Code and data size: 2fH
+  _write          
+
+message           Offset: 0000ce80H  Code and data size: 18H
+  _M              
+
+getpwent          Offset: 0000cf80H  Code and data size: 768H
+  _endpwent         _getpwent         _getpwnam         _getpwuid
+  _setpwent       
+
+crypt             Offset: 0000d4c0H  Code and data size: 1eeH
+  _crypt          
+
+anldiv            Offset: 0000d7c0H  Code and data size: 9aH
+  __aNldiv        
+
+anlmul            Offset: 0000d8e0H  Code and data size: 32H
+  __aNlmul          __aNulmul       
+
+anlrem            Offset: 0000d9b0H  Code and data size: a0H
+  __aNlrem        
+
+anlshl            Offset: 0000dae0H  Code and data size: bH
+  __aNlshl        
+
+anlshr            Offset: 0000db70H  Code and data size: bH
+  __aNlshr        
+
+annalshl          Offset: 0000dc00H  Code and data size: 1cH
+  __aNNalshl      
+
+aNNalrem          Offset: 0000dcc0H  Code and data size: 1fH
+  __aNNalrem      
+
+aNNalmul          Offset: 0000dd80H  Code and data size: 1fH
+  __aNNalmul        __aNNaulmul     

@@ -1,0 +1,2472 @@
+MAKE Version 3.6  Copyright (c) 1991 Borland International
+
+Available memory 15338832 bytes
+
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c ar.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+ar.c:
+Warning ar.c 81: Function should return a value in function usage
+Warning ar.c 95: Function should return a value in function error
+Warning ar.c 152: Function should return a value in function catch
+Warning ar.c 211: Function should return a value in function main
+Warning ar.c 323: Function should return a value in function get
+Warning ar.c 364: Function should return a value in function add
+Warning ar.c 384: Function should return a value in function extract
+Warning ar.c 406: Function should return a value in function copy_member
+Warning ar.c 424: Function should return a value in function print
+Warning ar.c 445: Function should return a value in function print_mode
+Warning ar.c 472: Function should return a value in function litoa
+Warning ar.c 481: Function should return a value in function mwrite
+Warning ar.c 491: Function should return a value in function show
+Warning ar.c 504: Function should return a value in function p_name
+Warning ar.c 575: Function should return a value in function date
+
+	Available memory 4118020
+	tlink /x/n/c/d ..\mlib\crtso ar,ar,ar,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp ar
+
+
+DOS-header:
+          nr of pages:     bh    (  11 dec)
+   bytes in last page:   192h    ( 402 dec)
+    min. free mem *16:   40bh    (1035 dec)
+           stack-size:   6e8h    (1768 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   1200h   (  4608 dec)
+            data-size:    192h   (   402 dec)
+             bss-size:   2cb0h   ( 11440 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   5442h   ( 21570 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c basename.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+basename.c:
+Warning basename.c 35: Function should return a value in function main
+
+	Available memory 4156640
+	tlink /x/n/c/d ..\mlib\crtso basename,basename,basename,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp basename
+
+
+DOS-header:
+          nr of pages:     3h    (   3 dec)
+   bytes in last page:   1fbh    ( 507 dec)
+    min. free mem *16:   14bh    ( 331 dec)
+           stack-size:    57h    (  87 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    3d0h   (   976 dec)
+            data-size:     2bh   (    43 dec)
+             bss-size:     b0h   (   176 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   18abh   (  6315 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c cal.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+cal.c:
+Warning cal.c 74: Function should return a value in function main
+Warning cal.c 106: Function should return a value in function doyear
+Warning cal.c 121: Function should return a value in function domonth
+Warning cal.c 153: Function should return a value in function output
+Warning cal.c 188: Function should return a value in function calendar
+Warning cal.c 197: Function should return a value in function usage
+Warning cal.c 300: Function should return a value in function setmonth
+Warning cal.c 322: 'Jan1' is declared as both external and static
+
+	Available memory 4137876
+	tlink /x/n/c/d ..\mlib\crtso cal,cal,cal,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp cal
+
+
+DOS-header:
+          nr of pages:     9h    (   9 dec)
+   bytes in last page:   132h    ( 306 dec)
+    min. free mem *16:   1e0h    ( 480 dec)
+           stack-size:   249h    ( 585 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    dd0h   (  3536 dec)
+            data-size:    162h   (   354 dec)
+             bss-size:    a00h   (  2560 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   2d32h   ( 11570 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c cat.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+cat.c:
+Warning cat.c 52: Function should return a value in function main
+Warning cat.c 87: Function should return a value in function flush
+Warning cat.c 94: Function should return a value in function quit
+
+	Available memory 4141104
+	tlink /x/n/c/d ..\mlib\crtso cat,cat,cat,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp cat
+
+
+DOS-header:
+          nr of pages:     5h    (   5 dec)
+   bytes in last page:   131h    ( 305 dec)
+    min. free mem *16:   163h    ( 355 dec)
+           stack-size:    e5h    ( 229 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    470h   (  1136 dec)
+            data-size:    2c1h   (   705 dec)
+             bss-size:    230h   (   560 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   1d61h   (  7521 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c cc.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+cc.c:
+Warning cc.c 138: Function should return a value in function trapcc
+Warning cc.c 374: Function should return a value in function append
+Warning cc.c 387: Function should return a value in function concat
+Warning cc.c 398: Possibly incorrect assignment in function mkstr
+Warning cc.c 399: Possibly incorrect assignment in function mkstr
+Warning cc.c 418: Possibly incorrect assignment in function basename
+Warning cc.c 420: Function should return a value in function basename
+Warning cc.c 456: 'fd' is assigned a value that is never used in function runvec
+Warning cc.c 506: Function should return a value in function panic
+Warning cc.c 506: Parameter 'argv' is never used in function panic
+Warning cc.c 529: Function should return a value in function pr_vec
+Warning cc.c 557: Function should return a value in function ex_vec
+Warning cc.c 571: Function should return a value in function mktempname
+
+	Available memory 4101716
+	tlink /x/n/c/d ..\mlib\crtso cc,cc,cc,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp cc
+
+
+DOS-header:
+          nr of pages:     ch    (  12 dec)
+   bytes in last page:    d2h    ( 210 dec)
+    min. free mem *16:   2b8h    ( 696 dec)
+           stack-size:   470h    (1136 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   11a0h   (  4512 dec)
+            data-size:    332h   (   818 dec)
+             bss-size:   1780h   (  6016 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   4052h   ( 16466 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c chmem.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+chmem.c:
+Warning chmem.c 105: Function should return a value in function main
+Warning chmem.c 111: Function should return a value in function usage
+Warning chmem.c 120: Function should return a value in function stderr3
+
+	Available memory 4146752
+	tlink /x/n/c/d ..\mlib\crtso chmem,chmem,chmem,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp chmem
+
+
+DOS-header:
+          nr of pages:     8h    (   8 dec)
+   bytes in last page:    cch    ( 204 dec)
+    min. free mem *16:   1c3h    ( 451 dec)
+           stack-size:   1e2h    ( 482 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    bc0h   (  3008 dec)
+            data-size:    10ch   (   268 dec)
+             bss-size:    830h   (  2096 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   28fch   ( 10492 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c chmod.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+chmod.c:
+Warning chmod.c 34: Function should return a value in function main
+Warning chmod.c 53: Function should return a value in function Usage
+
+	Available memory 4152536
+	tlink /x/n/c/d ..\mlib\crtso chmod,chmod,chmod,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp chmod
+
+
+DOS-header:
+          nr of pages:     3h    (   3 dec)
+   bytes in last page:   1f2h    ( 498 dec)
+    min. free mem *16:   14bh    ( 331 dec)
+           stack-size:    5ah    (  90 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    3a0h   (   928 dec)
+            data-size:     52h   (    82 dec)
+             bss-size:     b0h   (   176 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   18a2h   (  6306 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c chown.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+chown.c:
+Warning chown.c 44: Function should return a value in function main
+
+	Available memory 4141284
+	tlink /x/n/c/d ..\mlib\crtso chown,chown,chown,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp chown
+
+
+DOS-header:
+          nr of pages:     ah    (  10 dec)
+   bytes in last page:    4eh    (  78 dec)
+    min. free mem *16:   214h    ( 532 dec)
+           stack-size:   2dfh    ( 735 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    d10h   (  3344 dec)
+            data-size:    33eh   (   830 dec)
+             bss-size:    d40h   (  3392 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   318eh   ( 12686 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c clr.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+clr.c:
+Warning clr.c 9: Function should return a value in function main
+
+	Available memory 4157920
+	tlink /x/n/c/d ..\mlib\crtso clr,clr,clr,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp clr
+
+
+DOS-header:
+          nr of pages:     3h    (   3 dec)
+   bytes in last page:    bbh    ( 187 dec)
+    min. free mem *16:   14bh    ( 331 dec)
+           stack-size:    41h    (  65 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    2b0h   (   688 dec)
+            data-size:      bh   (    11 dec)
+             bss-size:     b0h   (   176 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   176bh   (  5995 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c cmp.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+cmp.c:
+Warning cmp.c 55: Function should return a value in function main
+Warning cmp.c 114: Function should return a value in function usage
+Warning cmp.c 124: Function should return a value in function cantopen
+
+	Available memory 4147336
+	tlink /x/n/c/d ..\mlib\crtso cmp,cmp,cmp,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp cmp
+
+
+DOS-header:
+          nr of pages:     8h    (   8 dec)
+   bytes in last page:   150h    ( 336 dec)
+    min. free mem *16:   5cbh    (1483 dec)
+           stack-size:   9f8h    (2552 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    c80h   (  3200 dec)
+            data-size:     d0h   (   208 dec)
+             bss-size:   48b0h   ( 18608 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   6a00h   ( 27136 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c comm.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+comm.c:
+Warning comm.c 62: Function should return a value in function main
+Warning comm.c 69: Function should return a value in function usage
+Warning comm.c 79: Function should return a value in function error
+Warning comm.c 92: Function should return a value in function eopen
+Warning comm.c 185: Function should return a value in function putcol
+Warning comm.c 193: Function should return a value in function cpycol
+
+	Available memory 4146568
+	tlink /x/n/c/d ..\mlib\crtso comm,comm,comm,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp comm
+
+
+DOS-header:
+          nr of pages:     5h    (   5 dec)
+   bytes in last page:   137h    ( 311 dec)
+    min. free mem *16:   1d7h    ( 471 dec)
+           stack-size:   1a6h    ( 422 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    6e0h   (  1760 dec)
+            data-size:     57h   (    87 dec)
+             bss-size:    970h   (  2416 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   24a7h   (  9383 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c cp.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+cp.c:
+Warning cp.c 28: Constant out of range in comparison in function main
+Warning cp.c 49: Function should return a value in function main
+Warning cp.c 91: Function should return a value in function cp_to_dir
+Warning cp.c 116: Function should return a value in function copyfile
+Warning cp.c 122: Function should return a value in function usage
+Warning cp.c 154: Function should return a value in function stderr3
+
+	Available memory 4141360
+	tlink /x/n/c/d ..\mlib\crtso cp,cp,cp,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp cp
+
+
+DOS-header:
+          nr of pages:     7h    (   7 dec)
+   bytes in last page:    3bh    (  59 dec)
+    min. free mem *16:   543h    (1347 dec)
+           stack-size:   8deh    (2270 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    6e0h   (  1760 dec)
+            data-size:    35bh   (   859 dec)
+             bss-size:   4030h   ( 16432 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   5e6bh   ( 24171 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c cpdir.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+cpdir.c:
+Warning cpdir.c 48: Possibly incorrect assignment in function main
+Warning cpdir.c 67: Function should return a value in function main
+Warning cpdir.c 67: 'rc' is assigned a value that is never used in function main
+Warning cpdir.c 77: Possibly incorrect assignment in function cpdir
+Warning cpdir.c 79: Possibly incorrect assignment in function cpdir
+Warning cpdir.c 110: Function should return a value in function cpdir
+Warning cpdir.c 129: Function should return a value in function mkdir
+Warning cpdir.c 154: Function should return a value in function cp
+Warning cpdir.c 172: Function should return a value in function nonfatal
+Warning cpdir.c 179: Function should return a value in function fatal
+
+	Available memory 4136768
+	tlink /x/n/c/d ..\mlib\crtso cpdir,cpdir,cpdir,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp cpdir
+
+
+DOS-header:
+          nr of pages:     ah    (  10 dec)
+   bytes in last page:   164h    ( 356 dec)
+    min. free mem *16:   1c3h    ( 451 dec)
+           stack-size:   23ah    ( 570 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    f80h   (  3968 dec)
+            data-size:    1e4h   (   484 dec)
+             bss-size:    830h   (  2096 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   2d94h   ( 11668 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c date.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+date.c:
+Warning date.c 54: Function should return a value in function main
+Warning date.c 89: Function should return a value in function cv_time
+Warning date.c 137: Function should return a value in function set_time
+Warning date.c 157: Function should return a value in function bad
+Warning date.c 163: Function should return a value in function usage
+
+	Available memory 4134036
+	tlink /x/n/c/d ..\mlib\crtso date,date,date,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp date
+
+
+DOS-header:
+          nr of pages:     ch    (  12 dec)
+   bytes in last page:   194h    ( 404 dec)
+    min. free mem *16:   1c5h    ( 453 dec)
+           stack-size:   27bh    ( 635 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   1410h   (  5136 dec)
+            data-size:    184h   (   388 dec)
+             bss-size:    850h   (  2128 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   31e4h   ( 12772 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c dd.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+dd.c:
+Warning dd.c 95: Function should return a value in function puto
+Warning dd.c 95: 'n' is assigned a value that is never used in function puto
+Warning dd.c 103: Function should return a value in function statistics
+Warning dd.c 109: Function should return a value in function over
+Warning dd.c 320: Function should return a value in function cnull
+Warning dd.c 330: Function should return a value in function null
+Warning dd.c 339: Function should return a value in function extra
+Warning dd.c 346: Function should return a value in function done
+
+	Available memory 4110076
+	tlink /x/n/c/d ..\mlib\crtso dd,dd,dd,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp dd
+
+
+DOS-header:
+          nr of pages:     ch    (  12 dec)
+   bytes in last page:    52h    (  82 dec)
+    min. free mem *16:   1c8h    ( 456 dec)
+           stack-size:   275h    ( 629 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   1250h   (  4688 dec)
+            data-size:    202h   (   514 dec)
+             bss-size:    880h   (  2176 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   30d2h   ( 12498 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c df.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+df.c:
+Warning df.c 26: Function should return a value in function main
+Warning df.c 101: Function should return a value in function df
+Warning df.c 142: Function should return a value in function stderr2
+Warning df.c 154: Function should return a value in function num3
+Warning df.c 156: Undefined structure 'inode'
+Warning df.c 156: Undefined structure 'buf'
+
+	Available memory 4126400
+	tlink /x/n/c/d ..\mlib\crtso df,df,df,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp df
+
+
+DOS-header:
+          nr of pages:     7h    (   7 dec)
+   bytes in last page:   1d9h    ( 473 dec)
+    min. free mem *16:   14ch    ( 332 dec)
+           stack-size:   10eh    ( 270 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    840h   (  2112 dec)
+            data-size:    399h   (   921 dec)
+             bss-size:     c0h   (   192 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   2099h   (  8345 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c diff.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+diff.c:
+Warning diff.c 39: Function should return a value in function main
+Warning diff.c 48: Function should return a value in function fatal
+Warning diff.c 66: Possibly incorrect assignment in function new_line
+Warning diff.c 79: Function should return a value in function free_line
+Warning diff.c 130: Possibly incorrect assignment in function advance
+Warning diff.c 138: Function should return a value in function advance
+Warning diff.c 146: Possibly incorrect assignment in function aside
+Warning diff.c 154: Function should return a value in function aside
+Warning diff.c 162: Possibly incorrect assignment in function next
+Warning diff.c 186: Function should return a value in function init_f
+Warning diff.c 196: Function should return a value in function update
+Warning diff.c 237: Possibly incorrect assignment in function diff
+Warning diff.c 249: Possibly incorrect assignment in function diff
+Warning diff.c 260: Function should return a value in function diff
+Warning diff.c 268: Possibly incorrect assignment in function differ
+Warning diff.c 268: Possibly incorrect assignment in function differ
+Warning diff.c 292: Function should return a value in function differ
+Warning diff.c 310: Function should return a value in function range
+
+	Available memory 4134976
+	tlink /x/n/c/d ..\mlib\crtso diff,diff,diff,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp diff
+
+
+DOS-header:
+          nr of pages:     ch    (  12 dec)
+   bytes in last page:    7ch    ( 124 dec)
+    min. free mem *16:   1c3h    ( 451 dec)
+           stack-size:   258h    ( 600 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   13c0h   (  5056 dec)
+            data-size:     bch   (   188 dec)
+             bss-size:    830h   (  2096 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   30ach   ( 12460 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c dosread.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+dosread.c:
+Warning dosread.c 106: Function should return a value in function leave
+Warning dosread.c 114: Function should return a value in function usage
+Warning dosread.c 262: Function should return a value in function main
+Warning dosread.c 389: Function should return a value in function directory
+Warning dosread.c 419: Function should return a value in function extract
+Warning dosread.c 480: Function should return a value in function print
+Warning dosread.c 536: Function should return a value in function make_file
+Warning dosread.c 586: Function should return a value in function fill_date
+Warning dosread.c 683: Function should return a value in function modes
+Warning dosread.c 716: Function should return a value in function show
+Warning dosread.c 737: Function should return a value in function free_blocks
+Warning dosread.c 802: Possibly incorrect assignment in function print_string
+Warning dosread.c 819: Function should return a value in function print_string
+Warning dosread.c 867: Function should return a value in function link_fat
+Warning dosread.c 918: Possibly incorrect assignment in function add_path
+Warning dosread.c 919: Function should return a value in function add_path
+Warning dosread.c 927: Function should return a value in function bcopy
+Warning dosread.c 950: Function should return a value in function disk_io
+Warning dosread.c 957: Function should return a value in function bad
+
+	Available memory 4093796
+	tlink /x/n/c/d ..\mlib\crtso dosread,dosread,dosread,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+Warning: _bcopy defined in module dosread.c is duplicated in library file ..\mlib\minix.lib in module bcopy
+	..\tools\dos2out -dp dosread
+
+
+DOS-header:
+          nr of pages:    12h    (  18 dec)
+   bytes in last page:   151h    ( 337 dec)
+    min. free mem *16:   4b1h    (1201 dec)
+           stack-size:   95ah    (2394 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   1b20h   (  6944 dec)
+            data-size:    631h   (  1585 dec)
+             bss-size:   3710h   ( 14096 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   6c61h   ( 27745 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c echo.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+echo.c:
+Warning echo.c 29: Function should return a value in function main
+Warning echo.c 41: Function should return a value in function collect
+
+	Available memory 4152536
+	tlink /x/n/c/d ..\mlib\crtso echo,echo,echo,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp echo
+
+
+DOS-header:
+          nr of pages:     3h    (   3 dec)
+   bytes in last page:    58h    (  88 dec)
+    min. free mem *16:   1c3h    ( 451 dec)
+           stack-size:   12bh    ( 299 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    250h   (   592 dec)
+            data-size:      8h   (     8 dec)
+             bss-size:    830h   (  2096 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   1e88h   (  7816 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c find.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+find.c:
+Warning find.c 140: Function should return a value in function main
+Warning find.c 156: Possibly incorrect assignment in function find
+Warning find.c 181: Function should return a value in function find
+Warning find.c 230: Function should return a value in function check
+Warning find.c 245: Function should return a value in function ichk
+Warning find.c 306: Function should return a value in function number
+Warning find.c 368: Function should return a value in function checkarg
+Warning find.c 469: Function should return a value in function nonfatal
+Warning find.c 476: Function should return a value in function fatal
+Warning find.c 550: Function should return a value in function getpath
+Warning find.c 575: Possibly incorrect assignment in function find_bin
+
+	Available memory 4115460
+	tlink /x/n/c/d ..\mlib\crtso find,find,find,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp find
+
+
+DOS-header:
+          nr of pages:    11h    (  17 dec)
+   bytes in last page:    d8h    ( 216 dec)
+    min. free mem *16:   1cch    ( 460 dec)
+           stack-size:   333h    ( 819 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   1bf0h   (  7152 dec)
+            data-size:    2e8h   (   744 dec)
+             bss-size:    8c0h   (  2240 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   3b98h   ( 15256 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c fix.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+fix.c:
+Warning fix.c 104: Function should return a value in function main
+Warning fix.c 163: Function should return a value in function fatal
+
+	Available memory 4131812
+	tlink /x/n/c/d ..\mlib\crtso fix,fix,fix,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp fix
+
+
+DOS-header:
+          nr of pages:     bh    (  11 dec)
+   bytes in last page:   10eh    ( 270 dec)
+    min. free mem *16:   1c3h    ( 451 dec)
+           stack-size:   24eh    ( 590 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   1180h   (  4480 dec)
+            data-size:    18eh   (   398 dec)
+             bss-size:    830h   (  2096 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   2f3eh   ( 12094 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c fdisk.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+fdisk.c:
+Warning fdisk.c 173: Function should return a value in function getboot
+Warning fdisk.c 218: Function should return a value in function putboot
+Warning fdisk.c 247: Function should return a value in function load_from_file
+Warning fdisk.c 281: Function should return a value in function save_to_file
+Warning fdisk.c 310: Function should return a value in function dump_table
+Warning fdisk.c 326: Function should return a value in function dpl_partitions
+Warning fdisk.c 355: Function should return a value in function dpl_entry
+Warning fdisk.c 379: Constant out of range in comparison in function chk_table
+Warning fdisk.c 430: Function should return a value in function sec_to_hst
+Warning fdisk.c 456: Function should return a value in function change_table
+Warning fdisk.c 517: Function should return a value in function get_partition
+Warning fdisk.c 542: Function should return a value in function print_menu
+
+	Available memory 4131828
+	tlink /x/n/c/d ..\mlib\crtso fdisk,fdisk,fdisk,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp fdisk
+
+
+DOS-header:
+          nr of pages:    10h    (  16 dec)
+   bytes in last page:    18h    (  24 dec)
+    min. free mem *16:   1e4h    ( 484 dec)
+           stack-size:   34bh    ( 843 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   17f0h   (  6128 dec)
+            data-size:    428h   (  1064 dec)
+             bss-size:    a40h   (  2624 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   3a58h   ( 14936 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c getlf.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+getlf.c:
+Warning getlf.c 19: Function should return a value in function main
+
+	Available memory 4157664
+	tlink /x/n/c/d ..\mlib\crtso getlf,getlf,getlf,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp getlf
+
+
+DOS-header:
+          nr of pages:     3h    (   3 dec)
+   bytes in last page:    70h    ( 112 dec)
+    min. free mem *16:   142h    ( 322 dec)
+           stack-size:    2ch    (  44 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    260h   (   608 dec)
+            data-size:     10h   (    16 dec)
+             bss-size:     20h   (    32 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   1690h   (  5776 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c grep.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+grep.c:
+Warning grep.c 95: Function should return a value in function main
+Warning grep.c 123: Function should return a value in function match
+Warning grep.c 132: Function should return a value in function regerror
+Warning grep.c 142: Function should return a value in function pline
+Warning grep.c 149: Function should return a value in function usage
+Warning grep.c 171: Function should return a value in function done
+
+	Available memory 4136848
+	tlink /x/n/c/d ..\mlib\crtso grep,grep,grep,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp grep
+
+
+DOS-header:
+          nr of pages:    10h    (  16 dec)
+   bytes in last page:   1ffh    ( 511 dec)
+    min. free mem *16:   1ceh    ( 462 dec)
+           stack-size:   31dh    ( 797 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   1bd0h   (  7120 dec)
+            data-size:    22fh   (   559 dec)
+             bss-size:    8e0h   (  2272 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   3adfh   ( 15071 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c gres.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+gres.c:
+Warning gres.c 80: Function should return a value in function main
+Warning gres.c 105: Function should return a value in function process
+Warning gres.c 115: Function should return a value in function regerror
+Warning gres.c 169: Function should return a value in function pline
+Warning gres.c 188: Function should return a value in function dosub
+Warning gres.c 195: Function should return a value in function done
+
+	Available memory 4138128
+	tlink /x/n/c/d ..\mlib\crtso gres,gres,gres,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp gres
+
+
+DOS-header:
+          nr of pages:    14h    (  20 dec)
+   bytes in last page:    96h    ( 150 dec)
+    min. free mem *16:   1c5h    ( 453 dec)
+           stack-size:   37bh    ( 891 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   2210h   (  8720 dec)
+            data-size:    286h   (   646 dec)
+             bss-size:    850h   (  2128 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   40e6h   ( 16614 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c head.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+head.c:
+Warning head.c 52: Function should return a value in function main
+Warning head.c 71: Function should return a value in function do_file
+Warning head.c 78: Function should return a value in function usage
+
+	Available memory 4148280
+	tlink /x/n/c/d ..\mlib\crtso head,head,head,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp head
+
+
+DOS-header:
+          nr of pages:     7h    (   7 dec)
+   bytes in last page:   19eh    ( 414 dec)
+    min. free mem *16:   20ch    ( 524 dec)
+           stack-size:   259h    ( 601 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    b10h   (  2832 dec)
+            data-size:     8eh   (   142 dec)
+             bss-size:    cc0h   (  3264 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   2c5eh   ( 11358 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c kill.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+kill.c:
+Warning kill.c 14: Code has no effect in function main
+Warning kill.c 19: Code has no effect in function main
+Warning kill.c 29: Function should return a value in function main
+Warning kill.c 35: Function should return a value in function usage
+
+	Available memory 4151176
+	tlink /x/n/c/d ..\mlib\crtso kill,kill,kill,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp kill
+
+
+DOS-header:
+          nr of pages:     4h    (   4 dec)
+   bytes in last page:    e1h    ( 225 dec)
+    min. free mem *16:   14ch    ( 332 dec)
+           stack-size:    69h    ( 105 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    4b0h   (  1200 dec)
+            data-size:     31h   (    49 dec)
+             bss-size:     c0h   (   192 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   19a1h   (  6561 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c libpack.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+libpack.c:
+Warning libpack.c 239: 'ppt' is assigned a value that is never used in function pack88
+Warning libpack.c 281: Function should return a value in function hainit
+
+	Available memory 4141548
+	tlink /x/n/c/d ..\mlib\crtso libpack,libpack,libpack,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp libpack
+
+
+DOS-header:
+          nr of pages:     6h    (   6 dec)
+   bytes in last page:   123h    ( 291 dec)
+    min. free mem *16:   b37h    (2871 dec)
+           stack-size:  14cch    (5324 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    460h   (  1120 dec)
+            data-size:    4c3h   (  1219 dec)
+             bss-size:   9f70h   ( 40816 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   bc93h   ( 48275 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c libupack.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+libupack.c:
+Warning libupack.c 156: Code has no effect in function unpack88
+
+	Available memory 4150312
+	tlink /x/n/c/d ..\mlib\crtso libupack,libupack,libupack,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp libupack
+
+
+DOS-header:
+          nr of pages:     5h    (   5 dec)
+   bytes in last page:    e0h    ( 224 dec)
+    min. free mem *16:   b06h    (2822 dec)
+           stack-size:  1443h    (5187 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    250h   (   592 dec)
+            data-size:    490h   (  1168 dec)
+             bss-size:   9c60h   ( 40032 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   b740h   ( 46912 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c ln.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+ln.c:
+Warning ln.c 46: Function should return a value in function main
+Warning ln.c 64: Function should return a value in function usage
+
+	Available memory 4148872
+	tlink /x/n/c/d ..\mlib\crtso ln,ln,ln,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp ln
+
+
+DOS-header:
+          nr of pages:     4h    (   4 dec)
+   bytes in last page:    16h    (  22 dec)
+    min. free mem *16:   146h    ( 326 dec)
+           stack-size:    51h    (  81 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    3d0h   (   976 dec)
+            data-size:     46h   (    70 dec)
+             bss-size:     60h   (    96 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   1876h   (  6262 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c login.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+login.c:
+
+	Available memory 4146116
+	tlink /x/n/c/d ..\mlib\crtso login,login,login,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp login
+
+
+DOS-header:
+          nr of pages:     bh    (  11 dec)
+   bytes in last page:   1e0h    ( 480 dec)
+    min. free mem *16:   199h    ( 409 dec)
+           stack-size:   234h    ( 564 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    fa0h   (  4000 dec)
+            data-size:    440h   (  1088 dec)
+             bss-size:    590h   (  1424 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   2d70h   ( 11632 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c lpr.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+lpr.c:
+Warning lpr.c 44: Function should return a value in function main
+Warning lpr.c 83: Function should return a value in function putc
+Warning lpr.c 105: Function should return a value in function flush
+
+	Available memory 4150328
+	tlink /x/n/c/d ..\mlib\crtso lpr,lpr,lpr,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+Warning: _putc defined in module lpr.c is duplicated in library file ..\mlib\minix.lib in module putc
+	..\tools\dos2out -dp lpr
+
+
+DOS-header:
+          nr of pages:     4h    (   4 dec)
+   bytes in last page:   162h    ( 354 dec)
+    min. free mem *16:   1c6h    ( 454 dec)
+           stack-size:   169h    ( 361 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    4f0h   (  1264 dec)
+            data-size:     72h   (   114 dec)
+             bss-size:    860h   (  2144 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   21c2h   (  8642 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c ls.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+ls.c:
+Warning ls.c 85: Function should return a value in function main
+Warning ls.c 102: Function should return a value in function expand_args
+Warning ls.c 128: Function should return a value in function sort
+Warning ls.c 231: Function should return a value in function print
+Warning ls.c 276: Function should return a value in function exp_dir
+Warning ls.c 304: Function should return a value in function fill_file
+Warning ls.c 367: Function should return a value in function print_line
+Warning ls.c 389: Function should return a value in function owngrp
+Warning ls.c 438: 'org' is assigned a value that is never used in function stat_file
+Warning ls.c 546: Function should return a value in function date
+Warning ls.c 558: Function should return a value in function print_total
+Warning ls.c 582: Function should return a value in function getline
+Warning ls.c 622: Possibly incorrect assignment in function getuidgid
+
+	Available memory 4112100
+	tlink /x/n/c/d ..\mlib\crtso ls,ls,ls,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp ls
+
+
+DOS-header:
+          nr of pages:    10h    (  16 dec)
+   bytes in last page:   114h    ( 276 dec)
+    min. free mem *16:   5a6h    (1446 dec)
+           stack-size:   ac0h    (2752 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   1ae0h   (  6880 dec)
+            data-size:    234h   (   564 dec)
+             bss-size:   4660h   ( 18016 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   7774h   ( 30580 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c make.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+make.c:
+Warning make.c 254: Function should return a value in function main
+Warning make.c 388: Function should return a value in function init
+Warning make.c 620: Function should return a value in function expand
+Warning make.c 674: Function should return a value in function p_expand
+Warning make.c 745: Function should return a value in function x_scan
+Warning make.c 942: Function should return a value in function error
+Warning make.c 952: Function should return a value in function error2
+Warning make.c 962: Function should return a value in function panic
+Warning make.c 972: Function should return a value in function panic2
+Warning make.c 979: Function should return a value in function panicstop
+Warning make.c 985: Function should return a value in function mystop_err
+Warning make.c 1070: Function should return a value in function get_ext
+Warning make.c 1270: Function should return a value in function add_defn
+Warning make.c 1655: Function should return a value in function add_suff
+Warning make.c 1668: Function should return a value in function add_s_suff
+Warning make.c 1703: Function should return a value in function add_macro
+Warning make.c 1738: Function should return a value in function add_rule2
+Warning make.c 2024: Function should return a value in function mkpathlist
+Warning make.c 2036: Function should return a value in function squeezesp
+Warning make.c 2082: Function should return a value in function getmodified
+Warning make.c 2245: Function should return a value in function done
+Warning make.c 2262: Function should return a value in function my_strcpy
+
+	Available memory 4073860
+	tlink /x/n/c/d ..\mlib\crtso make,make,make,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+Warning: _getenv defined in module make.c is duplicated in library file ..\mlib\minix.lib in module getenv
+	..\tools\dos2out -dp make
+
+
+DOS-header:
+          nr of pages:    21h    (  33 dec)
+   bytes in last page:   195h    ( 405 dec)
+    min. free mem *16:   224h    ( 548 dec)
+           stack-size:   63ah    (1594 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   3800h   ( 14336 dec)
+            data-size:    795h   (  1941 dec)
+             bss-size:    e40h   (  3648 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   61d5h   ( 25045 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c mkdir.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+mkdir.c:
+Warning mkdir.c 23: Function should return a value in function main
+Warning mkdir.c 66: Function should return a value in function makedir
+Warning mkdir.c 74: Function should return a value in function stderr3
+
+	Available memory 4143408
+	tlink /x/n/c/d ..\mlib\crtso mkdir,mkdir,mkdir,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp mkdir
+
+
+DOS-header:
+          nr of pages:     5h    (   5 dec)
+   bytes in last page:    a2h    ( 162 dec)
+    min. free mem *16:   145h    ( 325 dec)
+           stack-size:    7dh    ( 125 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    610h   (  1552 dec)
+            data-size:     92h   (   146 dec)
+             bss-size:     50h   (    80 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   1af2h   (  6898 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c mkfs.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+mkfs.c:
+Warning mkfs.c 236: Function should return a value in function main
+Warning mkfs.c 236: 'ls' is assigned a value that is never used in function main
+Warning mkfs.c 325: Function should return a value in function super
+Warning mkfs.c 346: Function should return a value in function rootdir
+Warning mkfs.c 438: Function should return a value in function eat_file
+Warning mkfs.c 497: Function should return a value in function enter_dir
+Warning mkfs.c 540: Function should return a value in function add_zone
+Warning mkfs.c 557: Function should return a value in function incr_link
+Warning mkfs.c 575: Function should return a value in function incr_size
+Warning mkfs.c 640: Function should return a value in function insert_bit
+Warning mkfs.c 746: Function should return a value in function pexit
+Warning mkfs.c 754: Function should return a value in function copy
+Warning mkfs.c 804: Function should return a value in function print_fs
+Warning mkfs.c 1107: Function should return a value in function special
+Warning mkfs.c 1132: Function should return a value in function get_block
+Warning mkfs.c 1150: Function should return a value in function put_block
+Warning mkfs.c 1169: Undefined structure 'inode'
+Warning mkfs.c 1169: Undefined structure 'buf'
+
+	Available memory 4102464
+	tlink /x/n/c/d ..\mlib\crtso mkfs,mkfs,mkfs,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp mkfs
+
+
+DOS-header:
+          nr of pages:    14h    (  20 dec)
+   bytes in last page:    84h    ( 132 dec)
+    min. free mem *16:   30fh    ( 783 dec)
+           stack-size:   61dh    (1565 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   2110h   (  8464 dec)
+            data-size:    374h   (   884 dec)
+             bss-size:   1cf0h   (  7408 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   5574h   ( 21876 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c mknod.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+mknod.c:
+Warning mknod.c 20: Function should return a value in function main
+Warning mknod.c 29: Possibly incorrect assignment in function atoi
+Warning mknod.c 40: Function should return a value in function badcomm
+
+	Available memory 4152536
+	tlink /x/n/c/d ..\mlib\crtso mknod,mknod,mknod,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+Warning: _atoi defined in module mknod.c is duplicated in library file ..\mlib\minix.lib in module atoi
+	..\tools\dos2out -dp mknod
+
+
+DOS-header:
+          nr of pages:     5h    (   5 dec)
+   bytes in last page:    11h    (  17 dec)
+    min. free mem *16:   143h    ( 323 dec)
+           stack-size:    94h    ( 148 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    340h   (   832 dec)
+            data-size:    2d1h   (   721 dec)
+             bss-size:     30h   (    48 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   1a41h   (  6721 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c more.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+more.c:
+Warning more.c 92: Function should return a value in function main
+Warning more.c 122: Function should return a value in function output
+Warning more.c 128: Function should return a value in function oflush
+Warning more.c 214: Function should return a value in function lwrite
+Warning more.c 236: Function should return a value in function cbreak
+Warning more.c 246: Function should return a value in function nocbreak
+Warning more.c 251: Function should return a value in function byebye
+
+	Available memory 4131988
+	tlink /x/n/c/d ..\mlib\crtso more,more,more,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp more
+
+
+DOS-header:
+          nr of pages:     8h    (   8 dec)
+   bytes in last page:    a2h    ( 162 dec)
+    min. free mem *16:   1c5h    ( 453 dec)
+           stack-size:   1e3h    ( 483 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    bb0h   (  2992 dec)
+            data-size:     f2h   (   242 dec)
+             bss-size:    850h   (  2128 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   28f2h   ( 10482 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c mount.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+mount.c:
+Warning mount.c 29: Function should return a value in function main
+Warning mount.c 36: Function should return a value in function usage
+
+	Available memory 4155536
+	tlink /x/n/c/d ..\mlib\crtso mount,mount,mount,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp mount
+
+
+DOS-header:
+          nr of pages:     5h    (   5 dec)
+   bytes in last page:    2dh    (  45 dec)
+    min. free mem *16:   143h    ( 323 dec)
+           stack-size:    97h    ( 151 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    330h   (   816 dec)
+            data-size:    2fdh   (   765 dec)
+             bss-size:     30h   (    48 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   1a5dh   (  6749 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c mv.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+mv.c:
+Warning mv.c 51: Function should return a value in function main
+Warning mv.c 150: Function should return a value in function move
+Warning mv.c 159: Function should return a value in function cant
+
+	Available memory 4134124
+	tlink /x/n/c/d ..\mlib\crtso mv,mv,mv,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp mv
+
+
+DOS-header:
+          nr of pages:     7h    (   7 dec)
+   bytes in last page:    9ah    ( 154 dec)
+    min. free mem *16:   147h    ( 327 dec)
+           stack-size:    c4h    ( 196 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    9c0h   (  2496 dec)
+            data-size:     dah   (   218 dec)
+             bss-size:     70h   (   112 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   1f0ah   (  7946 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c od.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+od.c:
+Warning od.c 85: Function should return a value in function main
+Warning od.c 128: Possibly incorrect assignment in function dumpfile
+Warning od.c 154: Function should return a value in function dumpfile
+Warning od.c 165: Function should return a value in function wdump
+Warning od.c 178: Function should return a value in function bdump
+Warning od.c 198: Function should return a value in function byte
+Warning od.c 245: Function should return a value in function outword
+Warning od.c 273: Function should return a value in function outnum
+Warning od.c 286: Function should return a value in function addrout
+Warning od.c 300: Function should return a value in function usage
+
+	Available memory 4131908
+	tlink /x/n/c/d ..\mlib\crtso od,od,od,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp od
+
+
+DOS-header:
+          nr of pages:     ch    (  12 dec)
+   bytes in last page:    e8h    ( 232 dec)
+    min. free mem *16:   226h    ( 550 dec)
+           stack-size:   32ah    ( 810 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   13e0h   (  5088 dec)
+            data-size:    108h   (   264 dec)
+             bss-size:    e60h   (  3680 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   3748h   ( 14152 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c passwd.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+passwd.c:
+Warning passwd.c 105: Function should return a value in function main
+
+	Available memory 4133088
+	tlink /x/n/c/d ..\mlib\crtso passwd,passwd,passwd,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp passwd
+
+
+DOS-header:
+          nr of pages:     fh    (  15 dec)
+   bytes in last page:   1e0h    ( 480 dec)
+    min. free mem *16:   244h    ( 580 dec)
+           stack-size:   41fh    (1055 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   1650h   (  5712 dec)
+            data-size:    590h   (  1424 dec)
+             bss-size:   1040h   (  4160 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   4020h   ( 16416 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c pr.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+pr.c:
+Warning pr.c 138: Function should return a value in function main
+Warning pr.c 200: Function should return a value in function format
+Warning pr.c 226: Function should return a value in function print_page
+Warning pr.c 277: Function should return a value in function print
+Warning pr.c 288: Function should return a value in function out_header
+Warning pr.c 339: Function should return a value in function print_time
+Warning pr.c 339: 'original' is assigned a value that is never used in function print_time
+
+	Available memory 4127044
+	tlink /x/n/c/d ..\mlib\crtso pr,pr,pr,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp pr
+
+
+DOS-header:
+          nr of pages:     dh    (  13 dec)
+   bytes in last page:   1bah    ( 442 dec)
+    min. free mem *16:   204h    ( 516 dec)
+           stack-size:   31fh    ( 799 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   15f0h   (  5616 dec)
+            data-size:    1cah   (   458 dec)
+             bss-size:    c40h   (  3136 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   37fah   ( 14330 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c printenv.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+printenv.c:
+Warning printenv.c 10: Function should return a value in function main
+
+	Available memory 4157920
+	tlink /x/n/c/d ..\mlib\crtso printenv,printenv,printenv,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp printenv
+
+
+DOS-header:
+          nr of pages:     3h    (   3 dec)
+   bytes in last page:    b8h    ( 184 dec)
+    min. free mem *16:   14bh    ( 331 dec)
+           stack-size:    41h    (  65 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    2b0h   (   688 dec)
+            data-size:      8h   (     8 dec)
+             bss-size:     b0h   (   176 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   1768h   (  5992 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c pwd.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+pwd.c:
+Warning pwd.c 63: Suspicious pointer conversion in function main
+Warning pwd.c 63: Possibly incorrect assignment in function main
+Warning pwd.c 70: Function should return a value in function main
+
+	Available memory 4146788
+	tlink /x/n/c/d ..\mlib\crtso pwd,pwd,pwd,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp pwd
+
+
+DOS-header:
+          nr of pages:     5h    (   5 dec)
+   bytes in last page:    24h    (  36 dec)
+    min. free mem *16:   14bh    ( 331 dec)
+           stack-size:    7ch    ( 124 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    5e0h   (  1504 dec)
+            data-size:     44h   (    68 dec)
+             bss-size:     b0h   (   176 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   1ad4h   (  6868 dec)
+
+   -done-
+	tcc -I.. -A -mt -I..\include -Di8088 -DTURBO -G -O -c readfs.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+readfs.c:
+Warning readfs.c 85: Function should return a value in function main
+Warning readfs.c 104: Function should return a value in function get_flags
+Warning readfs.c 157: Function should return a value in function readfs
+Warning readfs.c 239: Both return and return with a value used in function dump_dir
+Warning readfs.c 277: Function should return a value in function dump_dir
+Warning readfs.c 498: Function should return a value in function restore
+Warning readfs.c 551: Function should return a value in function show_info
+Warning readfs.c 561: Function should return a value in function do_indent
+Warning readfs.c 594: Function should return a value in function bcopy
+Warning readfs.c 596: Undefined structure 'inode'
+
+	Available memory 4118240
+	tlink /x/n/c/d ..\mlib\crtso readfs,readfs,readfs,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+Warning: _bcopy defined in module readfs.c is duplicated in library file ..\mlib\minix.lib in module bcopy
+	..\tools\dos2out -dp readfs
+
+
+DOS-header:
+          nr of pages:     eh    (  14 dec)
+   bytes in last page:    ach    ( 172 dec)
+    min. free mem *16:   48ah    (1162 dec)
+           stack-size:   83eh    (2110 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   16a0h   (  5792 dec)
+            data-size:    20ch   (   524 dec)
+             bss-size:   34a0h   ( 13472 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   614ch   ( 24908 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c rev.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+rev.c:
+Warning rev.c 38: Function should return a value in function main
+Warning rev.c 56: Function should return a value in function rev
+
+	Available memory 4152536
+	tlink /x/n/c/d ..\mlib\crtso rev,rev,rev,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp rev
+
+
+DOS-header:
+          nr of pages:     3h    (   3 dec)
+   bytes in last page:   137h    ( 311 dec)
+    min. free mem *16:   183h    ( 387 dec)
+           stack-size:    bah    ( 186 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    320h   (   800 dec)
+            data-size:     17h   (    23 dec)
+             bss-size:    430h   (  1072 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   1b67h   (  7015 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c rm.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+rm.c:
+Warning rm.c 24: Code has no effect in function main
+Warning rm.c 45: Code has no effect in function main
+Warning rm.c 52: Function should return a value in function main
+Warning rm.c 57: Function should return a value in function usage
+Warning rm.c 119: Function should return a value in function remove
+Warning rm.c 140: Function should return a value in function rem_dir
+Warning rm.c 163: Function should return a value in function octal
+Warning rm.c 171: Function should return a value in function stderr3
+
+	Available memory 4137952
+	tlink /x/n/c/d ..\mlib\crtso rm,rm,rm,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp rm
+
+
+DOS-header:
+          nr of pages:     7h    (   7 dec)
+   bytes in last page:    13h    (  19 dec)
+    min. free mem *16:   143h    ( 323 dec)
+           stack-size:    b7h    ( 183 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    910h   (  2320 dec)
+            data-size:    103h   (   259 dec)
+             bss-size:     30h   (    48 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   1e43h   (  7747 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c rmdir.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+rmdir.c:
+Warning rmdir.c 30: Function should return a value in function main
+Warning rmdir.c 54: Possibly incorrect assignment in function remove
+Warning rmdir.c 111: Function should return a value in function remove
+Warning rmdir.c 119: Function should return a value in function stderr2
+
+	Available memory 4135904
+	tlink /x/n/c/d ..\mlib\crtso rmdir,rmdir,rmdir,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp rmdir
+
+
+DOS-header:
+          nr of pages:     6h    (   6 dec)
+   bytes in last page:   112h    ( 274 dec)
+    min. free mem *16:   14dh    ( 333 dec)
+           stack-size:    b9h    ( 185 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    830h   (  2096 dec)
+            data-size:     e2h   (   226 dec)
+             bss-size:     d0h   (   208 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   1de2h   (  7650 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c roff.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+roff.c:
+Warning roff.c 135: Function should return a value in function main
+Warning roff.c 153: Function should return a value in function mesg
+Warning roff.c 153: 'mode' is assigned a value that is never used in function mesg
+Warning roff.c 153: Parameter 'f' is never used in function mesg
+Warning roff.c 165: Function should return a value in function readfile
+Warning roff.c 300: Function should return a value in function bumpword
+Warning roff.c 312: Function should return a value in function dehyph
+Warning roff.c 338: Function should return a value in function tabulate
+Warning roff.c 573: Function should return a value in function snset
+Warning roff.c 609: Function should return a value in function nread
+Warning roff.c 677: Function should return a value in function defmac
+Warning roff.c 687: Function should return a value in function openmac
+Warning roff.c 729: Function should return a value in function submac
+Warning roff.c 737: Function should return a value in function endmac
+Warning roff.c 749: Function should return a value in function do_ta
+Warning roff.c 763: Function should return a value in function do_tr
+Warning roff.c 787: Function should return a value in function do_nx
+Warning roff.c 821: Function should return a value in function writebreak
+Warning roff.c 829: Function should return a value in function blankline
+Warning roff.c 878: Function should return a value in function writeline
+Warning roff.c 920: Function should return a value in function insrt
+Warning roff.c 928: Function should return a value in function newpage
+Warning roff.c 938: Function should return a value in function beginpage
+Warning roff.c 952: Function should return a value in function endpage
+Warning roff.c 967: Function should return a value in function blankpage
+Warning roff.c 983: Function should return a value in function waitawhile
+Warning roff.c 986: Function should return a value in function nix
+Warning roff.c 1031: Function should return a value in function writetitle
+Warning roff.c 1098: Function should return a value in function spits
+Warning roff.c 1138: Function should return a value in function spit
+Warning roff.c 1215: Function should return a value in function bomb
+Warning roff.c 1223: Function should return a value in function done
+
+	Available memory 4074532
+	tlink /x/n/c/d ..\mlib\crtso roff,roff,roff,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp roff
+
+
+DOS-header:
+          nr of pages:    1ch    (  28 dec)
+   bytes in last page:    42h    (  66 dec)
+    min. free mem *16:   265h    ( 613 dec)
+           stack-size:   5b7h    (1463 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   31b0h   ( 12720 dec)
+            data-size:    292h   (   658 dec)
+             bss-size:   1250h   (  4688 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   5a92h   ( 23186 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c shar.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+shar.c:
+Warning shar.c 36: Function should return a value in function main
+Warning shar.c 60: Function should return a value in function cat
+Warning shar.c 67: Function should return a value in function print
+Warning shar.c 77: Function should return a value in function putchar
+
+	Available memory 4153200
+	tlink /x/n/c/d ..\mlib\crtso shar,shar,shar,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+Warning: _index defined in module shar.c is duplicated in library file ..\mlib\minix.lib in module index
+	..\tools\dos2out -dp shar
+
+
+DOS-header:
+          nr of pages:     3h    (   3 dec)
+   bytes in last page:   1ddh    ( 477 dec)
+    min. free mem *16:   643h    (1603 dec)
+           stack-size:   a46h    (2630 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    3a0h   (   928 dec)
+            data-size:     3dh   (    61 dec)
+             bss-size:   5030h   ( 20528 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   680dh   ( 26637 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c size.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+size.c:
+Warning size.c 27: Function should return a value in function main
+Warning size.c 64: Function should return a value in function size
+Warning size.c 73: Function should return a value in function stderr3
+
+	Available memory 4149384
+	tlink /x/n/c/d ..\mlib\crtso size,size,size,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp size
+
+
+DOS-header:
+          nr of pages:     8h    (   8 dec)
+   bytes in last page:    78h    ( 120 dec)
+    min. free mem *16:   1cbh    ( 459 dec)
+           stack-size:   1eah    ( 490 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    ba0h   (  2976 dec)
+            data-size:     d8h   (   216 dec)
+             bss-size:    8b0h   (  2224 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   2928h   ( 10536 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c sleep.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+sleep.c:
+Warning sleep.c 17: Possibly incorrect assignment in function main
+Warning sleep.c 28: Function should return a value in function main
+
+	Available memory 4156388
+	tlink /x/n/c/d ..\mlib\crtso sleep,sleep,sleep,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp sleep
+
+
+DOS-header:
+          nr of pages:     3h    (   3 dec)
+   bytes in last page:   142h    ( 322 dec)
+    min. free mem *16:   145h    ( 325 dec)
+           stack-size:    41h    (  65 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    310h   (   784 dec)
+            data-size:     32h   (    50 dec)
+             bss-size:     50h   (    80 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   1792h   (  6034 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c sort.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+sort.c:
+Warning sort.c 222: Function should return a value in function get_opts
+Warning sort.c 288: Function should return a value in function new_field
+Warning sort.c 299: Function should return a value in function catch
+Warning sort.c 406: Function should return a value in function main
+Warning sort.c 429: Function should return a value in function adjust_options
+Warning sort.c 444: Function should return a value in function error
+Warning sort.c 456: Function should return a value in function open_outfile
+Warning sort.c 511: Function should return a value in function get_file
+Warning sort.c 561: Function should return a value in function print_table
+Warning sort.c 591: Function should return a value in function mread
+Warning sort.c 603: Function should return a value in function mwrite
+Warning sort.c 644: Function should return a value in function sort
+Warning sort.c 666: Function should return a value in function sort_table
+Warning sort.c 686: Function should return a value in function incr
+Warning sort.c 745: Function should return a value in function build_field
+Warning sort.c 963: Function should return a value in function files_merge
+Warning sort.c 1033: Function should return a value in function merge
+Warning sort.c 1058: Function should return a value in function put_line
+Warning sort.c 1211: Function should return a value in function check_file
+Warning sort.c 1234: Function should return a value in function copy
+
+	Available memory 4110436
+	tlink /x/n/c/d ..\mlib\crtso sort,sort,sort,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+Warning: _atoi defined in module sort.c is duplicated in library file ..\mlib\minix.lib in module atoi
+	..\tools\dos2out -dp sort
+
+
+DOS-header:
+          nr of pages:     fh    (  15 dec)
+   bytes in last page:   172h    ( 370 dec)
+    min. free mem *16:   1ddh    ( 477 dec)
+           stack-size:   319h    ( 793 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   18f0h   (  6384 dec)
+            data-size:    282h   (   642 dec)
+             bss-size:    9d0h   (  2512 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   3942h   ( 14658 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c split.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+split.c:
+Warning split.c 50: Function should return a value in function main
+Warning split.c 75: Function should return a value in function split
+Warning split.c 98: Function should return a value in function usage
+Warning split.c 104: Function should return a value in function quit
+
+	Available memory 4147672
+	tlink /x/n/c/d ..\mlib\crtso split,split,split,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp split
+
+
+DOS-header:
+          nr of pages:     5h    (   5 dec)
+   bytes in last page:    71h    ( 113 dec)
+    min. free mem *16:   14ah    ( 330 dec)
+           stack-size:    82h    ( 130 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    600h   (  1536 dec)
+            data-size:     71h   (   113 dec)
+             bss-size:     a0h   (   160 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   1b11h   (  6929 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c stty.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+stty.c:
+Warning stty.c 39: Function should return a value in function main
+Warning stty.c 59: Function should return a value in function report
+Warning stty.c 68: Function should return a value in function pr
+Warning stty.c 104: Function should return a value in function option
+Warning stty.c 128: Function should return a value in function prctl
+
+	Available memory 4141872
+	tlink /x/n/c/d ..\mlib\crtso stty,stty,stty,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp stty
+
+
+DOS-header:
+          nr of pages:     6h    (   6 dec)
+   bytes in last page:   1fdh    ( 509 dec)
+    min. free mem *16:   14ch    ( 332 dec)
+           stack-size:    c4h    ( 196 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    920h   (  2336 dec)
+            data-size:     ddh   (   221 dec)
+             bss-size:     c0h   (   192 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   1ebdh   (  7869 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c su.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+su.c:
+Warning su.c 54: Function should return a value in function main
+
+	Available memory 4145816
+	tlink /x/n/c/d ..\mlib\crtso su,su,su,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp su
+
+
+DOS-header:
+          nr of pages:     ch    (  12 dec)
+   bytes in last page:    c0h    ( 192 dec)
+    min. free mem *16:   219h    ( 537 dec)
+           stack-size:   346h    ( 838 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   1040h   (  4160 dec)
+            data-size:    480h   (  1152 dec)
+             bss-size:    d90h   (  3472 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   3650h   ( 13904 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c sum.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+sum.c:
+Warning sum.c 43: Function should return a value in function main
+Warning sum.c 54: Function should return a value in function error
+Warning sum.c 88: Function should return a value in function sum
+Warning sum.c 109: Function should return a value in function putd
+
+	Available memory 4148108
+	tlink /x/n/c/d ..\mlib\crtso sum,sum,sum,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp sum
+
+
+DOS-header:
+          nr of pages:     4h    (   4 dec)
+   bytes in last page:   173h    ( 371 dec)
+    min. free mem *16:   14bh    ( 331 dec)
+           stack-size:    71h    ( 113 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    530h   (  1328 dec)
+            data-size:     43h   (    67 dec)
+             bss-size:     b0h   (   176 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   1a23h   (  6691 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c sync.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+sync.c:
+Warning sync.c 3: Function should return a value in function main
+
+	Available memory 4159528
+	tlink /x/n/c/d ..\mlib\crtso sync,sync,sync,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp sync
+
+
+DOS-header:
+          nr of pages:     2h    (   2 dec)
+   bytes in last page:   174h    ( 372 dec)
+    min. free mem *16:   143h    ( 323 dec)
+           stack-size:    1dh    (  29 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    170h   (   368 dec)
+            data-size:      4h   (     4 dec)
+             bss-size:     30h   (    48 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   15a4h   (  5540 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c tail.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+tail.c:
+Warning tail.c 71: Function should return a value in function main
+Warning tail.c 163: Function should return a value in function tail
+Warning tail.c 172: Function should return a value in function done
+
+	Available memory 4140012
+	tlink /x/n/c/d ..\mlib\crtso tail,tail,tail,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp tail
+
+
+DOS-header:
+          nr of pages:     ah    (  10 dec)
+   bytes in last page:   162h    ( 354 dec)
+    min. free mem *16:   304h    ( 772 dec)
+           stack-size:   4a8h    (1192 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   10c0h   (  4288 dec)
+            data-size:     a2h   (   162 dec)
+             bss-size:   1c40h   (  7232 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   41a2h   ( 16802 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c tar.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+tar.c:
+Warning tar.c 76: Function should return a value in function error
+Warning tar.c 124: Function should return a value in function main
+Warning tar.c 171: Function should return a value in function tarfile
+Warning tar.c 179: Function should return a value in function skip_entry
+Warning tar.c 206: Function should return a value in function extract
+Warning tar.c 224: Function should return a value in function copy
+Warning tar.c 259: Function should return a value in function mkdir
+Warning tar.c 320: Function should return a value in function add_path
+Warning tar.c 360: Function should return a value in function add_file
+Warning tar.c 370: Possibly incorrect assignment in function make_header
+Warning tar.c 385: Function should return a value in function make_header
+Warning tar.c 393: Function should return a value in function clear_header
+Warning tar.c 403: Function should return a value in function adjust_boundary
+Warning tar.c 411: Function should return a value in function mread
+Warning tar.c 421: Function should return a value in function mwrite
+Warning tar.c 442: Function should return a value in function print
+Warning tar.c 474: Possibly incorrect assignment in function string_print
+Warning tar.c 503: Possibly incorrect assignment in function string_print
+Warning tar.c 515: Function should return a value in function string_print
+
+	Available memory 4129188
+	tlink /x/n/c/d ..\mlib\crtso tar,tar,tar,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp tar
+
+
+DOS-header:
+          nr of pages:     ah    (  10 dec)
+   bytes in last page:   119h    ( 281 dec)
+    min. free mem *16:   1b1h    ( 433 dec)
+           stack-size:   20dh    ( 525 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    f70h   (  3952 dec)
+            data-size:    1a9h   (   425 dec)
+             bss-size:    710h   (  1808 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   2c29h   ( 11305 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c tee.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+tee.c:
+Warning tee.c 63: Function should return a value in function main
+
+	Available memory 4142984
+	tlink /x/n/c/d ..\mlib\crtso tee,tee,tee,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp tee
+
+
+DOS-header:
+          nr of pages:     4h    (   4 dec)
+   bytes in last page:    a2h    ( 162 dec)
+    min. free mem *16:   147h    ( 327 dec)
+           stack-size:    5ch    (  92 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    460h   (  1120 dec)
+            data-size:     42h   (    66 dec)
+             bss-size:     70h   (   112 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   1912h   (  6418 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c test.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+test.c:
+Warning test.c 88: Function should return a value in function main
+Warning test.c 88: Parameter 'argc' is never used in function main
+Warning test.c 192: Function should return a value in function filstat
+Warning test.c 238: Function should return a value in function syntax
+
+	Available memory 4120132
+	tlink /x/n/c/d ..\mlib\crtso test,test,test,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp test
+
+
+DOS-header:
+          nr of pages:     7h    (   7 dec)
+   bytes in last page:   129h    ( 297 dec)
+    min. free mem *16:   143h    ( 323 dec)
+           stack-size:    c5h    ( 197 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    a50h   (  2640 dec)
+            data-size:     d9h   (   217 dec)
+             bss-size:     30h   (    48 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   1f59h   (  8025 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c time.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+time.c:
+Warning time.c 61: Function should return a value in function main
+Warning time.c 96: Function should return a value in function print_time
+Warning time.c 109: Function should return a value in function twin
+Warning time.c 121: Possibly incorrect assignment in function execute
+Warning time.c 127: Function should return a value in function execute
+Warning time.c 142: Function should return a value in function try
+
+	Available memory 4139924
+	tlink /x/n/c/d ..\mlib\crtso time,time,time,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp time
+
+
+DOS-header:
+          nr of pages:     7h    (   7 dec)
+   bytes in last page:   1e2h    ( 482 dec)
+    min. free mem *16:   152h    ( 338 dec)
+           stack-size:   10bh    ( 267 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    950h   (  2384 dec)
+            data-size:    292h   (   658 dec)
+             bss-size:    120h   (   288 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   2102h   (  8450 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c touch.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+touch.c:
+Warning touch.c 35: Function should return a value in function main
+Warning touch.c 79: Function should return a value in function usage
+Warning touch.c 83: Function should return a value in function std_err
+
+	Available memory 4144944
+	tlink /x/n/c/d ..\mlib\crtso touch,touch,touch,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+Warning: _std_err defined in module touch.c is duplicated in library file ..\mlib\minix.lib in module stderr
+	..\tools\dos2out -dp touch
+
+
+DOS-header:
+          nr of pages:     4h    (   4 dec)
+   bytes in last page:   17bh    ( 379 dec)
+    min. free mem *16:   14bh    ( 331 dec)
+           stack-size:    70h    ( 112 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    540h   (  1344 dec)
+            data-size:     3bh   (    59 dec)
+             bss-size:     b0h   (   176 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   1a2bh   (  6699 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c tr.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+tr.c:
+Warning tr.c 72: Function should return a value in function main
+Warning tr.c 120: Function should return a value in function map
+Warning tr.c 159: Function should return a value in function expand
+Warning tr.c 178: Function should return a value in function complement
+
+	Available memory 4145548
+	tlink /x/n/c/d ..\mlib\crtso tr,tr,tr,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp tr
+
+
+DOS-header:
+          nr of pages:     4h    (   4 dec)
+   bytes in last page:   1b1h    ( 433 dec)
+    min. free mem *16:   1f4h    ( 500 dec)
+           stack-size:   1c7h    ( 455 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    570h   (  1392 dec)
+            data-size:     41h   (    65 dec)
+             bss-size:    b40h   (  2880 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   24f1h   (  9457 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c umount.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+umount.c:
+Warning umount.c 23: Function should return a value in function main
+Warning umount.c 29: Function should return a value in function usage
+
+	Available memory 4156304
+	tlink /x/n/c/d ..\mlib\crtso umount,umount,umount,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp umount
+
+
+DOS-header:
+          nr of pages:     4h    (   4 dec)
+   bytes in last page:   1b5h    ( 437 dec)
+    min. free mem *16:   143h    ( 323 dec)
+           stack-size:    8fh    ( 143 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    2d0h   (   720 dec)
+            data-size:    2e5h   (   741 dec)
+             bss-size:     30h   (    48 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   19e5h   (  6629 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c uniq.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+uniq.c:
+Warning uniq.c 88: Function should return a value in function main
+Warning uniq.c 88: 'outf' is assigned a value that is never used in function main
+Warning uniq.c 127: Function should return a value in function show
+Warning uniq.c 166: Function should return a value in function usage
+
+	Available memory 4139744
+	tlink /x/n/c/d ..\mlib\crtso uniq,uniq,uniq,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp uniq
+
+
+DOS-header:
+          nr of pages:     ch    (  12 dec)
+   bytes in last page:   1a9h    ( 425 dec)
+    min. free mem *16:   284h    ( 644 dec)
+           stack-size:   415h    (1045 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   1270h   (  4720 dec)
+            data-size:    339h   (   825 dec)
+             bss-size:   1440h   (  5184 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   3de9h   ( 15849 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c update.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+update.c:
+
+	Available memory 4152200
+	tlink /x/n/c/d ..\mlib\crtso update,update,update,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp update
+
+
+DOS-header:
+          nr of pages:     3h    (   3 dec)
+   bytes in last page:   132h    ( 306 dec)
+    min. free mem *16:   145h    ( 325 dec)
+           stack-size:    3fh    (  63 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:    310h   (   784 dec)
+            data-size:     22h   (    34 dec)
+             bss-size:     50h   (    80 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   1782h   (  6018 dec)
+
+   -done-
+	tcc -A -mt -I..\include -Di8088 -DTURBO -G -O -c wc.c
+Turbo C++ Version 3.00 Copyright (c) 1992 Borland International
+wc.c:
+Warning wc.c 119: Function should return a value in function main
+Warning wc.c 145: Function should return a value in function count
+Warning wc.c 151: Function should return a value in function usage
+
+	Available memory 4135912
+	tlink /x/n/c/d ..\mlib\crtso wc,wc,wc,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+	..\tools\dos2out -dp wc
+
+
+DOS-header:
+          nr of pages:     ah    (  10 dec)
+   bytes in last page:   16ah    ( 362 dec)
+    min. free mem *16:   1c5h    ( 453 dec)
+           stack-size:   22bh    ( 555 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   10b0h   (  4272 dec)
+            data-size:     bah   (   186 dec)
+             bss-size:    850h   (  2128 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   2dbah   ( 11706 dec)
+
+   -done-
+	tlink /x/n/c/d ..\mlib\crtso sh\sh1 sh\sh2 sh\sh3 sh\sh4 sh\sh5 sh\sh6,sh,sh,..\mlib\minix
+Turbo Link  Version 5.0 Copyright (c) 1992 Borland International
+Warning: _printf defined in module sh\sh2.c is duplicated in library file ..\mlib\minix.lib in module fprintf
+Warning: _getc defined in module sh\sh5.c is duplicated in library file ..\mlib\minix.lib in module getc
+Warning: _putc defined in module sh\sh5.c is duplicated in library file ..\mlib\minix.lib in module putc
+Warning: _itoa defined in module sh\sh1.c is duplicated in library file ..\mlib\minix.lib in module itoa
+	..\tools\dos2out -dp sh
+
+
+DOS-header:
+          nr of pages:    35h    (  53 dec)
+   bytes in last page:     2h    (   2 dec)
+    min. free mem *16:   196h    ( 406 dec)
+           stack-size:   76eh    (1902 dec)
+    stack-pointer val:  1400h    (5120 dec)
+  program entry-point:     0h    (   0 dec)
+     code-segment val:     0h    (   0 dec)
+
+
+OUT-header:
+            text-size:   5fe0h   ( 24544 dec)
+            data-size:    622h   (  1570 dec)
+             bss-size:    560h   (  1376 dec)
+          entry-point:      0h   (     0 dec)
+           totalbytes:   7f62h   ( 32610 dec)
+
+   -done-
+	..\tools\chmem =2000 cc.out
+cc.out: Stack+malloc area changed from 9632 to 2000 bytes.
+	..\tools\chmem =32000 cpdir.out
+cpdir.out: Stack+malloc area changed from 9088 to 32000 bytes.
+	..\tools\chmem =40000 dd.out
+dd.out: Stack+malloc area changed from 9808 to 40000 bytes.
+	..\tools\chmem =50000 diff.out
+diff.out: Stack+malloc area changed from 10176 to 50000 bytes.
+	..\tools\chmem =8000 df.out
+df.out: Stack+malloc area changed from 7232 to 8000 bytes.
+	..\tools\chmem =32000 dosread.out
+dosread.out: Stack+malloc area changed from 12064 to 32000 bytes.
+	..\tools\chmem =50000 find.out
+find.out: Stack+malloc area changed from 12272 to 50000 bytes.
+	..\tools\chmem =50000 fix.out
+fix.out: Stack+malloc area changed from 9600 to 50000 bytes.
+	..\tools\chmem =8000 grep.out
+grep.out: Stack+malloc area changed from 12240 to 8000 bytes.
+	..\tools\chmem =8000 gres.out
+gres.out: Stack+malloc area changed from 13840 to 8000 bytes.
+	..\tools\chmem =64000 libpack.out
+libpack.out: Stack+malloc area changed from 6240 to 23501 bytes.
+	..\tools\chmem =64000 libupack.out
+libupack.out: Stack+malloc area changed from 5712 to 24336 bytes.
+	..\tools\chmem =20000 make.out
+make.out: Stack+malloc area changed from 19456 to 20000 bytes.
+	..\tools\chmem =8000 mkdir.out
+mkdir.out: Stack+malloc area changed from 6672 to 8000 bytes.
+	..\tools\chmem =16000 mkfs.out
+mkfs.out: Stack+malloc area changed from 13584 to 16000 bytes.
+	..\tools\chmem =8000 mv.out
+mv.out: Stack+malloc area changed from 7616 to 8000 bytes.
+	..\tools\chmem =8000 pr.out
+pr.out: Stack+malloc area changed from 10736 to 8000 bytes.
+	..\tools\chmem =50000 readfs.out
+readfs.out: Stack+malloc area changed from 10912 to 50000 bytes.
+	..\tools\chmem =8000 rm.out
+rm.out: Stack+malloc area changed from 7440 to 8000 bytes.
+	..\tools\chmem =8000 rmdir.out
+rmdir.out: Stack+malloc area changed from 7216 to 8000 bytes.
+	..\tools\chmem =8000 sh.out
+sh.out: Stack+malloc area changed from 29664 to 8000 bytes.
+	..\tools\chmem =30000 sort.out
+sort.out: Stack+malloc area changed from 11504 to 30000 bytes.
+	..\tools\chmem =2000 tail.out
+tail.out: Stack+malloc area changed from 9408 to 2000 bytes.
+	..\tools\chmem =2000 time.out
+time.out: Stack+malloc area changed from 7504 to 2000 bytes.

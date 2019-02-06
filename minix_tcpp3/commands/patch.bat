@@ -1,0 +1,1 @@
+fix %1.old D:\TC1\COMMANDS\SH\%1.dif >%1.c

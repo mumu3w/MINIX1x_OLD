@@ -1,0 +1,195 @@
+
+ Start  Stop   Length Name                   Class
+ 00000H 027A1H 027A2H _TEXT                  CODE
+ 027B0H 027CFH 00020H _DATAB                 DATA
+ 027D0H 029E5H 00216H _DATA                  DATA
+ 029E6H 029E6H 00000H CONST                  CONST
+ 029E6H 029E6H 00000H _DATAT                 CONST
+ 029E6H 02D99H 003B4H _BSS                   BSS
+ 02D9AH 039DBH 00C42H C_COMMON               BSS
+ 039DCH 039DCH 00000H _DATAU                 BSS
+ 039DCH 039DCH 00000H _DATAV                 BSS
+ 039E0H 039E0H 00000H @STACK                 STACK
+
+ Origin   Group
+ 027B:0   DGROUP
+
+  Address         Publics by Name
+
+ 0000:0000       $MAIN
+ 0000:0715       _adjust
+ 0000:1904       _alloc_mem
+ 0000:1B84       _allowed
+ 027B:0010       _BRKSIZE
+ 0000:254A       _callm1
+ 0000:2589       _callm3
+ 0000:25ED       _callx
+ 027B:0180       _call_vec
+ 0000:1DEE       _close
+ 027B:017C       _core_bits
+ 027B:0176       _core_name
+ 0000:1E1A       _creat
+ 027B:0000       _DATA_ORG
+ 027B:060C       _dont_reply
+ 0000:13D0       _do_alarm
+ 0000:06B6       _do_brk
+ 0000:01A1       _do_brk2
+ 0000:0964       _do_exec
+ 0000:02AA       _do_fork
+ 0000:17DC       _do_getset
+ 0000:10AA       _do_kill
+ 0000:10CE       _do_ksig
+ 0000:049E       _do_mm_exit
+ 0000:1464       _do_pause
+ 0000:1010       _do_signal
+ 0000:054D       _do_wait
+ 027B:122C       _END
+ 027B:0890       _errno
+ 027B:0892       _err_code
+ 0000:197A       _free_mem
+ 0000:1E3E       _fstat
+ 0000:1E6B       _GET_BASE
+ 0000:1E6E       _GET_SIZE
+ 0000:1E72       _get_tot_mem
+ 0000:263B       _len
+ 027B:021E       _M
+ 0000:001C       _MAIN
+ 0000:1AEC       _max_hole
+ 0000:1CA1       _mem_copy
+ 0000:1B39       _mem_init
+ 027B:060E       _mm_call
+ 0000:04C4       _mm_exit
+ 027B:1214       _mm_in
+ 027B:05EC       _mm_out
+ 027B:0894       _mm_stack
+ 027B:0604       _mp
+ 027B:0610       _mproc
+ 0000:1D0B       _no_sys
+ 0000:1E98       _open
+ 0000:1D1D       _panic
+ 0000:1EBC       _printk
+ 027B:0606       _procs_in_use
+ 0000:1D6C       _putc
+ 0000:22B2       _read
+ 0000:22E6       _receive
+ 0000:0107       _reply
+ 027B:05EA       _result2
+ 027B:060A       _res_ptr
+ 0000:22E1       _send
+ 0000:22EB       _sendrec
+ 0000:22EB       _SEND_REC
+ 0000:13ED       _set_alarm
+ 0000:1315       _sig_proc
+ 0000:0879       _size_ok
+ 027B:0012       _SP_LIMIT
+ 027B:017E       _STACKPT
+ 0000:0906       _stack_fault
+ 0000:24AE       _sys_abort
+ 0000:2413       _sys_copy
+ 0000:23B9       _sys_exec
+ 0000:238D       _sys_fork
+ 0000:232B       _sys_getsp
+ 0000:23E6       _sys_newmap
+ 0000:235E       _sys_sig
+ 0000:244B       _sys_times
+ 0000:22FE       _sys_xit
+ 0000:24D7       _tell_fs
+ 0000:1484       _unpause
+ 027B:0608       _who
+ 0000:2502       _write
+ 0000:9876  Abs  __ACRTUSED
+ 0000:2668       __aNldiv
+ 0000:2702       __aNlrem
+ 0000:2532       __aNlshl
+ 0000:253E       __aNlshr
+
+  Address         Publics by Value
+
+ 0000:0000       $MAIN
+ 0000:001C       _MAIN
+ 0000:0107       _reply
+ 0000:01A1       _do_brk2
+ 0000:02AA       _do_fork
+ 0000:049E       _do_mm_exit
+ 0000:04C4       _mm_exit
+ 0000:054D       _do_wait
+ 0000:06B6       _do_brk
+ 0000:0715       _adjust
+ 0000:0879       _size_ok
+ 0000:0906       _stack_fault
+ 0000:0964       _do_exec
+ 0000:1010       _do_signal
+ 0000:10AA       _do_kill
+ 0000:10CE       _do_ksig
+ 0000:1315       _sig_proc
+ 0000:13D0       _do_alarm
+ 0000:13ED       _set_alarm
+ 0000:1464       _do_pause
+ 0000:1484       _unpause
+ 0000:17DC       _do_getset
+ 0000:1904       _alloc_mem
+ 0000:197A       _free_mem
+ 0000:1AEC       _max_hole
+ 0000:1B39       _mem_init
+ 0000:1B84       _allowed
+ 0000:1CA1       _mem_copy
+ 0000:1D0B       _no_sys
+ 0000:1D1D       _panic
+ 0000:1D6C       _putc
+ 0000:1DEE       _close
+ 0000:1E1A       _creat
+ 0000:1E3E       _fstat
+ 0000:1E6B       _GET_BASE
+ 0000:1E6E       _GET_SIZE
+ 0000:1E72       _get_tot_mem
+ 0000:1E98       _open
+ 0000:1EBC       _printk
+ 0000:22B2       _read
+ 0000:22E1       _send
+ 0000:22E6       _receive
+ 0000:22EB       _sendrec
+ 0000:22EB       _SEND_REC
+ 0000:22FE       _sys_xit
+ 0000:232B       _sys_getsp
+ 0000:235E       _sys_sig
+ 0000:238D       _sys_fork
+ 0000:23B9       _sys_exec
+ 0000:23E6       _sys_newmap
+ 0000:2413       _sys_copy
+ 0000:244B       _sys_times
+ 0000:24AE       _sys_abort
+ 0000:24D7       _tell_fs
+ 0000:2502       _write
+ 0000:2532       __aNlshl
+ 0000:253E       __aNlshr
+ 0000:254A       _callm1
+ 0000:2589       _callm3
+ 0000:25ED       _callx
+ 0000:263B       _len
+ 0000:2668       __aNldiv
+ 0000:2702       __aNlrem
+ 027B:0000       _DATA_ORG
+ 027B:0010       _BRKSIZE
+ 027B:0012       _SP_LIMIT
+ 027B:0176       _core_name
+ 027B:017C       _core_bits
+ 027B:017E       _STACKPT
+ 027B:0180       _call_vec
+ 027B:021E       _M
+ 027B:05EA       _result2
+ 027B:05EC       _mm_out
+ 027B:0604       _mp
+ 027B:0606       _procs_in_use
+ 027B:0608       _who
+ 027B:060A       _res_ptr
+ 027B:060C       _dont_reply
+ 027B:060E       _mm_call
+ 027B:0610       _mproc
+ 027B:0890       _errno
+ 027B:0892       _err_code
+ 027B:0894       _mm_stack
+ 027B:1214       _mm_in
+ 027B:122C       _END
+ 0000:9876  Abs  __ACRTUSED
+
+Program entry point at 0000:0000

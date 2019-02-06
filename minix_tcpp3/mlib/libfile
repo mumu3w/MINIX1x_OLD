@@ -1,0 +1,22 @@
+..\mlib\minix
+y
++cleanup +fgets +fprintf +system +puts +qsort +ctime &
++fputs +fread +freopen +fclose +fopen +fseek &
++fflush +ftell +fwrite +gets +getc +printdat &
++setbuf +sprintf +doprintf +putc +scanf +ungetc &
++strcmp +access +chdir +chmod +chown +chroot &
++creat +dup +dup2 +exec +exit +fork +isatty &
++fstat +getegid +getenv +geteuid +getgid +getpass &
++close +getuid +ioctl +kill +link +lseek +malloc &
++brk +brk2 +mknod +mktemp +getpid +mount +open &
++perror +pipe +popen +prints +read +setgid +setuid &
++sleep +alarm +pause +signal +catchsig +stat &
++stime +strcat +strcpy +strlen +strncat +strncmp &
++strncpy +sync +time +times +umask +umount +unlink &
++utime +wait +stderr +write +syslib +call +atoi &
++message +sendrec +printk +abort +itoa +stb &
++abs +atol +ctype +index +bcopy +getutil &
++rand +rindex +crypt +getgrent +getpwent +regexp &
++regsub +setjmp &
++h_ldiv +h_llsh +h_lursh +f_lxmul +N_LXMUL +H_LRSH +N_SCOPY +H_SPUSH
+..\mlib\minix.lst
