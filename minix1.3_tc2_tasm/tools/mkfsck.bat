@@ -25,7 +25,7 @@ Rem    All C code is compiled with the same options
 tcc -c -k- -f- -G -mt -Di8088 -DSTANDALONE -DTURBO -I\usr\minix1.3\include fsck.c
 if not "%1" == "" goto sep
 echo Making FSCK module -- combined I&D
-rem tasm /ml /i\usr\minix1.3\include fsck1.asm
+tasm /ml /i\usr\minix1.3\include fsck1.asm
 tlink /ml /n /c fsck1.obj fsck.obj, fsck.exe, fsck.map, \usr\minix1.3\lib\tmodel \usr\minix1.3\lib\minix
 Rem  Convert to Minix format
 dos2out fsck
@@ -33,7 +33,7 @@ goto done
 :sep
 echo Making FSCK module -- Separate I&D
 rem
-rem tasm /ml /i\usr\minix1.3\include /D_SID fsck1.asm
+tasm /ml /i\usr\minix1.3\include /D_SID fsck1.asm
 tlink /ml /n /c fsck1.obj fsck.obj,fsck.exe,fsck.map, \usr\minix1.3\lib\smodel \usr\minix1.3\lib\minix
 dos2out -i fsck
 goto done
