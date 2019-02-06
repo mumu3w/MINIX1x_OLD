@@ -1,0 +1,15 @@
+mcc t10a.c
+mcc t11a.c
+mcc t11b.c
+mcc test0.c
+mcc test1.c
+mcc test10.c
+mcc test11.c
+mcc test2.c
+mcc test3.c
+mcc test4.c
+mcc test5.c
+mcc test6.c
+mcc test7.c
+mcc test8.c
+mcc test9.c

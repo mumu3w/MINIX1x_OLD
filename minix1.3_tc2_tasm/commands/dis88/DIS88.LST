@@ -1,0 +1,22 @@
+Turbo C  Version 2.01  Copyright (c) 1987, 1988 Borland International
+disfp.c:
+Warning disfp.c 119: Parameter 'j' is never used in function fphand
+
+	Available memory 367962
+Turbo C  Version 2.01  Copyright (c) 1987, 1988 Borland International
+dishand.c:
+
+	Available memory 338430
+Turbo C  Version 2.01  Copyright (c) 1987, 1988 Borland International
+dismain.c:
+Warning dismain.c 628: Parameter 'argc' is never used in function main
+
+	Available memory 346362
+Turbo C  Version 2.01  Copyright (c) 1987, 1988 Borland International
+disrel.c:
+
+	Available memory 381696
+Turbo C  Version 2.01  Copyright (c) 1987, 1988 Borland International
+distabs.c:
+
+	Available memory 332822

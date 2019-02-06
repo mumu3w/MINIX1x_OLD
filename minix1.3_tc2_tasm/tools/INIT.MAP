@@ -1,0 +1,118 @@
+
+ Start  Stop   Length Name               Class
+
+ 00000H 00C0EH 00C0FH _TEXT              CODE
+ 00C0FH 00C11H 00003H _TEXTEND           CODE
+ 00C12H 00D27H 00116H _DATA              DATA
+ 00D28H 00E81H 0015AH _BSS               BSS
+ 00E82H 00E82H 00000H _BSSEND            BSS
+ 00E90H 00E90H 00000H _STACK             STACK
+
+  Address         Publics by Name
+
+ 0000:0000       $main
+ 0000:0D28       begbss
+ 0000:0E82       endbss
+ 0000:03C7       LXLSH@
+ 0000:03E6       LXRSH@
+ 0000:0C24       splimit
+ 0000:0D3C       _args
+ 0000:0396       _begsig
+ 0000:0C22       _brksize
+ 0000:0404       _callm1
+ 0000:043A       _callm3
+ 0000:0487       _callx
+ 0000:04E2       _close
+ 0000:0C12       _data_org
+ 0000:0E44       _environ
+ 0000:0E5A       _errno
+ 0000:0508       _execl
+ 0000:051F       _execle
+ 0000:06DB       _execn
+ 0000:0545       _execv
+ 0000:055B       _execve
+ 0000:0019       _exit
+ 0000:0708       _fork
+ 0000:072A       _ioctl
+ 0000:04C4       _len
+ 0000:09E6       _lseek
+ 0000:0D10       _M
+ 0000:001B       _main
+ 0000:0C7C       _name
+ 0000:0A28       _open
+ 0000:0D28       _pid
+ 0000:0E42       _pidct
+ 0000:0A42       _read
+ 0000:037C       _receive
+ 0000:0E46       _save_params
+ 0000:0376       _send
+ 0000:0382       _sendrec
+ 0000:0A6F       _signal
+ 0000:0D42       _stack
+ 0000:0C86       _stackpt
+ 0000:01C3       _startup
+ 0000:0AD6       _strncpy
+ 0000:0B16       _sync
+ 0000:0B39       _time
+ 0000:0C26       _uart
+ 0000:0E62       _vectab
+ 0000:0BAB       _wait
+ 0000:0BE9       _write
+ 0000:02CF       _wtmp
+ 0000:0C6E       _wtmpfile
+
+  Address         Publics by Value
+
+ 0000:0000       $main
+ 0000:0019       _exit
+ 0000:001B       _main
+ 0000:01C3       _startup
+ 0000:02CF       _wtmp
+ 0000:0376       _send
+ 0000:037C       _receive
+ 0000:0382       _sendrec
+ 0000:0396       _begsig
+ 0000:03C7       LXLSH@
+ 0000:03E6       LXRSH@
+ 0000:0404       _callm1
+ 0000:043A       _callm3
+ 0000:0487       _callx
+ 0000:04C4       _len
+ 0000:04E2       _close
+ 0000:0508       _execl
+ 0000:051F       _execle
+ 0000:0545       _execv
+ 0000:055B       _execve
+ 0000:06DB       _execn
+ 0000:0708       _fork
+ 0000:072A       _ioctl
+ 0000:09E6       _lseek
+ 0000:0A28       _open
+ 0000:0A42       _read
+ 0000:0A6F       _signal
+ 0000:0AD6       _strncpy
+ 0000:0B16       _sync
+ 0000:0B39       _time
+ 0000:0BAB       _wait
+ 0000:0BE9       _write
+ 0000:0C12       _data_org
+ 0000:0C22       _brksize
+ 0000:0C24       splimit
+ 0000:0C26       _uart
+ 0000:0C6E       _wtmpfile
+ 0000:0C7C       _name
+ 0000:0C86       _stackpt
+ 0000:0D10       _M
+ 0000:0D28       _pid
+ 0000:0D28       begbss
+ 0000:0D3C       _args
+ 0000:0D42       _stack
+ 0000:0E42       _pidct
+ 0000:0E44       _environ
+ 0000:0E46       _save_params
+ 0000:0E5A       _errno
+ 0000:0E62       _vectab
+ 0000:0E82       endbss
+
+Program entry point at 0000:0000
+
