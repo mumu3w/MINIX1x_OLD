@@ -13,7 +13,7 @@
  *	-t Touch files instead of making them
  *	-m Change memory requirements (EON only)
  */
- 
+
 #include <stdio.h>
 #include "h.h"
 

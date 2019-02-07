@@ -7,7 +7,7 @@
 ; Modified for Turbo Assembler by Deborah Mullen
 ; Date: Jan 29, 1989
 
-INCLUDE model.h
+INCLUDE model.inc
 
 GLOBAL $main:NEAR, _main:NEAR, _exit:NEAR
 GLOBAL _stackpt:WORD, _data_org:WORD, _brksize:WORD, splimit:WORD

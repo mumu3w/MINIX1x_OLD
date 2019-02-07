@@ -1,0 +1,406 @@
+This file contains important information not present in the book or elsewhere.
+Please read it VERY carefully.
+
+
+ 1. GENERAL
+       There were a number of changes made to the code after the book
+    was printed.  As a result, line X of file Y in the book may actually 
+    appear at X+3, or X-5, etc. on the disk version.  New features have also
+    been added in various places.
+
+ 2. PC-AT
+       The distribution for the PC-AT differs from that for the PC in minor
+    ways.  For example, there is no /user diskette.  Most the files that would
+    normally be on /user fit on /usr.  Furthermore, the number and organization
+    of the source diskettes is different, but the same programs are available.
+    Two additional special files are present in /dev: /dev/at0 and /dev/at1.
+    These should be used to access 1.2M diskettes.  To access 360K diskettes
+    on the PC-AT, use /dev/fd0 and /dev/fd1.  Special files are used by
+    commands such as mount, mkfs, and df, among others.  For example, to
+    copy part of a 1.2M diskette, type dd if=/dev/at0 of=file count=100.
+    The difference between /dev/at0 and /dev/fd0 is that in MINIX, special
+    files have sizes to prevent access beyond the end.  For /dev/fd0 the
+    size is 360K.  For /dev/at0 it is 1.2M.  Finally, the executable binary
+    for the PC-AT contains at_wini.c instead of xt_wini.c (see below).
+
+ 3. HARD DISK DRIVERS
+       MINIX supports the use of the standard IBM hard disks.  Unfortunately,
+    IBM chose to use different (and incompatible) disks and controllers on the
+    XT and AT.  To find out if MINIX works with your disk, give the command:
+		dd if=/dev/hd0 of=/dev/null count=1000
+    If this runs to the end without errors, the driver embedded in your
+    MINIX binary is appropriate for your controller and drive.  If it gives
+    errors, do a sync, turn the computer off and reboot MINIX.  This time run
+    a hard disk check from the initial menu.  Start MINIX (even if this check
+    gives errors).  Run dd again.  If it still fails, try the following.
+    Copy kernel/xt_wini.c to wini.c and recompile the operating system.
+    If this fails, then try kernel/at_wini.c and recompile it once more.
+    Usually, one of these will work.  If neither works, your disk is not
+    compatible with either the XT or AT.  You will have to modify the driver.
+    For PS/2 Model 30 users, a driver ps_wini.c has been provided for use.
+    You MUST have a kernel/wini.c to recompile the system, even if you do not
+    have a hard disk (in which case, any one will do).
+
+ 4. INSTALLING MINIX ON A HARD DISK
+      After you have made sure that you have a working hard disk driver, as
+    described above, proceed as follows. To use MINIX on a hard disk, you need
+    a MINIX partition.  You may also have MS-DOS, PC-IX, OS/2, XENIX, or other
+    partitions as well if you like.  If you understand about making partitions,
+    make one any way you are used to.  Otherwise use the MINIX fdisk program.
+    All partitions on the disk must be an even number of sectors even DOS ones.
+    Be warned that the MINIX, MS-DOS, PC-IX, and XENIX parition numbering 
+    schemes all differ.  Be very careful here, lest you overwrite useful data.
+       It is suggested that you use the program diskcheck to inspect the MINIX
+    partition for bad blocks.  The program badblocks will help deal with them.
+    The file man_pages in this directory discusses their use.
+       Once you have a partition available for MINIX (the type does not matter
+    as MINIX does not check), make a file system by booting MINIX from floppy
+    the usual way and run mkfs.  If, for example, you have chosen partition 2,
+    which has, say, 40 cylinders (i.e., 40 x 68 = 2720 sectors or 1360 1K
+    blocks), type: 
+		mkfs /dev/hd2 1360
+    to make an empty file system.  However, for partition 1 use 1 block less
+    because block 0 is not available (it contains the MS-DOS partition table).
+    In other words, a 40 cylinder partition 1 has 1359 blocks but a 40 cylinder
+    partition 2 or higher has 1360 blocks. Then mount the file system by typing
+		/etc/mount /dev/hd2 /user
+    Next, make whatever directories you like, typically bin, lib, and others,
+    and copy files to the hard disk.  With the /usr floppy in drive 0, the
+    command 
+		cp /usr/bin/* /user/bin
+    will copy all the binaries from /usr/bin to the hard disk, for example.
+       Alternatively, the cpdir program can be used to copy entire trees, e.g.
+		cpdir /usr/bin /user/bin
+    will create a new directory /user/bin, and put /usr/bin with all its files
+    and subdirectories in it.  
+       A few of the files in /usr/bin must be owned by the root (instead of 
+    bin) and have mode 4755. Check to make sure. These files are:  
+		badblocks chgrp df fsck mkdir mv passwd readall rmdir su
+       Finally, edit /etc/rc to have the hard disk mounted when the system
+    is booted.  A line such as
+		/etc/mount /dev/hd2 /usr
+    can be used as a replacement for the mount command initially in /etc/rc.
+    After editing /etc/rc, mount the root file system diskette and copy it
+    to the diskette; otherwise the changes will be lost when the system is
+    rebooted.  (There is nothing special about the root file system except
+    its size; it can be mounted and written on like any other file system.)
+       After these steps have been taken, the system can be booted from
+    floppy in the usual way, and the root file system also read in from
+    floppy.  The hard disk will automatically be mounted by the /etc/rc.
+    The root device remains on the RAM disk, and the boot process still
+    goes via floppy (for compatibility and to prevent disaster in the event
+    that something goes wrong with the hard disk file system).  Hard disk
+    file systems can be checked using fsck, the same as floppies.  However,
+    fsck assumes you have 4 heads and 17 sectors/track.  If this is not so,
+    change the code accordingly or fsck will give spurious errors.
+       The special file /dev/hd0 refers to the whole disk, without regard to
+    partitions, whereas /dev/hd1 ... /dev/hd4 refer to partitions 1 to 4.  If
+    you have a second hard disk, you can make /dev/hd5 ... /dev/hd9 with mknod
+    (major device 3, minor device 5 ... 9) for the second drive, with hd5 for
+    the whole drive, hd6 for partition 1, etc.  Fsck also uses this convention.
+
+  5. CONFIGURING MINIX ON A HARD DISK
+       When setting up MINIX on a hard disk, the following set of directories
+    is recommended, although the MINIX source tree can go elsewhere if desired.
+    Be sure to edit the cc.c program to make sure it knows where to find the
+    various compiler passes and libraries, which may be in /bin, lib, /usr/bin,
+    or /usr/bin.  When a large RAM disk is available, put /bin and /lib on the
+    RAM disk, and include the compiler parts in them.  When extracting files
+    from the distribution, note carefully that there is a lib directory on the
+    /usr diskette (for /lib and /usr/lib) and another one among the sources
+    (for /usr/src/minix/lib).  Many of the directories listed below have sub-
+    directories.
+
+	/bin			- most common binaries
+	/dev			- special files
+	/etc			- system administration
+	/lib			- most important libraries
+	/tmp			- scratch files go here
+	/usr			- mount usr file system here
+	/usr/bin		- rest of the binaries
+	/usr/include		- system include files
+	/usr/lib		- rest of the libraries
+	/usr/src		- sources go here
+	/usr/src/minix		- minix sources go here
+	/usr/src/minix/amoeba	- all networking code is here
+	/usr/src/minix/commands	- utility program sources
+	/usr/src/minix/fs	- file system sources
+	/usr/src/minix/h	- operating system header files
+	/usr/src/minix/kernel	- kernel and device driver sources
+	/usr/src/minix/lib	- libc.a sources
+	/usr/src/minix/mm	- memory manager sources
+	/usr/src/minix/test	- test programs
+	/usr/src/minix/tools	- tools for building new operating systems
+	/usr/tmp		- (optional) alternative place for temporaries
+	
+  6. PUTTING THE ROOT FILE SYSTEM ON A HARD DISK
+       To speed up the boot procedure, you may copy the root file system to
+    /dev/hd3 with the commands 
+		cp /dev/fd0 /dev/hd3     or    cp /dev/at0 /dev/hd3
+    The former is for the PC, the latter is for the AT.  /dev/hd3 must not be
+    mounted. When booting, leave the boot diskette in the drive when typing the
+    = sign.  MINIX will see that the diskette is not a valid file system, and
+    take the root file system from the default device, /dev/hd3.  You can 
+    change the choice of default by modifying RAM_IMAGE in fs/main.c
+
+  7. USING MS-DOS AS A DEVELOPMENT SYSTEM
+       MINIX is now completely self supporting, so the C86 and PC-IX 
+    directories have been deleted.  The only time you might need MS-DOS is
+    for formatting blank diskettes.  MINIX does not have a format program.
+
+  8. EDITING LARGE PROGRAMS WITH MINED
+       Mined has a limit on the size of programs it can edit.  To edit
+     larger ones, they must be broken up with split, edited separately and
+     recombined later.  Better yet, use elle, which is a much better editor,
+     is emacs compatible, and can handle files as large as the disk.
+
+  9. MKNOD
+        MINIX differs from UNIX in that block special files (and even some
+    character special files, such as /dev/kmem) can have sizes.  A 360K floppy
+    disk special file, such as /dev/fd0 can have size 360K.  Unfortunately, the
+    mknod system call (and mknod program) have no way to express the size,
+    so it uses size 0, which is equal to infinity.  When you read past the
+    end of a block special file WITH a size, the file system returns zero
+    bytes.  When you go off the end of a device WITHOUT a size, some drivers
+    return end-of-file (e.g., hard disk, RAM disk), but others (e.g., floppy
+    disk) return an I/O error code.  Thus if you make a new block special file
+    for 2/0 and 2/1 (floppy disk) with mknod (i.e., no size) the command
+		cp /dev/fd0 /dev/fd1
+    will terminate with an error on block 360 (but it will copy the disk
+    perfectly).  The only way to make a special file with a size is by making 
+    a file system with mkfs.
+
+10. NONEXISTENT DEVICES
+       If you try to open /dev/fd1 on a system with only one floppy disk drive,
+    the system may hang.  To avoid this problem, the first time you log in, go
+    to the /dev directory, and rename special files that you do not have to
+    something unusual.  For example, if you do not have a hard disk, rename
+    hd0 to HARD_DISK_0, hd1 to HARD_DISK_1, etc.  Similarly with one one floppy
+    disk, rename fd1 to FLOPPY_DISK_1 to prevent it being typed by accident.
+    You can also remove them, but due to the mknod problem described above, you
+    can not get them back easily, so it is best just to get them out of the 
+    way in case you ever need them again later.
+
+11. PRINTER
+       In order to accommodate buffered and unbuffered printers, the printer
+    driver uses a combination of delay loops and interrupts.  The net result
+    is that the driver consumes a fair number of CPU cyles when running.  If
+    you expect to do a lot of printing, you might want to consider rewriting 
+    the printer interrupt handler, pr_char, in assembly code.  Note that some
+    printers that are not IBM compatible give spurious out-of-paper messages.
+
+12. DISK SPACE
+       The /usr disk as distributed is nearly full.  If you have two floppy
+    disk drives, be sure to mount /user on drive 1 and move your working
+    directory there.  If you have only 1 floppy disk drive, remove some files
+    from /usr/bin to make more space.  If you have a hard disk, there is no
+    problem.
+
+13. RUNNING /USER TESTS ON A FLOPPY
+       Before running the tests in /user/test, remove the files in 
+    /user/commands to create some free space on the disk.  Run the tests as
+    superuser.
+
+14. COMMAND LINE LENGTH
+       The maximum initial stack size is 2K.  Calls to EXEC which require a
+    larger stack will fail.  Thus if you do ls -l * in a large directory,
+    the shell may expand the * so that the command line exceeds 2K and the 
+    EXEC will fail, resulting in a message such as "Cannot execute ls".
+
+15. ARCHIVES ON THE DISTRIBUTION DISKETTES
+       To save space on the distribution diskettes, some of the sources have
+    been archived and compressed.  Files ending with .Z are compressed files, 
+    and can be decompressed by typing: compress -d file.Z
+    In some cases, the resulting file is an archive, ending with the .a suffix.
+    Remove the files with: ar xv file.a   Thus a file like fs.a.Z must first be
+    uncompressed to get fs.a and then dearchived.
+
+16. RECOMPILING FSCK AND OTHER LARGE PROGRAMS
+      If for some reason you don't like the tools/fsck binary and want to
+    recompile it, make sure you have plenty of free space for the compiler's
+    temporary files.  On a floppy disk system, this may mean putting fsck on
+    an almost empty diskette before compiling it.  When the disk is full, the
+    quality of the compiler's error messages deteriorates rapidly.  If you
+    are compiling fsck and getting strange results, check for disk space.
+    Normally /tmp is used for temporaries, but the -T flag can override that.
+
+17. NEWS GROUP
+      If you have access to USENET, you may be interested in knowing
+    that there is a news group, comp.os.minix devoted to discussions of MINIX.
+    This is one of the largest news groups, with over 10,000 readers.
+    If you have access to the Arpanet, Bitnet, or EARN, the news group is
+    gatewayed there.  Contact info-minix-request@udel.edu to join or send
+    email to ast@cs.vu.nl requesting the MINIX information sheet.
+
+18. SYSTEM PROBLEMS
+      The IBM PC does not have any hardware for checking for stack overflow.
+    The user must allocate the amount of stack for each program with chmem
+    or use the compiler default (64K - program - data size).  Some programs
+    in the distribution have been set to a smaller value, and may, in rare
+    instances with certain arguments, hang.  If the system ever gets into a
+    situation where it echoes keystrokes, but ignores DEL and CTRL-\ and
+    appears otherwise to be hung up, hit F1 to see what is going on.  If
+    some process is running and there is no way to interrupt it, hit CTRL-F9.
+    This key is equivalent to the super-user typing:  kill -1 9.  The result
+    of CTRL-F9 is that every process in the system is killed, including update
+    and all the shells.  Although drastic, CTRL-F9 will dehang the system
+    instantly.  Log in again and then type /etc/update & to restart update.
+    The reason for requiring CTRL to be held down while hitting F9 is to
+    prevent F9 from being hit by accident.
+
+19. USE OF EXTENDED MEMORY ON ATs
+       If the size of the root file system (either taken from floppy or from
+    /dev/hd3, as described above), is 256K or more, MINIX puts the root
+    device in extended memory, above 1M, leaving the entire 512K or 640K
+    free for MINIX and user programs.  To get full advantage of the extended
+    memory, the size of the root file system should be the same as the amount
+    of extended memory present.  If the root file system is < 256K, MINIX
+    assumes that there is no extended memory, and puts the root file system
+    in "low" core (below 640K).  This feature only works on ATs, so PCs must
+    never have root file systems >= 256K.  If you have a large extended memory,
+    you may want to put the root file system on hard disk, as described above,
+    so the extended memory can be loaded from hard disk quickly at boot time.
+
+20. SOFTWARE SCROLLING FOR EGA CARDS
+       MINIX works with monochrome cards, CGA cards, and IBM compatible EGA
+    cards.  However, it does not work with some nonstandard EGA cards.  With 
+    some cards, the screen will go blank every 25 lines.  MINIX can be made to
+    work with these EGA cards by hitting the F3 key to use software scrolling.
+    This is slower than hardware scrolling, so only use it if you have to.  You
+    can toggle between the two modes by hitting F3 repeatedly. If you want soft
+    scrolling to be the default, recompile kernel/tty.c  with the variable 
+    softscroll initialized to 1, and make a new kernel.
+
+21. NEW FLAGS AND FEATURES
+       Various programs have acquired new flags and features and new programs
+    have been included.  Please read all the files in this directory carefully.
+
+22. ANSI ESCAPE SEQUENCES 
+      The escape sequences used by the tty driver for both input and output
+    have been changed to the ANSI standard ones.  To manipulate the cursor
+    etc., print the following (among others):
+	ESC M:		scroll a line backwards (cursor must be on line 1)
+	ESC [ y ; x H	move to column x, row y;  (1,1) is upper right corner
+	ESC [0J		clear from cursor to end of screen
+	ESC [7m		go to reverse video
+	ESC [0m		go to normal video
+
+    The 9 numeric pad keys, as well as numeric + and - now generate ESC [ x
+    for some x.  Just type them to see which x goes with each key.  There is
+    an /etc/termcap file for MINIX that uses the allowed sequences.
+
+23. _CLEANUP NO LONGER NEEDED
+       The exit routine has been changed to call _cleanup automatically.
+    As a result, programs using stdio no longer have to call it explicitly.
+    All calls to _cleanup have been removed from the standard distribution.
+
+24. DISTRIBUTION CHANGES
+       The subdirectories PC-IX and C86 have been deleted, as mentioned above.
+    In a few cases, a subdirectory IBM_PC is present for files specific to the
+    IBM PC/XT/AT/386 version of MINIX (as opposed to the Atari ST). These files
+    should be moved up one directory level.  In some cases, two makefiles are 
+    provided, called pc_makefile and at_makefile.  Copy the appropriate one to
+    makefile, depending on whether you have (1) a PC or XT or (2) an AT.  
+    Study them both and delete the inappropriate one.  The differences are
+    usually related to the assumed size of the RAM disk, rather than any
+    differences between the two processors.
+
+25. LINKS
+       The directory /usr/include now contains several subdirectories and also
+    linked files.  If you copy this directory to hard disk, link the following
+    files, if possible.
+
+        /usr/include/sgtty.h		to	minix/h/sgtty.h
+        /usr/include/signal.h		to	minix/h/signal.h
+        /usr/include/minix/callnr.h	to	minix/h/callnr.h
+        /usr/include/minix/com.h	to	minix/h/com.h
+        /usr/include/minix/const.h	to	minix/h/const.h
+        /usr/include/minix/type.h	to	minix/h/type.h
+        /usr/include/sys/stat.h		to	minix/h/stat.h
+        /usr/include/fs/buf.h		to	minix/fs/buf.h
+        /usr/include/fs/const.h		to	minix/fs/const.h
+        /usr/include/fs/super.h		to	minix/fs/super.h
+        /usr/include/fs/type.h		to	minix/fs/type.h
+
+    In addition, the files dosread, dosdir, and doswrite in /usr/bin should all
+    be links to the same file. It determines which it is by looking at argv[0].
+
+26. LACK OF SPACE
+    If you are running on a system with limited memory, either 512K RAM
+    or no hard disk, you may encounter difficulties trying to recompile the
+    system.  However, there are steps you can take to improve the situation.
+    First, various passes of the compiler are configured with ample stack
+    space.  Using chmem you can reduce this stack space to reduce the program's
+    memory requirements.  Be careful about not reducing it too much, or strange
+    things will happen.  Second, the compiler flag -T can be used to place
+    temporary files in a place other than /tmp.  This flag may be useful if
+    /tmp is on the RAM disk, which is too small.  Third, the compiler flag -F
+    can be used to run cpp and cem sequentially instead of in parallel.  This
+    approach is slower but uses less memory. Fourth, the library, libc.a
+    contains several large routines that are rarely used.  By removing these,
+    you can reduce the amount of space the library requires. Fifth, if you are
+    able to compile but not link, after having created all the *.s files, you
+    can remove some of the larger *.c files, replacing them with null files to
+    keep make happy, and then link.  Sixth, the size of the RAM disk is
+    determined by the size of the root file system.  If the default size is not
+    suitable for your configuration, you can make a new root file system with 
+    mkfs.  In particular, on an XT, you may wish to move cpp and cem from /lib
+    (RAM disk) to /usr/lib (hard disk), thus making it possible to build a new
+    and smaller RAM disk to free up more "core."  If you do this, be sure to
+    modify cc.c, since it has to know where to find cpp and cem.
+    
+27. MULTIPLE BIN DIRECTORIES IN THE DISTRIBUTION
+       Since the distribution disks are nearly full, a few of the programs that
+    logically ought to be in the /usr/bin directory have been put on one of the
+    other distribution diskettes in a separate bin directory.  On a hard disk
+    system, these programs should be put in /usr/bin.
+
+28. LIBRARY
+       Not all the sources in minix/lib have been included in libc.a (to save
+    space).  If you have a hard disk and enough space, compare the sources and
+    binaries and add the missing files.  Remember to compile all library
+    routines with cc -c -LIB file.c.  The -LIB flag is essential for libraries.
+    The library sources are contained in the lib/libsrc.a archive.
+
+29. RS232 LINES
+       MINIX supports RS232 lines to terminals and modems.  Baudrate, parity,
+    and bits/character are user settable.  The special files /dev/tty[12] are
+    used to access the RS232 lines. They can be opened for reading and writing.
+       As shipped, the system is configured for only one line, /dev/tty1.  To
+    enable the second one, change NR_RS_LINES in tty.c to 2.  Doing so will
+    increase kernel size by 1K, due to the extra table and buffer space needed.
+       The file /etc/ttys can be configured to have a shell be started for
+    either line, thus making MINIX a multi-terminal system.  The second char
+    of the three-character /etc/ttys entry gives the line parameters.  See
+    the comment at the start of tools/init.c for details.
+       The program stty can be used to set baud rates, bits/character and
+    parity for its standard input, e.g.  stty 9600 8 -even -odd </dev/tty1 
+    sets line 1 to 9600 baud, 8 bits/char, no parity.  The stty program does
+    its work using the ioctl system call.
+
+30. MISSING SOURCES
+       The sources for the C compiler (including all its parts), the editor
+    elle, and patch are not included in the distribution.  The compiler sources
+    are available from Transmediair and UniPress (see below).  The elle and
+    patch sources were too large to be included and are only available via the
+    USENET online archives.
+
+31. C SYMBOL TABLE
+       A new flag, -s, has been added to cc to generate a symbol table in the
+    a.out file.  It can be printed using nm and removed using strip.  Do not
+    confuse -s (lower case, symbol table) with -S (upper case, assembly code).
+
+32. PASCAL AND MODULA 2 COMPILERS FOR MINIX
+       A MINIX compiler for Pascal is available.  A MINIX compiler for Modula 2
+    will available during the course of 1988-9. Neither is part of the standard
+    distribution.  They may be purchased from either of:
+
+	Unipress Software		Transmediair Utrecht B.V.
+	2025 Lincoln Highway		Melkweg 3
+	Edison, NJ 08817		3721 RG Bilthoven
+	USA				Holland
+	Tel: (201) 985-8000		Tel: (30) 78 18 20
+
+    These companies also sell the sources to the MINIX C compiler, and the
+    Amsterdam Compiler Kit, from which all the compilers have been derived.
+

@@ -1,8 +1,8 @@
 /* diskcheck - test a disk for bad blocks	Author: Andy Tanenbaum */
 
 #include "signal.h"
-#include "../../fs/const.h"
-#include "../../h/const.h"
+#include "../fs/const.h"
+#include "../h/const.h"
 #include <errno.h>
 #undef printf
 #define PRINTFREQ  100

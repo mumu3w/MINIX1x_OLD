@@ -25,7 +25,7 @@ Rem    Names is a file listing the .objs to link
 Rem
 Rem    All C code is compiled with the same options
 REM 
-tcc -c -k- -f- -G -mt -Di8088 -I..\include *.c
+tcc -c -k- -f- -G -mt -Di8088 -ID:\MINIX1.3\include *.c >log.txt
 if errorlevel 1 goto err2
 if not "%2" == "" goto sep
 echo Making %1 module -- combined I&D
@@ -35,13 +35,13 @@ rem
 if not exist mpx88.asm goto nxt
 rem
 rem    For Kernel, first file is mpx88 not crtso
-tasm /ml /i..\include *.asm
+tasm /ml /iD:\MINIX1.3\include *.asm
 if errorlevel 1 goto err2
-tlink /ml /n /c @names, %1.exe, %1.map, ..\lib\tmodel ..\lib\minix
+tlink /ml /n /c @names, %1.exe, %1.map, D:\MINIX1.3\lib\tmodel D:\MINIX1.3\lib\minix
 if errorlevel 1 goto err2
 goto cnvt
 :nxt
-tlink /ml /n /c \usr\lib\headt @names, %1.exe, %1.map, ..\lib\tmodel ..\lib\minix
+tlink /ml /n /c D:\MINIX1.3\lib\headt @names, %1.exe, %1.map,D:\MINIX1.3\lib\tmodel D:\MINIX1.3\lib\minix
 if errorlevel 1 goto err2
 :cnvt
 Rem  Convert to Minix format
@@ -55,13 +55,13 @@ rem
 if not exist mpx88.asm goto nxt2
 rem
 rem    For Kernel, first file is mpx88 not crtso
-tasm /ml /i..\include /D_SID *.asm
+tasm /ml /iD:\MINIX1.3\include /D_SID *.asm
 if errorlevel 1 goto err2
-tlink /ml /n /c @names, %1.exe, %1.map, ..\lib\smodel ..\lib\minix
+tlink /ml /n /c @names, %1.exe, %1.map, D:\MINIX1.3\lib\smodel D:\MINIX1.3\lib\minix
 if errorlevel 1 goto err2
 goto cnvt2
 :nxt2
-tlink /ml /n /c ..\lib\heads @names, %1.exe, %1.map, ..\lib\smodel ..\lib\minix 
+tlink /ml /n /c D:\MINIX1.3\lib\heads @names, %1.exe, %1.map, D:\MINIX1.3\lib\smodel D:\MINIX1.3\lib\minix
 if errorlevel 1 goto err2
 :cnvt2
 dos2out -i %1

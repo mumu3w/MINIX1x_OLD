@@ -23,11 +23,10 @@
 #include "glo.h"
 #include "proc.h"
 
-
 /*===========================================================================*
  *				interrupt				     * 
  *===========================================================================*/
-PUBLIC interrup(task, m_ptr)
+PUBLIC interrupt(task, m_ptr)
 int task;			/* number of task to be started */
 message *m_ptr;			/* interrupt message to send to the task */
 {

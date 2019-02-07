@@ -1,11 +1,11 @@
 /* ls - list files and directories 	Author: Andy Tanenbaum */
 /* Version: Minix 1.3 */
 
-#include "/usr/minix1.3/include/minix/const.h"
-#include "/usr/minix1.3/include/minix/type.h"
+#include "/usr/include/minix/const.h"
+#include "/usr/include/minix/type.h"
 #include <sys/stat.h>
-#include "/usr/minix1.3/fs/const.h"
-#include "/usr/minix1.3/fs/type.h"
+#include "/usr/minix/fs/const.h"
+#include "/usr/minix/fs/type.h"
 #include <stdio.h>
 
 #define DIRNAMELEN        14	/* # chars in a directory entry name */

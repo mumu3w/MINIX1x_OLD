@@ -1,6 +1,6 @@
 /* nm - print name list.	Author: Dick van Veen, veench@cs.vu.nl */
 
-#include <aout.h>
+#include <a.out.h>
 #include <stdio.h>
 
 /*

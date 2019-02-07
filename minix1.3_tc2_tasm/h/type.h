@@ -57,19 +57,18 @@ typedef struct {long m4l1, m4l2, m4l3, m4l4;} mess_4;
 typedef struct {char m5c1, m5c2; int m5i1, m5i2; long m5l1, m5l2, m5l3;} mess_5;
 typedef struct {int m6i1, m6i2, m6i3; long m6l1; int (*m6f1)();} mess_6;
 
-typedef struct { 
-  int m_source;    /* who sent the message */
-  int m_type;      /* what kind of message is it */
-  union { 
-  mess_1 m_m1; 
-  mess_2 m_m2; 
-  mess_3 m_m3; 
-  mess_4 m_m4; 
-  mess_5 m_m5; 
-  mess_6 m_m6; 
-  } m_u; 
-} message; 
-
+typedef struct {
+  int m_source;			/* who sent the message */
+  int m_type;			/* what kind of message is it */
+  union {
+	mess_1 m_m1;
+	mess_2 m_m2;
+	mess_3 m_m3;
+	mess_4 m_m4;
+	mess_5 m_m5;
+	mess_6 m_m6;
+  } m_u;
+} message;
 
 #define MESS_SIZE (sizeof(message))
 #define NIL_MESS (message *) 0

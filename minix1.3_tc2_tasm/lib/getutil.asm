@@ -8,7 +8,7 @@
 ; Modified for Turbo Assembler by Deborah Mullen
 ; Date: Jan 29, 1989
 
-INCLUDE model.h
+INCLUDE model.inc
 
 GLOBAL _get_base:NEAR, _get_size:NEAR, _get_tot_mem:NEAR, endbss:BYTE
 

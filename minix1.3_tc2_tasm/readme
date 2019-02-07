@@ -1,0 +1,115 @@
+I got a large number of requests for this, so here it is. Included is
+all the assembly files needed, all the batch files I used and all the
+utilities I hacked at to be able to generate minix code under dos.
+I used the Turbo C 2.0 professional package from Borland which included
+the Turbo Assembler 1.0.  All assembly code is in the "ideal" mode for
+the assembler.  I did not use TC's integrated environment. Besides the
+advantages of faster compile time, link time and smaller code space, the
+order of the library does NOT matter.
+
+In order to conserve space on the net, I compressed the files, and
+then uuencoded them for posting. If you are having trouble with 
+compress, check on a unix system near you for decompress and uudecode.
+They should be compatible.
+
+
+Description:
+Posting 2--
+  Contains all the utilities to be compiled using TC include files and
+  used only under DOS.  Each source is self contained.  When linking, I
+  used wildargs.obj provided by Borland in their startup.arc file on the
+  disk labeled "examples/bgi/misc".  The programs will still run without
+  linking wildargs.obj, but you will not be able to use filenames as "*.c".
+  Compile them all ( model does not matter) and put them in your DOS "path".
+
+  addcr.c: Changes the EOL from LF to CRLF.
+  arm.c:   This is a hacked version of the minix ar.c. It contains two
+	   new options: "n" which on extraction converts filenames to
+	   those accepted by DOS (replaces extra "." in filename with "x",
+	   and when adding to the library, stores the filenames in lowercase.
+	   "a" which on extraction changes the EOL from LF to CRLF and
+	   when adding changes the EOL from CRLF to LF. Other options were
+	   deleted.
+  build.c  This is used to build the minix boot disk. I have only included
+           "diffs" against minix 1.3 build.c. Use minix "fix" to get the
+	   source. The Turbo C library routines	for diskio work fine. 
+  chmem.c  This version allows you to have more than one filename on the
+	   command line.  Used to change the stack size of minix commands
+	   before transferring to minix.
+  dc.c     Used when making the bootblok. See mkboot.bat.
+  dos2out.c Used to convert .exe files to minix format. This one was not
+	  linked with wildargs.obj.  A new option was added, "-i" which
+	  generates the format for separate I&D, resulting file ends in .sep,
+          the default is combined I&D with the file extention .out.
+  mcc.c   I used this when compiling the minix command source files. It calls
+          tcc, tlink and dos2out with all the proper switches and flags. The
+	  default is combined I&D. With the option -ms, then separate I&D
+	  format will be used. It has buildin paths for the minix include
+	  directory and the library to link to. I used "\usr\include" and
+	  "\usr\lib". These can be changed. See source for more detail.
+  pack.c  This is a hacked version of the minix command compress.c. I have
+	  only included the "diffs" against minix 1.3 compress.c.  Files
+	  compressed under minix can be decompressed under dos using this.
+	  Most of my source files were stored under minix as libraries of
+	  of compressed files. To get them to dos I did:
+		doswrite 0 libname.za < libname.Z.a (under minix)
+		arm xvna libname.za  (under dos)
+		pack -d *.cxz        (under dos)
+		ren *.cx *.c	     (under dos)
+		addcr *.c            (under dos)
+	 
+Posting 3 --
+  Contains all the assembly source files ( and model.h, the
+  header file used) used in the library and in the kernel. It also
+  has diff file for fsck.c.  This is the one C source code that TC
+  choked on.  It did not like some of the macros.  I just expanded the
+  macros in the function doprnt(). Note: bootblok, catchsig, getutil, and
+  sendrec have filename extensions of .a -- after unpacking, change to .asm.
+
+Posting 1 --
+  Contains this readme file, klib88.asm ( cuz posting 3 was too big) and
+  all the .bat files used under DOS to create the minix libraries to
+  to link to and to make the different modules of the kernel.
+  See the files for detail.  They are:
+    doit.bat: Creates the minix boot disk. Assumes the minix executables
+	      kernel, mm, fs, init, fsck, and bootblok are in same dir
+    mkboot.bat:   Assembles and generates bootblok.
+    mkfsck.bat:   Compiles fsck.c and assembles fsck1.asm, links them, generates
+	          fsck
+    mkinit.bat:   Generates init
+    mk.bat:	  Usage: mk name [sep], where name is mm, fs, or kernel.
+		  If anything else is on the command line, will make it as
+		  separate I&D, otherwise combined I&D.
+    mklib.bat:    Makes minix.lib with all the C source code
+    mkmlibs.bat:  Makes tmodel.lib and smodel.lib.  These are the different
+		  libraries used for combined I&D and separate I&D. It
+	          also makes the different versions of crtso and head that
+	          are needed. 
+
+As you can see, I did not include minix C source code.  All the C code
+compiled under TC except fsck.c (diffs included), at.c atrun.c.  At.c and
+atrun.c also had a macro that TC did not like. Just replace it. The
+include file "a.out.h" needs to be renamed to a.out and the name changed
+in ast.c and strip.c. You will have to transfer
+all the minix include files and the C source via doswrite. I suggest, if
+nothing else is available to you, putting it in libraries and then unpacking
+them with utilities given.
+
+All the assembly files were converted from minix 1.3 .s files. 
+You will not need to take any of the .s files from minix. Just use the
+ones provided.
+ 
+I used setjmp.h and setjmp.obj that came with Turbo C.  In this way,
+the register variables di and si are saved, and the special compile option of
+"-r-" is not needed.  So remember to copy the setjmp.h into your minix
+include directory. 
+
+Before using mkmlibs.bat, certain routines will need to be pulled out of
+TurboC cs.lib library using tlib.exe.  These routines are listed in the 
+batch file.  Probably all are not needed.  I took everything that looked
+like they were compiler routines.
+
+Using the utilities and batch files provided, everything should be go
+smoothly.  For details check the batch files and the comments in
+dos2out.c.  Have fun!
+--Deborah Mullen

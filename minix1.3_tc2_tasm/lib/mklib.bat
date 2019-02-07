@@ -6,7 +6,6 @@ Rem     The files were compiled with mcc -c.  All the options are built
 Rem     into mcc.  The command mcc is used for all the compiling done
 Rem     for minix
 Rem
-tcc -c -k- -f- -G -mt -Di8088 -I\usr\minix1.3\include *.c
 tlib minix /C /E +abort +abs +access +alarm +atoi
 tlib minix /C /E +atol  +bcmp +bcopy +brk +brk2
 tlib minix /C /E +bsearch +bzero +call +chdir +chmod

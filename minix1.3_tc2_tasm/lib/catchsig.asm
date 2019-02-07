@@ -12,7 +12,7 @@
 ; Modified for Turbo Assembler by Deborah Mullen
 ; Date: Jan 29, 1989
 
-INCLUDE model.h
+INCLUDE model.inc
 
 GLOBAL _begsig:NEAR, _vectab:WORD, _M:WORD
 

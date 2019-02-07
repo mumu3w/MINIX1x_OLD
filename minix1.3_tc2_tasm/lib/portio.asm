@@ -8,7 +8,7 @@
 ; Modified for Turbo Assembler by Deborah Mullen
 ; Date: Jan 29, 1989
 
-INCLUDE model.h
+INCLUDE model.inc
 
 GLOBAL _port_out:NEAR, _port_in:NEAR, _peek:NEAR
 

@@ -7,34 +7,57 @@
  *	but this isn't complete yet. Where routines can handle the
  *	situation this is mentioned in the comment.
  *
+ *	To compile this program for TURBOC, 
+ *     use: cc -Di8088 -DTURBO -DSTANDALONE -DDOS mkfs.c
  *	To compile this program for MS-DOS, use: cc -DDOS mkfs.c diskio.asm
  *	To compile this program for UNIX,   use: cc -DUNIX mkfs.c
  *	To compile this program for MINIX,  use: cc mkfs.c
  */
 
 
-#include <minix/const.h>
-#include <minix/type.h>
-#include <fs/const.h>
+#include "../include/minix/const.h"
+#include "../include/minix/type.h"
+#include "../include/fs/const.h"
 #undef EXTERN
 #define EXTERN			/* get rid of EXTERN by making it null */
-#include <fs/type.h>
-#include <fs/super.h>
+#include "../include/fs/type.h"
+#include "../include/fs/super.h"
 
 #ifdef DOS
-#include "/lib/c86/stdio.h"
-#else
+# ifdef TURBO
+#  undef printf		/* defined as printk in ../fs/const.h ! */
+#  include <stdio.h>
+#  include <fcntl.h>
+#  include <sys/stat.h>
+# else
+#  include "/lib/c86/stdio.h"
+# endif
+#undef major
+#undef minor
+#define COMPILERFLAG
+#endif
+
+#ifdef UNIX
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#define COMPILERFLAG
+#endif
+
+#ifndef COMPILERFLAG
+#include "stdio.h"
+#include "stat.h"
 #endif
 
 
 #ifndef DOS
 #ifndef UNIX
-#undef printf		/* printf is a macro for printk */
 #define UNIX
 #endif
+#endif
+
+#ifdef UNIX
+#undef printf		/* printf is a macro for printk */
 #endif
 
 
@@ -48,8 +71,13 @@
 #define N_BLOCKS         32000		/* must be multiple of 8 */
 
 #ifdef DOS
+# ifdef TURBO
+#  define BREAD		     O_RDONLY|O_BINARY
+#  define BWRITE	     S_IREAD|S_IWRITE
+# else
 #  define BREAD		     4
 #  define BWRITE	     5
+# endif
 #else
 #  define BREAD		     0
 #  define BWRITE	     1
@@ -58,7 +86,6 @@
 
 int next_zone, next_inode, zone_size, zone_shift=0, zoff, nrblocks,inode_offset,
     nrinodes, lct=1, disk, fd, print=0, file=0, override=0, simple=0, dflag;
-int donttest;			/* skip test if it fits on medium */
 
 long current_time, bin_time;
 char zero[BLOCK_SIZE], *lastp;
@@ -67,8 +94,13 @@ int zone_map = 3;		/* where is zone map? (depends on # inodes) */
 
 FILE *proto;
 long lseek();
+char *size_fmt = "%6D";
+char *ldfmt = "%6ld";
+char *mode_fmt = "%6o";
+char *ldmode = "%06o";
 char gwarning[] = {65,46,83,46,84,97,110,101,110,98,97,117,109,10};
 
+/* MS-DOS and PC-IX use %ld for longs, MINIX uses %D */
 
 
 /*================================================================
@@ -80,7 +112,8 @@ int argc;
 char *argv[];
 {
   int i, blocks, zones, inodes, mode, usrid, grpid, badusage = 0;
-  char *token[MAX_TOKENS], line[LINE_LEN];
+  char *token[MAX_TOKENS], buf[BLOCK_SIZE];
+  int testb[2];
   FILE *fopen();
   long time(), ls;
   struct stat statbuf;
@@ -91,7 +124,7 @@ char *argv[];
    * the i_modtimes of all the files.  This feature is useful when producing
    * a set of file systems, and one wants all the times to be identical.
    * First you set the time of the mkfs binary to what you want, then go.
-   */  
+   */
   current_time = time(0L);	/* time mkfs is being run */
   stat(argv[0], &statbuf);
   bin_time = statbuf.st_mtime;	/* time when mkfs binary was last modified */
@@ -102,23 +135,23 @@ char *argv[];
 	if ( (statbuf.st_mode&S_IFMT) != S_IFREG) badusage = 1;
   }
   if (badusage) {
-	write(2, "Usage: mkfs [-ldt] special proto\n", 33);
+	write(2, "Usage: mkfs [-L] special proto\n", 31);
 	exit(1);
   }
   while (--argc) {
     switch (argv[argc][0]) {
       case '-': while (*++argv[argc])
 		  switch (*argv[argc]) {
-		    case 'l': case 'L':
-			print=1; break;
-		    case 'o': case 'O':
-			override=1; break;
-		    case 'd': case 'D':
-			current_time = bin_time; dflag=1; break;
-		    case 't': case 'T':
-			donttest=1; break;
-		    default:
-			printf ("Bad switch %c, ignored.\n",*argv[argc]);
+		    case 'L' : print=1; break;
+		    case 'l' : print=1;
+			       size_fmt = ldfmt;
+			       mode_fmt = ldmode;
+			       break;
+		    case 'o' :
+		    case 'O' : override=1; break;
+		    case 'd' : current_time = bin_time; dflag=1; break;
+		    default  :
+		    printf ("Bad switch %c, ignored.\n",*argv[argc]);
 		  }
 		break;
 
@@ -128,16 +161,16 @@ char *argv[];
   	proto = fopen(argv[argc], "r" );
 	if (proto != NULL) {
 	   /* Prototype file is readable. */
-	   getline(line, token);	/* skip boot block info. */
+	   getline(buf, token);	/* skip boot block info. */
 
 	   /* Read the line with the block and inode counts. */
-	   getline(line, token);
+	   getline(buf, token);
 	   blocks = atoi(token[0]);
  	   if (blocks > N_BLOCKS) pexit("Block count too large");
 	   inodes = atoi(token[1]);
 
 	   /* Process mode line for root directory. */
-	   getline(line, token);
+	   getline(buf, token);
 	   mode = mode_con(token[0]);
 	   usrid = atoi(token[1]);
 	   grpid = atoi(token[2]);
@@ -168,9 +201,6 @@ char *argv[];
 
 
 #ifdef UNIX
-  if (!donttest) {
-  static short testb[BLOCK_SIZE/sizeof(short)];
-
   /* Try writing the last block of partition or diskette. */
   ls = lseek(fd,  ((long)blocks - 1L) * BLOCK_SIZE, 0);
   testb[0] = 0x3245;
@@ -183,13 +213,7 @@ char *argv[];
   i = read(fd, testb, BLOCK_SIZE);
   if (i != BLOCK_SIZE || testb[0] != 0x3245 || testb[1] != 0x11FF) 
 	pexit("File system is too big for minor device");
-  lseek(fd,  ((long)blocks - 1L) * BLOCK_SIZE, 0);
-  testb[0] = 0;
-  testb[1] = 0;
-  if (write(fd, testb, BLOCK_SIZE) != BLOCK_SIZE)
-	pexit("File system is too big for minor device");
   lseek(fd, 0L, 0);
-  }
 #endif
 
   /* make the file-system */
@@ -223,13 +247,12 @@ char *argv[];
 super(zones, inodes)
 int zones, inodes;
 {
-
   unsigned int i, inodeblks, initblks, initzones, nrzones, bs;
   unsigned int map_size, bit_map_len, b_needed, b_allocated, residual;
   long zo;
   struct super_block *sup;
   char buf[BLOCK_SIZE], *cp;
-
+ 
   sup= (struct super_block *) buf;
 
   bs			= 1 << BIT_MAP_SHIFT;
@@ -338,7 +361,7 @@ int parent;	/* parent's inode nr */
   /*Read prototype lines and set up directory. Recurse if need be. */
   char *token[MAX_TOKENS], *p;
   char line[LINE_LEN];
-  int mode, n, usrid, grpid, z, maj, min, f;
+  int mode, n, usrid, grpid, z, major, minor, f;
   long size;
 
   while (1) {
@@ -369,13 +392,11 @@ int parent;	/* parent's inode nr */
 		eat_dir(n);
 	} else if (*p == 'b' || *p == 'c') {
 		/* Special file. */
-		maj = atoi(token[4]);
-		min = atoi(token[5]);
-		size = 0;
-		if (token[6])
-			size = atoi(token[6]);
+		major = atoi(token[4]);
+		minor = atoi(token[5]);
+		size = atoi(token[6]);
 		size = BLOCK_SIZE * size;
-		add_zone(n, (maj<<8)|min, size, current_time);
+		add_zone(n, (major<<8)|minor, size, current_time);
 	} else {
 		/* Regular file. Go read it. */
 		if ((f=open(token[4],BREAD)) < 0) {
@@ -401,8 +422,8 @@ int inode, f;
 {
   int z, ct, i, j, k;
   char buf[BLOCK_SIZE];
-  long timeval;
   extern long file_time();
+  long timeval;
 
   do {
      for (i=0, j=0; i < zone_size; i++, j+=ct ) {
@@ -585,7 +606,6 @@ int mode, usrid, grpid;
 
 
 
-
 int alloc_zone()
 {
   /* allocate a new zone */
@@ -594,6 +614,7 @@ int alloc_zone()
 
   z = next_zone++;
   b = z << zone_shift;
+
   if ( (b+zone_size) > nrblocks) pexit("File system not big enough for all the files");
   for ( i=0; i < zone_size; i++)
 	put_block ( b+i, zero );		/* give an empty zone */
@@ -609,12 +630,12 @@ int block, bit, count;
 {
   /* insert 'count' bits in the bitmap */
   int w,s, i;
-  short buf[BLOCK_SIZE/sizeof(short)];
+  int buf[BLOCK_SIZE/sizeof(int)];
 
   get_block(block, buf);
   for (i = bit; i < bit + count; i++) {
-	w = i / (8*sizeof(short));
-	s = i % (8*sizeof(short));
+	w = i / (8*sizeof(int));
+	s = i % (8*sizeof(int));
 	buf[w] |= (1 << s);
   }
   put_block(block, buf);
@@ -703,6 +724,9 @@ int f;
   fstat(f, & statbuf);
   return (statbuf.st_mtime);
 #else				/* fstat not supported by DOS */
+	/* with Turbo C, we could use getftime() and difftime() to
+	* compute the time in seconds from 1/1/1970.
+	*/
   return( 0L );
 #endif
 }
@@ -761,10 +785,10 @@ print_fs()
 	if (k > nrinodes) break;
 	if (inode[i].i_mode != 0) {
 	   printf("Inode %2d:  mode=",k, inode[i].i_mode);
-	   printf("%06o", inode[i].i_mode);
+	   printf(mode_fmt, inode[i].i_mode);
 	   printf("  uid=%2d  gid=%2d  size=",
 				inode[i].i_uid, inode[i].i_gid);
-	   printf("%6ld", inode[i].i_size);
+	   printf(size_fmt, inode[i].i_size);
 	   printf("  zone[0]=%d\n", inode[i].i_zone[0]);
 	}
 
@@ -772,7 +796,7 @@ print_fs()
 		/* This is a directory */
 		get_block(inode[i].i_zone[0], dir);
 		for (j = 0; j < NR_DIR_ENTRIES; j++)
-			if (dir[j].inum) 
+			if (dir[j].inum)
 			  printf("\tInode %2d: %s\n",dir[j].inum,dir[j].name);
 	}
     }
@@ -815,7 +839,7 @@ int n;
  *	from the file diskio.asm. Since these routines just do
  *	as they are told (read & write the sector specified),
  *	a local cache is used to minimize the i/o-overhead for
- *	frequently used blocks.
+ *	frequently used blocks. (for Turbo C, we use the library routines)
  *
  *	The global variable "file" determines whether the output
  *	is to a disk-device or to a binary file.
@@ -869,7 +893,7 @@ char *string;
       file=1;
       if ((fd = creat(string,BWRITE)) == 0)
 	 pexit ("Can't open special file");
-      } 
+      }
 }
 
 
@@ -1005,7 +1029,11 @@ char buf[BLOCK_SIZE];
      for (bp=buf; bp<&buf[BLOCK_SIZE]; bp++) {
 	retries = MAX_RETRIES;
 	do
+#ifdef TURBO
+	  err=absread (disk,1,sectnum,bp);
+#else
 	  err=absread (disk,sectnum,bp);
+#endif
 	while (err && --retries);
 
 	if (retries) {
@@ -1038,7 +1066,11 @@ char buf[BLOCK_SIZE];
     for (bp=buf; bp<&buf[BLOCK_SIZE]; bp++) {
       retries = MAX_RETRIES;
       do {
+#ifdef TURBO
+	err=abswrite (disk,1,sectnum,bp);
+#else
 	err=abswrite (disk,sectnum,bp);
+#endif
       } while (err && --retries);
 
       if (retries) {
@@ -1135,4 +1167,3 @@ cache_init()
 }
 
 #endif
-  

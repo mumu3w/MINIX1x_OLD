@@ -1,72 +1,73 @@
 
  Start  Stop   Length Name               Class
 
- 00000H 069F0H 069F1H _TEXT              CODE
+ 00000H 069F1H 069F2H _TEXT              CODE
  06A00H 07606H 00C07H _DATA              DATA
- 07608H 0A64BH 03044H _BSS               BSS
- 0A64CH 0A64CH 00000H _BSSEND            BSS
- 0A650H 0A650H 00000H _STACK             STACK
+ 07610H 07610H 00000H _DATAEND           DATA
+ 07610H 0A653H 03044H _BSS               BSS
+ 0A654H 0A654H 00000H _BSSEND            BSS
+ 0A660H 0A660H 00000H _STACK             STACK
 
   Address         Publics by Name
 
- 06A0:0C08       begbss
+ 06A0:0C10       begbss
  0000:2599       cret
  0000:256D       csv
- 06A0:3C4C       endbss
- 0000:64EC       LDIV@
- 0000:64F5       LMOD@
- 0000:64F0       LUDIV@
- 0000:64FA       LUMOD@
- 0000:658F       LXLSH@
- 0000:65CC       LXMUL@
- 0000:65AE       LXRSH@
- 0000:65E5       SCOPY@
+ 06A0:3C54       endbss
+ 0000:64ED       LDIV@
+ 0000:64F6       LMOD@
+ 0000:64F1       LUDIV@
+ 0000:64FB       LUMOD@
+ 0000:6590       LXLSH@
+ 0000:65CD       LXMUL@
+ 0000:65AF       LXRSH@
+ 0000:65E6       SCOPY@
  06A0:02B2       splimit
- 0000:2761       _ack_char
- 06A0:16D2       _alt
- 06A0:3664       _alt_c
- 06A0:0C73       _aout
- 06A0:20FC       _bill_ptr
+ 0000:2762       _ack_char
+ 06A0:16DA       _alt
+ 06A0:366C       _alt_c
+ 06A0:0C7B       _aout
+ 06A0:2104       _bill_ptr
  06A0:004A       _blank_color
  06A0:001A       _brksize
  0000:2547       _build_sig
- 06A0:20F8       _busy_map
- 06A0:20EC       _capslock
- 06A0:19E0       _caps_off
- 0000:4826       _cause_sig
- 06A0:3276       _char_height
+ 06A0:2100       _busy_map
+ 06A0:20F4       _capslock
+ 06A0:19E8       _caps_off
+ 0000:4827       _cause_sig
+ 06A0:327E       _char_height
  0000:00D6       _clock_int
  0000:01E0       _clock_task
- 06A0:16D4       _color
- 06A0:17DC       _control
+ 06A0:16DC       _color
+ 06A0:17E4       _control
  0000:2514       _cp_mess
- 06A0:0D5A       _cum_count
- 06A0:17DA       _cur_proc
+ 06A0:0D62       _cum_count
+ 06A0:17E2       _cur_proc
  0000:00A8       _disk_int
  0000:25C1       _dma_read
  0000:25DF       _dma_write
- 0000:2D40       _dp8390_int
+ 0000:2D41       _dp8390_int
  06A0:0998       _dutch_alt
  06A0:092F       _dutch_sh
  06A0:08C6       _dutch_unsh
- 06A0:0EBE       _ega
- 0000:271F       _em_xfer
+ 06A0:0EC6       _ega
+ 0000:2720       _em_xfer
  0000:00ED       _eth_int
- 0000:2D3F       _eth_stp
- 0000:2840       _exit
- 0000:52BC       _finish
+ 0000:2D40       _eth_stp
+ 0000:2841       _exit
+ 0000:52BD       _finish
  0000:1ABD       _floppy_task
  0000:0A7F       _flush
- 06A0:0D5E       _flush_flag
+ 06A0:0D66       _flush_flag
  0000:16B3       _func_key
- 0000:64BF       _get_base
- 0000:26DD       _get_byte
+ 0000:64C0       _get_base
+ 0000:26DE       _get_byte
  0000:25A0       _get_chrome
  0000:25AF       _get_ega
- 0000:64C2       _get_size
- 0000:64C6       _get_tot_mem
- 0000:487F       _inform
- 0000:3EE2       _init_rs232
+ 0000:64C3       _get_size
+ 0000:64C7       _get_tot_mem
+ 0000:4880       _inform
+ 0000:3EE3       _init_rs232
  0000:00FD       _int00
  0000:0105       _int01
  0000:010D       _int02
@@ -83,119 +84,119 @@
  0000:0165       _int13
  0000:016D       _int14
  0000:0175       _int15
- 0000:33AA       _interrup
- 06A0:2100       _int_mess
+ 0000:33AB       _interrup
+ 06A0:2108       _int_mess
  06A0:03F4       _int_vec
- 06A0:0C46       _keybd_mess
+ 06A0:0C4E       _keybd_mess
  0000:055B       _keyboard
- 06A0:20F0       _keyb_type
- 06A0:17DE       _k_stack
+ 06A0:20F8       _keyb_type
+ 06A0:17E6       _k_stack
  0000:253A       _lock
- 06A0:2134       _lost_ticks
+ 06A0:213C       _lost_ticks
  0000:00A0       _lpr_int
  06A0:085D       _m24
- 0000:2843       _main
+ 0000:2844       _main
  0000:18E2       _map_dmp
- 0000:2D41       _mem_task
- 0000:353F       _mini_send
- 06A0:211A       _minus_code
- 06A0:0C5E       _nbuff
- 06A0:19DE       _numlock
- 06A0:16D8       _num_off
- 06A0:20FE       _num_slash
- 06A0:2132       _output_done
+ 0000:2D42       _mem_task
+ 0000:3540       _mini_send
+ 06A0:2122       _minus_code
+ 06A0:0C66       _nbuff
+ 06A0:19E6       _numlock
+ 06A0:16E0       _num_off
+ 06A0:2106       _num_slash
+ 06A0:213A       _output_done
  0000:0761       _out_char
- 0000:2C9D       _panic
- 06A0:0D50       _pcount
- 06A0:16D6       _pc_at
- 0000:648E       _peek
+ 0000:2C9E       _panic
+ 06A0:0D58       _pcount
+ 06A0:16DE       _pc_at
+ 0000:648F       _peek
  0000:247E       _phys_copy
- 0000:376D       _pick_proc
- 06A0:0EBC       _port_65
- 0000:647A       _port_in
- 0000:646A       _port_out
- 06A0:0D54       _prev_ct
- 06A0:20EE       _prev_proc
- 0000:300C       _printer_task
- 0000:66BA       _printk
+ 0000:376E       _pick_proc
+ 06A0:0EC4       _port_65
+ 0000:647B       _port_in
+ 0000:646B       _port_out
+ 06A0:0D5C       _prev_ct
+ 06A0:20F6       _prev_proc
+ 0000:300D       _printer_task
+ 0000:66BB       _printk
  0000:19B4       _prname
- 06A0:0EC2       _proc
- 06A0:2118       _proc_ptr
- 06A0:0D58       _pr_busy
- 0000:32C0       _pr_char
- 06A0:0EC0       _ps
+ 06A0:0ECA       _proc
+ 06A0:2120       _proc_ptr
+ 06A0:0D60       _pr_busy
+ 0000:32C1       _pr_char
+ 06A0:0EC8       _ps
  0000:16A0       _putc
  0000:1735       _p_dmp
- 06A0:20E2       _rdy_head
- 06A0:20F2       _rdy_tail
- 0000:37DE       _ready
- 06A0:20E8       _realtime
- 0000:27A0       _reboot
- 0000:64A6       _receive
+ 06A0:20EA       _rdy_head
+ 06A0:20FA       _rdy_tail
+ 0000:37DF       _ready
+ 06A0:20F0       _realtime
+ 0000:27A1       _reboot
+ 0000:64A7       _receive
  0000:002A       _restart
  0000:253E       _restore
- 0000:394E       _rs232
+ 0000:394F       _rs232
  0000:0088       _rs232_int
- 06A0:0E68       _rs232_rd_mess
- 06A0:0E80       _rs232_wt_mess
- 0000:3AA9       _rs_flush
- 0000:3CF7       _rs_out_char
- 0000:3EAB       _rs_sig
- 0000:278B       _save_tty_vec
- 06A0:20FA       _scan_code
- 0000:390B       _sched
+ 06A0:0E70       _rs232_rd_mess
+ 06A0:0E88       _rs232_wt_mess
+ 0000:3AAA       _rs_flush
+ 0000:3CF8       _rs_out_char
+ 0000:3EAC       _rs_sig
+ 0000:278C       _save_tty_vec
+ 06A0:2102       _scan_code
+ 0000:390C       _sched
  06A0:0AD3       _scode_map
- 0000:26B9       _scr_down
- 0000:2695       _scr_up
+ 0000:26BA       _scr_down
+ 0000:2696       _scr_up
  0000:0094       _secondary_int
- 0000:64A0       _send
- 0000:64AC       _sendrec
+ 0000:64A1       _send
+ 0000:64AD       _sendrec
  0000:1467       _set_leds
  0000:19FE       _set_name
- 0000:3FAC       _set_uart
+ 0000:3FAD       _set_uart
  06A0:078B       _sh
- 06A0:0EB8       _shift1
- 06A0:0EBA       _shift2
+ 06A0:0EC0       _shift1
+ 06A0:0EC2       _shift2
  06A0:0A6A       _sh_usx
- 0000:574A       _sigchar
- 06A0:211C       _sig_procs
+ 0000:574B       _sigchar
+ 06A0:2124       _sig_procs
  06A0:0000       _sizes
- 06A0:2130       _softscroll
- 0000:636B       _sort
- 0000:6427       _swap
- 0000:34B7       _sys_call
- 0000:412A       _sys_task
+ 06A0:2138       _softscroll
+ 0000:636C       _sort
+ 0000:6428       _swap
+ 0000:34B8       _sys_call
+ 0000:412B       _sys_task
  0000:0067       _s_call
  06A0:069E       _tasktab
- 06A0:211E       _task_mess
- 0000:2C64       _trap
+ 06A0:2126       _task_mess
+ 0000:2C65       _trap
  0000:017E       _trp
- 06A0:16DA       _tty_buf
- 06A0:2E8E       _tty_copy_buf
- 06A0:3278       _tty_driver_buf
+ 06A0:16E2       _tty_buf
+ 06A0:2E96       _tty_copy_buf
+ 06A0:3280       _tty_driver_buf
  0000:14E5       _tty_init
  0000:0080       _tty_int
- 0000:3E36       _tty_o_done
- 0000:5709       _tty_reply
- 06A0:2136       _tty_struct
- 0000:49D1       _tty_task
- 06A0:19E2       _t_stack
- 0000:48F3       _umap
- 0000:2C05       _unexpected_int
+ 0000:3E37       _tty_o_done
+ 0000:570A       _tty_reply
+ 06A0:213E       _tty_struct
+ 0000:49D2       _tty_task
+ 06A0:19EA       _t_stack
+ 0000:48F4       _umap
+ 0000:2C06       _unexpected_int
  06A0:07F4       _unm24
- 0000:3853       _unready
+ 0000:3854       _unready
  06A0:0722       _unsh
  06A0:0A01       _unsh_usx
- 06A0:0CB3       _vargv
+ 06A0:0CBB       _vargv
  06A0:02D3       _vec_table
  0000:25FD       _vid_copy
- 06A0:0C40       _vid_mask
- 06A0:0C42       _vid_port
- 0000:2680       _wait_retrace
- 0000:5798       _winchester_task
+ 06A0:0C48       _vid_mask
+ 06A0:0C4A       _vid_port
+ 0000:2681       _wait_retrace
+ 0000:5799       _winchester_task
  0000:00BF       _wini_int
- 0000:27E0       _wreboot
- 0000:49C3       ____dummy
+ 0000:27E1       _wreboot
+ 0000:49C4       ____dummy
 
   Address         Publics by Value
 
@@ -251,69 +252,69 @@
  0000:25C1       _dma_read
  0000:25DF       _dma_write
  0000:25FD       _vid_copy
- 0000:2680       _wait_retrace
- 0000:2695       _scr_up
- 0000:26B9       _scr_down
- 0000:26DD       _get_byte
- 0000:271F       _em_xfer
- 0000:2761       _ack_char
- 0000:278B       _save_tty_vec
- 0000:27A0       _reboot
- 0000:27E0       _wreboot
- 0000:2840       _exit
- 0000:2843       _main
- 0000:2C05       _unexpected_int
- 0000:2C64       _trap
- 0000:2C9D       _panic
- 0000:2D3F       _eth_stp
- 0000:2D40       _dp8390_int
- 0000:2D41       _mem_task
- 0000:300C       _printer_task
- 0000:32C0       _pr_char
- 0000:33AA       _interrup
- 0000:34B7       _sys_call
- 0000:353F       _mini_send
- 0000:376D       _pick_proc
- 0000:37DE       _ready
- 0000:3853       _unready
- 0000:390B       _sched
- 0000:394E       _rs232
- 0000:3AA9       _rs_flush
- 0000:3CF7       _rs_out_char
- 0000:3E36       _tty_o_done
- 0000:3EAB       _rs_sig
- 0000:3EE2       _init_rs232
- 0000:3FAC       _set_uart
- 0000:412A       _sys_task
- 0000:4826       _cause_sig
- 0000:487F       _inform
- 0000:48F3       _umap
- 0000:49C3       ____dummy
- 0000:49D1       _tty_task
- 0000:52BC       _finish
- 0000:5709       _tty_reply
- 0000:574A       _sigchar
- 0000:5798       _winchester_task
- 0000:636B       _sort
- 0000:6427       _swap
- 0000:646A       _port_out
- 0000:647A       _port_in
- 0000:648E       _peek
- 0000:64A0       _send
- 0000:64A6       _receive
- 0000:64AC       _sendrec
- 0000:64BF       _get_base
- 0000:64C2       _get_size
- 0000:64C6       _get_tot_mem
- 0000:64EC       LDIV@
- 0000:64F0       LUDIV@
- 0000:64F5       LMOD@
- 0000:64FA       LUMOD@
- 0000:658F       LXLSH@
- 0000:65AE       LXRSH@
- 0000:65CC       LXMUL@
- 0000:65E5       SCOPY@
- 0000:66BA       _printk
+ 0000:2681       _wait_retrace
+ 0000:2696       _scr_up
+ 0000:26BA       _scr_down
+ 0000:26DE       _get_byte
+ 0000:2720       _em_xfer
+ 0000:2762       _ack_char
+ 0000:278C       _save_tty_vec
+ 0000:27A1       _reboot
+ 0000:27E1       _wreboot
+ 0000:2841       _exit
+ 0000:2844       _main
+ 0000:2C06       _unexpected_int
+ 0000:2C65       _trap
+ 0000:2C9E       _panic
+ 0000:2D40       _eth_stp
+ 0000:2D41       _dp8390_int
+ 0000:2D42       _mem_task
+ 0000:300D       _printer_task
+ 0000:32C1       _pr_char
+ 0000:33AB       _interrup
+ 0000:34B8       _sys_call
+ 0000:3540       _mini_send
+ 0000:376E       _pick_proc
+ 0000:37DF       _ready
+ 0000:3854       _unready
+ 0000:390C       _sched
+ 0000:394F       _rs232
+ 0000:3AAA       _rs_flush
+ 0000:3CF8       _rs_out_char
+ 0000:3E37       _tty_o_done
+ 0000:3EAC       _rs_sig
+ 0000:3EE3       _init_rs232
+ 0000:3FAD       _set_uart
+ 0000:412B       _sys_task
+ 0000:4827       _cause_sig
+ 0000:4880       _inform
+ 0000:48F4       _umap
+ 0000:49C4       ____dummy
+ 0000:49D2       _tty_task
+ 0000:52BD       _finish
+ 0000:570A       _tty_reply
+ 0000:574B       _sigchar
+ 0000:5799       _winchester_task
+ 0000:636C       _sort
+ 0000:6428       _swap
+ 0000:646B       _port_out
+ 0000:647B       _port_in
+ 0000:648F       _peek
+ 0000:64A1       _send
+ 0000:64A7       _receive
+ 0000:64AD       _sendrec
+ 0000:64C0       _get_base
+ 0000:64C3       _get_size
+ 0000:64C7       _get_tot_mem
+ 0000:64ED       LDIV@
+ 0000:64F1       LUDIV@
+ 0000:64F6       LMOD@
+ 0000:64FB       LUMOD@
+ 0000:6590       LXLSH@
+ 0000:65AF       LXRSH@
+ 0000:65CD       LXMUL@
+ 0000:65E6       SCOPY@
+ 0000:66BB       _printk
  06A0:0000       _sizes
  06A0:001A       _brksize
  06A0:004A       _blank_color
@@ -331,61 +332,61 @@
  06A0:0A01       _unsh_usx
  06A0:0A6A       _sh_usx
  06A0:0AD3       _scode_map
- 06A0:0C08       begbss
- 06A0:0C40       _vid_mask
- 06A0:0C42       _vid_port
- 06A0:0C46       _keybd_mess
- 06A0:0C5E       _nbuff
- 06A0:0C73       _aout
- 06A0:0CB3       _vargv
- 06A0:0D50       _pcount
- 06A0:0D54       _prev_ct
- 06A0:0D58       _pr_busy
- 06A0:0D5A       _cum_count
- 06A0:0D5E       _flush_flag
- 06A0:0E68       _rs232_rd_mess
- 06A0:0E80       _rs232_wt_mess
- 06A0:0EB8       _shift1
- 06A0:0EBA       _shift2
- 06A0:0EBC       _port_65
- 06A0:0EBE       _ega
- 06A0:0EC0       _ps
- 06A0:0EC2       _proc
- 06A0:16D2       _alt
- 06A0:16D4       _color
- 06A0:16D6       _pc_at
- 06A0:16D8       _num_off
- 06A0:16DA       _tty_buf
- 06A0:17DA       _cur_proc
- 06A0:17DC       _control
- 06A0:17DE       _k_stack
- 06A0:19DE       _numlock
- 06A0:19E0       _caps_off
- 06A0:19E2       _t_stack
- 06A0:20E2       _rdy_head
- 06A0:20E8       _realtime
- 06A0:20EC       _capslock
- 06A0:20EE       _prev_proc
- 06A0:20F0       _keyb_type
- 06A0:20F2       _rdy_tail
- 06A0:20F8       _busy_map
- 06A0:20FA       _scan_code
- 06A0:20FC       _bill_ptr
- 06A0:20FE       _num_slash
- 06A0:2100       _int_mess
- 06A0:2118       _proc_ptr
- 06A0:211A       _minus_code
- 06A0:211C       _sig_procs
- 06A0:211E       _task_mess
- 06A0:2130       _softscroll
- 06A0:2132       _output_done
- 06A0:2134       _lost_ticks
- 06A0:2136       _tty_struct
- 06A0:2E8E       _tty_copy_buf
- 06A0:3276       _char_height
- 06A0:3278       _tty_driver_buf
- 06A0:3664       _alt_c
- 06A0:3C4C       endbss
+ 06A0:0C10       begbss
+ 06A0:0C48       _vid_mask
+ 06A0:0C4A       _vid_port
+ 06A0:0C4E       _keybd_mess
+ 06A0:0C66       _nbuff
+ 06A0:0C7B       _aout
+ 06A0:0CBB       _vargv
+ 06A0:0D58       _pcount
+ 06A0:0D5C       _prev_ct
+ 06A0:0D60       _pr_busy
+ 06A0:0D62       _cum_count
+ 06A0:0D66       _flush_flag
+ 06A0:0E70       _rs232_rd_mess
+ 06A0:0E88       _rs232_wt_mess
+ 06A0:0EC0       _shift1
+ 06A0:0EC2       _shift2
+ 06A0:0EC4       _port_65
+ 06A0:0EC6       _ega
+ 06A0:0EC8       _ps
+ 06A0:0ECA       _proc
+ 06A0:16DA       _alt
+ 06A0:16DC       _color
+ 06A0:16DE       _pc_at
+ 06A0:16E0       _num_off
+ 06A0:16E2       _tty_buf
+ 06A0:17E2       _cur_proc
+ 06A0:17E4       _control
+ 06A0:17E6       _k_stack
+ 06A0:19E6       _numlock
+ 06A0:19E8       _caps_off
+ 06A0:19EA       _t_stack
+ 06A0:20EA       _rdy_head
+ 06A0:20F0       _realtime
+ 06A0:20F4       _capslock
+ 06A0:20F6       _prev_proc
+ 06A0:20F8       _keyb_type
+ 06A0:20FA       _rdy_tail
+ 06A0:2100       _busy_map
+ 06A0:2102       _scan_code
+ 06A0:2104       _bill_ptr
+ 06A0:2106       _num_slash
+ 06A0:2108       _int_mess
+ 06A0:2120       _proc_ptr
+ 06A0:2122       _minus_code
+ 06A0:2124       _sig_procs
+ 06A0:2126       _task_mess
+ 06A0:2138       _softscroll
+ 06A0:213A       _output_done
+ 06A0:213C       _lost_ticks
+ 06A0:213E       _tty_struct
+ 06A0:2E96       _tty_copy_buf
+ 06A0:327E       _char_height
+ 06A0:3280       _tty_driver_buf
+ 06A0:366C       _alt_c
+ 06A0:3C54       endbss
 
 Program entry point at 0000:0000
 

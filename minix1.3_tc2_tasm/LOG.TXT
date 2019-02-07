@@ -1,0 +1,161 @@
+Turbo C  Version 2.01  Copyright (c) 1987, 1988 Borland International
+abort.c:
+abs.c:
+access.c:
+alarm.c:
+amoeba.c:
+atoi.c:
+atol.c:
+bcmp.c:
+bcopy.c:
+brk.c:
+brk2.c:
+Warning brk2.c 8: Possible use of 'p2' before definition in function brk2
+bsearch.c:
+bzero.c:
+call.c:
+chdir.c:
+chmod.c:
+chown.c:
+chroot.c:
+cleanup.c:
+close.c:
+creat.c:
+crypt.c:
+ctermid.c:
+ctime.c:
+ctype.c:
+cuserid.c:
+doprintf.c:
+Warning doprintf.c 34: Possibly incorrect assignment in function _itoa
+Warning doprintf.c 59: Possibly incorrect assignment in function ltoa
+dup.c:
+dup2.c:
+exec.c:
+execlp.c:
+exit.c:
+fclose.c:
+fdopen.c:
+fflush.c:
+ffs.c:
+fgetc.c:
+fgets.c:
+fopen.c:
+fork.c:
+fprintf.c:
+fputc.c:
+fputs.c:
+fread.c:
+freopen.c:
+fseek.c:
+fstat.c:
+ftell.c:
+fwrite.c:
+getc.c:
+getcwd.c:
+getegid.c:
+getenv.c:
+geteuid.c:
+getgid.c:
+getgrent.c:
+getlogin.c:
+getpass.c:
+getpid.c:
+getpwent.c:
+gets.c:
+getuid.c:
+gtty.c:
+index.c:
+ioctl.c:
+isatty.c:
+itoa.c:
+kill.c:
+link.c:
+lsearch.c:
+lseek.c:
+malloc.c:
+Warning malloc.c 1: Redefinition of 'i8088' is not identical
+memccpy.c:
+memchr.c:
+memcmp.c:
+Warning memcmp.c 19: Possibly incorrect assignment in function memcmp
+memcpy.c:
+memset.c:
+message.c:
+mknod.c:
+mktemp.c:
+mount.c:
+open.c:
+pause.c:
+perror.c:
+pipe.c:
+popen.c:
+printdat.c:
+printk.c:
+Warning printk.c 32: Possibly incorrect assignment in function itoa
+Warning printk.c 57: Possibly incorrect assignment in function ltoa
+prints.c:
+Warning prints.c 44: Possibly incorrect assignment in function prints
+putc.c:
+puts.c:
+qsort.c:
+rand.c:
+read.c:
+regexp.c:
+Warning regexp.c 377: Code has no effect in function regbranch
+Warning regexp.c 520: Unreachable code in function regatom
+Warning regexp.c 525: Unreachable code in function regatom
+Warning regexp.c 896: Unreachable code in function regmatch
+Warning regexp.c 924: Unreachable code in function regmatch
+Warning regexp.c 971: Unreachable code in function regmatch
+Warning regexp.c 974: Unreachable code in function regmatch
+Warning regexp.c 978: Unreachable code in function regmatch
+regsub.c:
+rindex.c:
+scanf.c:
+Warning scanf.c 51: Possibly incorrect assignment in function rnc
+Warning scanf.c 179: Possibly incorrect assignment in function _doscanf
+setbuf.c:
+setgid.c:
+setuid.c:
+signal.c:
+sleep.c:
+sprintf.c:
+stat.c:
+stb.c:
+stderr.c:
+stime.c:
+strcat.c:
+strchr.c:
+strcmp.c:
+strcpy.c:
+strcspn.c:
+strlen.c:
+strncat.c:
+strncmp.c:
+strncpy.c:
+strpbrk.c:
+strrchr.c:
+strspn.c:
+strstr.c:
+strtok.c:
+stty.c:
+swab.c:
+sync.c:
+syslib.c:
+system.c:
+termcap.c:
+Warning termcap.c 296: Parameter 'affcnt' is never used in function tputs
+time.c:
+times.c:
+ttyname.c:
+umask.c:
+umount.c:
+ungetc.c:
+uniqport.c:
+unlink.c:
+utime.c:
+wait.c:
+write.c:
+
+	Available memory 351376

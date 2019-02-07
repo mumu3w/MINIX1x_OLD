@@ -1,0 +1,22 @@
+Turbo C  Version 2.01  Copyright (c) 1987, 1988 Borland International
+clock.c:
+console.c:
+dmp.c:
+floppy.c:
+Warning floppy.c 621: 'status' is assigned a value which is never used in function reset
+Warning floppy.c 621: 'r' is assigned a value which is never used in function reset
+main.c:
+Warning main.c 199: 'old_state' is assigned a value which is never used in function main
+Warning main.c 252: Constant out of range in comparison in function panic
+memory.c:
+printer.c:
+proc.c:
+Warning proc.c 229: Possible use of 'previous_ptr' before definition in function mini_rec
+rs232.c:
+system.c:
+Warning system.c 334: Parameter 'm_ptr' is never used in function do_abort
+table.c:
+tty.c:
+xt_wini.c:
+
+	Available memory 393488

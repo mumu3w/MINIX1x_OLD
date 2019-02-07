@@ -29,9 +29,9 @@
 /* fcntl.h not used in MINIX */
 /* #include <fcntl.h>      /* System file-control definitions  */
 
-#include <aout.h>      /* Object file format definitions   */
+#include <a.out.h>      /* Object file format definitions   */
 
-#ifdef i8086 || i8088      /* For CPU's with 16-bit integers   */
+#if i8086 || i8088      /* For CPU's with 16-bit integers   */
 #undef int
 #else                   /* Defaults (for 32-bit CPU types)  */
 #define int short

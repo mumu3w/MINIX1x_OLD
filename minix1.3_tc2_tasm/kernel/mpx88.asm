@@ -9,7 +9,7 @@
 ;   Feb. 11, 1989
 ;
 
-INCLUDE model.h
+INCLUDE model.inc
 
 ;
 ; This file is part of the lowest layer of the MINIX kernel.  All processing

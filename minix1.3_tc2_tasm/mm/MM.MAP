@@ -3,15 +3,16 @@
 
  00000H 02320H 02321H _TEXT              CODE
  02330H 02563H 00234H _DATA              DATA
- 02564H 03959H 013F6H _BSS               BSS
- 0395AH 0395AH 00000H _BSSEND            BSS
- 03960H 03960H 00000H _STACK             STACK
+ 02570H 02570H 00000H _DATAEND           DATA
+ 02570H 03965H 013F6H _BSS               BSS
+ 03966H 03966H 00000H _BSSEND            BSS
+ 03970H 03970H 00000H _STACK             STACK
 
   Address         Publics by Name
 
  0000:0000       $main
- 0233:0234       begbss
- 0233:162A       endbss
+ 0233:0240       begbss
+ 0233:1636       endbss
  0000:1AD2       LDIV@
  0000:1ADB       LMOD@
  0000:1AD6       LUDIV@
@@ -32,7 +33,7 @@
  0233:012A       _core_name
  0000:1CB6       _creat
  0233:0000       _data_org
- 0233:160E       _dont_reply
+ 0233:161A       _dont_reply
  0000:15AD       _do_alarm
  0000:01D2       _do_brk
  0000:10DA       _do_brk2
@@ -45,8 +46,8 @@
  0000:163C       _do_pause
  0000:1279       _do_signal
  0000:0DC4       _do_wait
- 0233:1628       _errno
- 0233:086E       _err_code
+ 0233:1634       _errno
+ 0233:087A       _err_code
  0000:001C       _exit
  0000:006F       _free_mem
  0000:1CD0       _fstat
@@ -59,24 +60,24 @@
  0000:016F       _max_hole
  0000:19DE       _mem_copy
  0000:0191       _mem_init
- 0233:0888       _mm_call
+ 0233:0894       _mm_call
  0000:0D2D       _mm_exit
- 0233:0856       _mm_in
- 0233:0870       _mm_out
- 0233:088A       _mm_stack
- 0233:05D2       _mp
- 0233:05D6       _mproc
+ 0233:0862       _mm_in
+ 0233:087C       _mm_out
+ 0233:0896       _mm_stack
+ 0233:05DE       _mp
+ 0233:05E2       _mproc
  0000:1A3C       _no_sys
  0000:1CFD       _open
  0000:1A42       _panic
  0000:1DD0       _printk
- 0233:160C       _procs_in_use
+ 0233:1618       _procs_in_use
  0000:1212       _putc
  0000:2107       _read
  0000:1A8C       _receive
  0000:105C       _reply
- 0233:05D0       _result2
- 0233:160A       _res_ptr
+ 0233:05DC       _result2
+ 0233:1616       _res_ptr
  0000:1A86       _send
  0000:1A92       _sendrec
  0000:15C7       _set_alarm
@@ -95,7 +96,7 @@
  0000:223E       _sys_times
  0000:2134       _sys_xit
  0000:22D8       _tell_fs
- 0233:05D4       _who
+ 0233:05E0       _who
  0000:22FB       _write
 
   Address         Publics by Value
@@ -173,21 +174,21 @@
  0233:0131       _stackpt
  0233:0133       _call_vec
  0233:0200       _M
- 0233:0234       begbss
- 0233:05D0       _result2
- 0233:05D2       _mp
- 0233:05D4       _who
- 0233:05D6       _mproc
- 0233:0856       _mm_in
- 0233:086E       _err_code
- 0233:0870       _mm_out
- 0233:0888       _mm_call
- 0233:088A       _mm_stack
- 0233:160A       _res_ptr
- 0233:160C       _procs_in_use
- 0233:160E       _dont_reply
- 0233:1628       _errno
- 0233:162A       endbss
+ 0233:0240       begbss
+ 0233:05DC       _result2
+ 0233:05DE       _mp
+ 0233:05E0       _who
+ 0233:05E2       _mproc
+ 0233:0862       _mm_in
+ 0233:087A       _err_code
+ 0233:087C       _mm_out
+ 0233:0894       _mm_call
+ 0233:0896       _mm_stack
+ 0233:1616       _res_ptr
+ 0233:1618       _procs_in_use
+ 0233:161A       _dont_reply
+ 0233:1634       _errno
+ 0233:1636       endbss
 
 Program entry point at 0000:0000
 

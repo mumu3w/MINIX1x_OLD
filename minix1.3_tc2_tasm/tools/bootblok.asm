@@ -14,7 +14,7 @@
 ; Deborah Mullen 2/89
 ;
 
-INCLUDE model.h
+INCLUDE model.inc
 
 ; When the PC is powered on, it reads the first block from the floppy
 ; disk into address 0x7C00 and jumps to it.  This boot block must contain

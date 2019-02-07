@@ -3,15 +3,16 @@
 
  00000H 046ABH 046ACH _TEXT              CODE
  046B0H 04C13H 00564H _DATA              DATA
- 04C14H 0D673H 08A60H _BSS               BSS
- 0D674H 0D674H 00000H _BSSEND            BSS
+ 04C20H 04C20H 00000H _DATAEND           DATA
+ 04C20H 0D67FH 08A60H _BSS               BSS
+ 0D680H 0D680H 00000H _BSSEND            BSS
  0D680H 0D680H 00000H _STACK             STACK
 
   Address         Publics by Name
 
  0000:0000       $main
- 046B:0564       begbss
- 046B:8FC4       endbss
+ 046B:0570       begbss
+ 046B:8FD0       endbss
  0000:3F1E       LDIV@
  0000:3F27       LMOD@
  0000:3F22       LUDIV@
@@ -25,9 +26,9 @@
  0000:08C8       _alloc_inode
  0000:023F       _alloc_zone
  046B:0010       _brksize
- 046B:0694       _buf
- 046B:8EBA       _bufs_in_use
- 046B:8DF8       _buf_hash
+ 046B:06A0       _buf
+ 046B:8EC6       _bufs_in_use
+ 046B:8E04       _buf_hash
  0000:4017       _callm1
  0000:404D       _callm3
  0000:409A       _callx
@@ -41,7 +42,7 @@
  0000:03FF       _dev_io
  0000:03AA       _dev_open
  046B:04EE       _dmap
- 046B:8FC0       _dont_reply
+ 046B:8FCC       _dont_reply
  0000:2887       _do_access
  0000:3204       _do_chdir
  0000:2774       _do_chmod
@@ -76,21 +77,21 @@
  0000:3AA8       _do_write
  0000:0A80       _dup_inode
  0000:1F31       _eat_path
- 046B:8FC2       _errno
- 046B:8DF6       _err_code
+ 046B:8FCE       _errno
+ 046B:8E02       _err_code
  0000:001C       _exit
  0000:39F1       _fetch_name
- 046B:8970       _filp
+ 046B:897C       _filp
  0000:07DF       _find_filp
  0000:28D8       _forbidden
- 046B:7FFC       _fp
- 046B:7FFE       _fproc
+ 046B:8008       _fp
+ 046B:800A       _fproc
  0000:3675       _free_bit
  0000:09D2       _free_inode
  0000:02CD       _free_zone
- 046B:8DF2       _front
- 046B:8BF2       _fstack
- 046B:8DF4       _fs_call
+ 046B:8DFE       _front
+ 046B:8BFE       _fstack
+ 046B:8E00       _fs_call
  0000:3EF1       _get_base
  0000:001E       _get_block
  0000:0748       _get_fd
@@ -99,14 +100,14 @@
  0000:3EF4       _get_size
  0000:36EE       _get_super
  0000:3EF8       _get_tot_mem
- 046B:8430       _inode
+ 046B:843C       _inode
  0000:0385       _invalidate
  0000:1F79       _last_dir
  0000:40D7       _len
  0000:3456       _load_bit_maps
  046B:0530       _M
- 046B:067C       _m
- 046B:0664       _m1
+ 046B:0688       _m
+ 046B:0670       _m1
  0000:0D95       _main
  046B:0526       _max_major
  0000:371C       _mounted
@@ -119,19 +120,19 @@
  0000:29C1       _putc
  0000:0162       _put_block
  0000:0882       _put_inode
- 046B:8EBC       _rdahedpos
- 046B:8FBE       _rdahed_inode
- 046B:0630       _rdwt_err
+ 046B:8EC8       _rdahedpos
+ 046B:8FCA       _rdahed_inode
+ 046B:063C       _rdwt_err
  0000:31B8       _read_ahead
  0000:2F9F       _read_map
  0000:299E       _read_only
  0000:2A40       _read_write
- 046B:8BF0       _rear
+ 046B:8BFC       _rear
  0000:3ED8       _receive
  0000:25DE       _release
  0000:0E9D       _reply
  0000:2644       _revive
- 046B:8E38       _reviving
+ 046B:8E44       _reviving
  0000:02FC       _rw_block
  0000:0578       _rw_dev
  0000:05D9       _rw_dev2
@@ -143,10 +144,10 @@
  0000:3ED2       _send
  0000:3EDE       _sendrec
  046B:0460       _stackpt
- 046B:8EC2       _super_block
- 046B:8EC0       _super_user
+ 046B:8ECE       _super_block
+ 046B:8ECC       _super_user
  0000:258F       _suspend
- 046B:8FBC       _susp_count
+ 046B:8FC8       _susp_count
  0000:464A       _sys_abort
  0000:45C5       _sys_copy
  0000:457D       _sys_exec
@@ -162,8 +163,8 @@
  0000:06D7       _tty_exit
  0000:0646       _tty_open
  0000:350E       _unload_bit_maps
- 046B:8E3A       _user_path
- 046B:842E       _who
+ 046B:8E46       _user_path
+ 046B:843A       _who
  0000:099A       _wipe_inode
  0000:3EB2       _zero_block
 
@@ -299,33 +300,33 @@
  046B:04EE       _dmap
  046B:0526       _max_major
  046B:0530       _M
- 046B:0564       begbss
- 046B:0630       _rdwt_err
- 046B:0664       _m1
- 046B:067C       _m
- 046B:0694       _buf
- 046B:7FFC       _fp
- 046B:7FFE       _fproc
- 046B:842E       _who
- 046B:8430       _inode
- 046B:8970       _filp
- 046B:8BF0       _rear
- 046B:8BF2       _fstack
- 046B:8DF2       _front
- 046B:8DF4       _fs_call
- 046B:8DF6       _err_code
- 046B:8DF8       _buf_hash
- 046B:8E38       _reviving
- 046B:8E3A       _user_path
- 046B:8EBA       _bufs_in_use
- 046B:8EBC       _rdahedpos
- 046B:8EC0       _super_user
- 046B:8EC2       _super_block
- 046B:8FBC       _susp_count
- 046B:8FBE       _rdahed_inode
- 046B:8FC0       _dont_reply
- 046B:8FC2       _errno
- 046B:8FC4       endbss
+ 046B:0570       begbss
+ 046B:063C       _rdwt_err
+ 046B:0670       _m1
+ 046B:0688       _m
+ 046B:06A0       _buf
+ 046B:8008       _fp
+ 046B:800A       _fproc
+ 046B:843A       _who
+ 046B:843C       _inode
+ 046B:897C       _filp
+ 046B:8BFC       _rear
+ 046B:8BFE       _fstack
+ 046B:8DFE       _front
+ 046B:8E00       _fs_call
+ 046B:8E02       _err_code
+ 046B:8E04       _buf_hash
+ 046B:8E44       _reviving
+ 046B:8E46       _user_path
+ 046B:8EC6       _bufs_in_use
+ 046B:8EC8       _rdahedpos
+ 046B:8ECC       _super_user
+ 046B:8ECE       _super_block
+ 046B:8FC8       _susp_count
+ 046B:8FCA       _rdahed_inode
+ 046B:8FCC       _dont_reply
+ 046B:8FCE       _errno
+ 046B:8FD0       endbss
 
 Program entry point at 0000:0000
 

@@ -1,6 +1,6 @@
 /* ast - add symbol table.		Author: Dick van Veen */
 
-#include <aout.h>
+#include <a.out.h>
 #include <stdio.h>
 
 /*

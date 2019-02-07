@@ -1,5 +1,4 @@
 /* cc - call the C compiler		Author: Erik Baalbergen */
-#define MEM640K
 
 #ifndef MEM640K
 #ifndef MEM512K

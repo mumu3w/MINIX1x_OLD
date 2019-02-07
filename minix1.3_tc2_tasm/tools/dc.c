@@ -7,65 +7,67 @@
  */
 
 
-#include <fcntl.h>
-#include <sys\stat.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 main(argc, argv)
 int argc;
 char *argv[];
 {
-int inf, ouf;
-char *buf;
-int wrcnt, incnt;
-int ct, readnum;
+    FILE *inf, *ouf;
+    char *buf;
+    int wrcnt, incnt;
+    int ct, readnum;
 
 
-   if (argc != 4) {
-	printf("usage: dcinfile outfile count\n");
-	exit(2);
-   }
+    if (argc != 4) {
+        printf("usage: dcinfile outfile count\n");
+        exit(2);
+    }
 
-   ct = atoi(argv[3]);
+    ct = atoi(argv[3]);
 
-   buf = (char *) calloc(512 + 1,1);
+    buf = (char *)calloc(512 + 1, 1);
 
-  
-   if (!buf) {
-	printf("can not get memory\n");
-	exit(2);
-   }
 
-   inf = open(argv[1],O_RDONLY | O_BINARY);
+    if (!buf) {
+        printf("can not get memory\n");
+        exit(2);
+    }
 
-   if (inf < 0) {
-	printf(" Could not open %s file\n",argv[1]);
-	exit(2);
-   }
+    inf = fopen(argv[1], "rb");
 
-   ouf = open(argv[2],O_RDWR | O_BINARY | O_CREAT, S_IREAD | S_IWRITE);
+    if (inf < 0) {
+        printf(" Could not open %s file\n", argv[1]);
+        exit(2);
+    }
 
-   if (ouf < 0) {
-	printf(" Could not open %s file\n",argv[2]);
-	exit(2);
-   }
+    ouf = fopen(argv[2], "wb+");
 
-   while (ct) {
-	/* read part to skip */
-	incnt = read(inf, buf, 512 );
-	if (incnt > ct ) {
-	      write(ouf, &(buf[ct]), incnt - ct);
-	      break;
-	}
-	ct -= incnt;
-   }
+    if (ouf < 0) {
+        printf(" Could not open %s file\n", argv[2]);
+        exit(2);
+    }
 
-   /* write out the rest of the file */
-   while ( (incnt = read(inf, buf, 512)) > 0)
-	write(ouf, buf, incnt);
+    while (ct) {
+        /* read part to skip */
+        incnt = fread(buf, 1, 512, inf);
+        if (incnt > ct) {
+            fwrite(&buf[ct], 1, incnt - ct, ouf);
+            break;
+        }
+        ct -= incnt;
+    }
 
-   close(inf);
-   close(ouf);
+    /* write out the rest of the file */
+    /*while ((incnt = read(inf, buf, 512)) > 0)
+        write(ouf, buf, incnt);*/
+    while ((incnt = fread(buf, 1, 512, inf)) > 0)
+        fwrite(buf, 1, incnt, ouf);
+
+    fclose(inf);
+    fclose(ouf);
 }
 
-   
+
 

@@ -170,7 +170,7 @@ PUBLIC rs_flush()
   if (tty_buf_count(tty_driver_buf) == 0) return;	/* nothing to flush */
   rs232_rd_mess.m_type = TTY_CHAR_INT;
   rs232_rd_mess.ADDRESS = tty_driver_buf;
-  interrup(TTY, &rs232_rd_mess);	  /* send a message to the tty task */
+  interrupt(TTY, &rs232_rd_mess);	/* send a message to the tty task */
 }
 
 
@@ -226,7 +226,7 @@ int line;
 	rs232_wt_mess.TTY_LINE = line;	/* which line is finished */
 	tp->tty_waiting = COMPLETED;	/* mark this line as done */
 	output_done++;			/* # of RS232 lines now completed */
-	interrup(TTY, &rs232_wt_mess);	/* send the message to the tty task */
+	interrupt(TTY, &rs232_wt_mess);	/* send the message to the tty task */
   } else {
 	port_out(INT_CTL, ENABLE);	/* re-enable 8259A controller */
   }
@@ -320,7 +320,7 @@ register struct tty_struct *tp;	/* tells which terminal is to be used */
 /*===========================================================================*
  *				rs_out_char				     *
  *===========================================================================*/
-rs_out_char(tp, c)
+PUBLIC rs_out_char(tp, c)
 register struct tty_struct *tp;	/* pointer to tty struct */
 char c;				/* character to be output */
 {
@@ -451,7 +451,7 @@ struct tty_struct *tp;
 /*===========================================================================*
  *				init_rs232				     * 
  *===========================================================================*/
-init_rs232()
+PUBLIC	init_rs232()
 {
   register struct tty_struct *tp;
   register struct rs_struct *rs;
@@ -495,7 +495,7 @@ init_rs232()
 /*===========================================================================*
  *				set_uart			 	     *
  *===========================================================================*/
-set_uart(line, mode, speeds)
+PUBLIC set_uart(line, mode, speeds)
 int line;			/* which line number (>= NR_CONS) */
 int mode;			/* sgtty.h sg_mode word */
 int speeds;			/* low byte is input speed, next is output */

@@ -53,5 +53,5 @@
 #define USER_Q             2	/* ready users are scheduled via queue 2 */
 
 #define printf        printk	/* the kernel really uses printk, not printf */
-
+#define interrupt   interrup
 

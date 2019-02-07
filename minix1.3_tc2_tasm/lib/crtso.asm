@@ -20,7 +20,7 @@
 ; Date: Jan 29, 1989
 
 
-INCLUDE model.h
+INCLUDE model.inc
 
 GLOBAL $main:NEAR,_main:NEAR, _exit:NEAR
 GLOBAL _environ:WORD, _brksize:WORD, endbss:BYTE, begbss:BYTE

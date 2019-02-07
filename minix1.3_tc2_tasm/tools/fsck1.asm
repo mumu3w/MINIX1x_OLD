@@ -4,7 +4,7 @@ page,132
 TURBO equ 1
 XDEBUG equ 0
 
-INCLUDE model.h
+INCLUDE model.inc
 
 
 ; Define STANDALONE if you need fsck to be part of Minix.

@@ -161,7 +161,7 @@ PUBLIC keyboard()
 	/* Build and send the interrupt message. */
 	keybd_mess.m_type = TTY_CHAR_INT;
 	keybd_mess.ADDRESS = tty_driver_buf;
-	interrup(TTY, &keybd_mess);	/* send a message to the tty task */
+	interrupt(TTY, &keybd_mess);	/* send a message to the tty task */
   } else {
 	/* Too many characters have been buffered.  Discard excess. */
 	port_out(INT_CTL, ENABLE);	/* re-enable 8259A controller */

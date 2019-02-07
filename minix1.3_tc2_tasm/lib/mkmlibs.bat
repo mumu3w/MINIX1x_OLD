@@ -11,12 +11,14 @@ Rem	The result will be in lib directory in current directory
 Rem
 Rem    Delete any existing .lib files
 del *.lib
-tasm /ml *.asm
+rem mkdir lib
+tlib C:\TC201\LIB\CS.LIB *ldiv *llsh *lrsh *lursh *lxmul *oldlrsh *overflow *pada
+tlib C:\TC201\LIB\CS.LIB *padd *pcmp *pina *psbp * scopy *spush *setjmp
+tasm /ml /iD:\MINIX1.3\include *.asm
 tlib tmodel /C /E +portio +sendrec +getutil +catchsig
 Rem
 Rem    Files from Turbo C library
 Rem
-copy TCLIB\*.obj .\
 tlib tmodel /C /E +ldiv +llsh +lrsh +lursh +lxmul +oldlrsh +overflow +pada
 tlib tmodel /C /E  +padd +pcmp +pina +psbp + scopy +spush +setjmp
 
@@ -25,7 +27,7 @@ copy crtso.obj crtsot.obj
 copy head.obj headt.obj
 
 Rem Make smodel.lib
-tasm /ml /D_SID *.asm
+tasm /ml /D_SID /iD:\MINIX1.3\include *.asm
 tlib smodel /C /E +portio +sendrec +getutil +catchsig
 tlib smodel /C /E +ldiv +llsh +lrsh +lursh +lxmul +oldlrsh +overflow +pada
 tlib smodel /C /E  +padd +pcmp +pina +psbp + scopy +spush +setjmp

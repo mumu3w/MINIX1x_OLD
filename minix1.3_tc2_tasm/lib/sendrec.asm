@@ -8,7 +8,7 @@
 ; Modified for Turbo Assembler by Deborah Mullen
 ; Date: Jan 29, 1989
 
-INCLUDE model.h
+INCLUDE model.inc
 
 GLOBAL _send:NEAR,_receive:NEAR,_sendrec:NEAR
 

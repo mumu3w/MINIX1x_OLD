@@ -7,7 +7,7 @@
 ;   Modified for Turbo Link by Deborah Mullen
 ;   Feb. 11, 1989
 
-INCLUDE model.h
+INCLUDE model.inc
 
 ;
 ; This file contains a number of assembly code utility routines needed by the
@@ -461,7 +461,7 @@ vid4:	pushf			; copying may now start; save flags
 
 	cmp si,0		; si = 0 means blank the screen
 	je vid7			; jump for blanking
-;	lock			; this is a trick for the IBM PC simulator only
+	lock			; this is a trick for the IBM PC simulator only
 	inc [WORD PTR vidlock] 	; 'lock' indicates a video ram access
 	rep movsw 		; this is the copy loop
 vid5:
